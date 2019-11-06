@@ -8,19 +8,27 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: `${__dirname}/data`
+      }
+    },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
           'Roboto:300,400,700'
         ]
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`
       }
     },
     'gatsby-transformer-sharp',
