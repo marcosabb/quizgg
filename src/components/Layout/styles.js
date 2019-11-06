@@ -1,6 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import normalize from 'styled-normalize'
+import styled from 'styled-components'
 
-export default createGlobalStyle`
-  ${normalize}
-`
+export const Container = styled.main``
+
+export const Wrapper = styled.div``

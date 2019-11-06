@@ -1,11 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: 'q'
+    title: 'Gaming',
+    description: 'Lorem ipsum dolor sit amet.',
+    author: '@marcosabb'
   },
   plugins: [
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Roboto:300,400,700'
+        ]
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
