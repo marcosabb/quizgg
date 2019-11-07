@@ -25,10 +25,10 @@ export default createGlobalStyle`
     font-weight: 400;
     font-size: 16px;
     letter-spacing: .0625rem;
-    color: #000;
+    color: #101010;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background-color: rgba(12, 36, 97, .02);
+    background-color: rgba(0, 57, 160, .02);
   }
 
   h1,

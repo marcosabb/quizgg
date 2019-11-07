@@ -8,12 +8,12 @@ export const Container = styled.header`
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #fff;
-  border-bottom: 1px solid rgba(12, 36, 97, 0.05);
+  border-bottom: 1px solid rgba(0, 57, 160, .06);
 `
 
 export const Title = styled.h1`
   font-size: ${rem(24)};
   font-weight: 300;
   text-transform: uppercase;
-  color: #0c2461;
+  color: #0039a0;
 `

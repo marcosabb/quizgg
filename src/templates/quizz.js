@@ -3,15 +3,14 @@ import t from 'prop-types'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
+import Questions from '../containers/Questions'
 
 // import { Container } from './styles';
 
-const Quizz = ({ data: { quizzesJson: quizz } }) => {
-  console.log(quizz)
-
+const Quizz = ({ data: { quizzesJson: { title, questions } } }) => {
   return (
     <Layout>
-      <h1>{quizz.title}</h1>
+      <Questions questions={questions} />
     </Layout>
   )
 }
@@ -19,8 +18,8 @@ const Quizz = ({ data: { quizzesJson: quizz } }) => {
 Quizz.propTypes = {
   data: t.shape({
     quizzesJson: t.shape({
-      id: t.string,
-      title: t.string
+      title: t.string,
+      questions: t.array
     })
   }).isRequired
 }
@@ -30,8 +29,17 @@ export default Quizz
 export const quizzQuery = graphql`
   query($slug: String!) {
     quizzesJson(fields: { slug: { eq: $slug } }) {
-      id
       title
+      questions {
+        id
+        title
+        options {
+          id
+          key
+          text
+          correct
+        }
+      }
     }
   }
 `
