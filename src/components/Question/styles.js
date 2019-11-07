@@ -36,6 +36,7 @@ export const Container = styled.div`
   padding: 20px;
   background-color: #fff;
   border-radius: 6px;
+  box-shadow: 0 20px 20px -20px rgba(0, 57, 160, .1);
 `
 
 export const Counter = styled.p`
