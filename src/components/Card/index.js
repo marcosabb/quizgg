@@ -5,6 +5,8 @@ import { Link } from 'gatsby'
 import { Container, Image, Content, Title, Badge } from './styles'
 
 const Card = ({ image, title, slug, badge, featured }) => {
+  console.log(image)
+
   return (
     <Link to={slug}>
       <Container featured={featured}>
@@ -24,7 +26,7 @@ Card.defaultProps = {
 }
 
 Card.propTypes = {
-  image: t.object,
+  image: t.object.isRequired,
   title: t.string.isRequired,
   slug: t.string.isRequired,
   badge: t.string.isRequired,

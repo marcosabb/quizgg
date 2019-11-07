@@ -4,6 +4,6 @@
   "badge": "teste",
   "image": {
     "name": "test",
-    "src": "../images/test.jpg"
+    "src": "../images/cover/dark-bomber.png"
   }
 }
