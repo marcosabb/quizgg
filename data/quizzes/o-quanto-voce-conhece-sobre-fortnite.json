@@ -1,0 +1,38 @@
+{
+  "id": "25b95548-9f17-4f27-8d18-ff8c6b240d2e",
+  "title": "O quanto você conhece sobre Fortnite?",
+  "image": {
+    "name": "test",
+    "src": "../images/cover/thanos.jpg"
+  },
+  "featured": true,
+  "questions": {
+    "6802dfc4-45a8-4fba-8611-bdb073743efe": {
+      "id": "6802dfc4-45a8-4fba-8611-bdb073743efe",
+      "title": "Em que data Fortnite foi lançado oficialmente?",
+      "options": {
+        "0d902274-0f3a-4d5d-93c7-a52aab722113": {
+          "id": "0d902274-0f3a-4d5d-93c7-a52aab722113",
+          "key": "A",
+          "text": "31 de Junho de 2017"
+        },
+        "8df66f23-b02a-4b32-a343-17e2eb379061": {
+          "id": "8df66f23-b02a-4b32-a343-17e2eb379061",
+          "key": "B",
+          "text": "25 de Julho de 2017",
+          "correct": true
+        },
+        "8675d0e0-940e-4817-8fca-3143479e041b": {
+          "id": "8675d0e0-940e-4817-8fca-3143479e041b",
+          "key": "C",
+          "text": "2 de Agosto de 2017"
+        },
+          "668443ce-fb6a-4d2a-b69f-77c0b62c7490": {
+            "id": "668443ce-fb6a-4d2a-b69f-77c0b62c7490",
+            "key": "D",
+            "text": "15 de Setembro de 2017"
+        }
+      }
+    }
+  }
+}

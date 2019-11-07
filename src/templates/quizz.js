@@ -2,15 +2,17 @@ import React from 'react'
 import t from 'prop-types'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/Layout'
+
 // import { Container } from './styles';
 
 const Quizz = ({ data: { quizzesJson: quizz } }) => {
   console.log(quizz)
 
   return (
-    <div>
+    <Layout>
       <h1>{quizz.title}</h1>
-    </div>
+    </Layout>
   )
 }
 
@@ -18,8 +20,7 @@ Quizz.propTypes = {
   data: t.shape({
     quizzesJson: t.shape({
       id: t.string,
-      title: t.string,
-      badge: t.string
+      title: t.string
     })
   }).isRequired
 }

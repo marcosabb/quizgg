@@ -1,9 +1,9 @@
 {
   "id": 2,
   "title": "Qual pro player de Fortnite você é?",
-  "badge": "teste",
   "image": {
     "name": "test",
     "src": "../images/cover/dark-bomber.png"
-  }
+  },
+  "featured": "left"
 }

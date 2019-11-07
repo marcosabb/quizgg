@@ -2,22 +2,23 @@ import React from 'react'
 import t from 'prop-types'
 import { Link } from 'gatsby'
 
-import { Container, Image, Content, Title, Badge } from './styles'
+import { Container, Image, Content, Title } from './styles'
 
-const Card = ({ image, title, slug, badge, featured }) => {
-  console.log(image)
-
+const Card = ({ image, title, slug, featured }) => {
   return (
-    <Link to={slug}>
-      <Container featured={featured}>
-        <Image fluid={image} />
-
-        <Content>
-          <Title>{title}</Title>
-          <Badge>{badge}</Badge>
-        </Content>
-      </Container>
-    </Link>
+    <Container featured={featured}>
+      <Image
+        Tag='div'
+        fluid={image}
+        backgroundColor='#040e18'
+      >
+        <Link to={slug}>
+          <Content>
+            <Title>{title}</Title>
+          </Content>
+        </Link>
+      </Image>
+    </Container>
   )
 }
 
@@ -29,7 +30,6 @@ Card.propTypes = {
   image: t.object.isRequired,
   title: t.string.isRequired,
   slug: t.string.isRequired,
-  badge: t.string.isRequired,
   featured: t.string
 }
 

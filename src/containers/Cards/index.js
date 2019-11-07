@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import Card from '../../components/Card'
 
-import { Container, Featured, Content } from './styles'
+import { Container, Featured } from './styles'
 
 const Cards = () => {
   const {
@@ -18,7 +18,6 @@ const Cards = () => {
             node {
               id
               title
-              badge
               fields {
                 slug
               }
@@ -27,7 +26,7 @@ const Cards = () => {
                 src {
                   childImageSharp {
                     fluid {
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp
                     }
                   }
                 }
@@ -44,21 +43,11 @@ const Cards = () => {
   return (
     <Container>
       <Featured>
-        {/* <Content>
-          <Card featured='left' />
-        </Content>
-
-        <Content>
-          <Card featured='right' />
-          <Card featured='right' />
-        </Content> */}
-
         {quizzes.map((
           {
             node: {
               id,
               title,
-              badge,
               fields: { slug },
               image: {
                 src: {
@@ -70,9 +59,13 @@ const Cards = () => {
             }
           }
         ) => (
-          <Content key={id}>
-            <Card image={fluid} title={title} slug={slug} badge={badge} featured='right' />
-          </Content>
+          <Card
+            key={id}
+            image={fluid}
+            title={title}
+            slug={slug}
+            featured='right'
+          />
         ))}
       </Featured>
     </Container>

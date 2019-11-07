@@ -1,16 +1,28 @@
 import styled from 'styled-components'
-import { ifProp } from 'styled-tools'
-import Img from 'gatsby-image'
+import Background from 'gatsby-background-image'
 
 export const Container = styled.div`
   position: relative;
-  width: 100%;
-  height: ${ifProp({ featured: 'left' }, '500px', 'calc(250px - 10px)')};
-  margin-bottom: ${ifProp({ featured: 'left' }, '0', '20px')};;
-  background-color: red;
+  width: calc(50% - 10px);
+  height: calc(50% - 5px);
+  border-radius: 4px;
+  overflow: hidden;
+
+  &:nth-child(1) {
+    height: 100%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
 `
 
-export const Image = styled(Img)``
+export const Image = styled(Background)`
+  height: 100%;
+  width: 100%;
+`
 
 export const Content = styled.div`
   position: absolute;
@@ -18,5 +30,3 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h2``
-
-export const Badge = styled.span``
