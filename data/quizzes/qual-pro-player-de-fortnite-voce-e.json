@@ -1,5 +1,9 @@
 {
   "id": 2,
   "title": "Qual pro player de Fortnite você é?",
-  "badge": "teste"
+  "badge": "teste",
+  "image": {
+    "name": "test",
+    "src": "../images/test.jpg"
+  }
 }

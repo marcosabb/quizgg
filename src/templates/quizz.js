@@ -27,8 +27,8 @@ Quizz.propTypes = {
 export default Quizz
 
 export const quizzQuery = graphql`
-  query($id: String!) {
-    quizzesJson(id: { eq: $id }) {
+  query($slug: String!) {
+    quizzesJson(fields: { slug: { eq: $slug } }) {
       id
       title
     }

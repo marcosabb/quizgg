@@ -1,5 +1,23 @@
 const path = require('path')
-const slug = require('slug')
+const { createFilePath } = require('gatsby-source-filesystem')
+
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === 'QuizzesJson') {
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: 'data'
+    })
+
+    createNodeField({
+      node,
+      name: 'slug',
+      value: `/${slug.replace('/quizzes/', '')}`
+    })
+  }
+}
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -10,6 +28,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         allQuizzesJson(limit: 1000) {
           edges {
             node {
+              fields {
+                slug
+              }
               id
               title
             }
@@ -24,14 +45,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const quizzTemplate = path.resolve('src/templates/quizz.js')
+  result.data.allQuizzesJson.edges.forEach(({ node }) => {
+    console.log('SLUG', node.fields.slug)
 
-  result.data.allQuizzesJson.edges.forEach(edge => {
     createPage({
-      path: `/${slug(edge.node.title, { lower: true })}/`,
-      component: quizzTemplate,
+      path: node.fields.slug,
+      component: path.resolve('src/templates/quizz.js'),
       context: {
-        id: edge.node.id
+        slug: node.fields.slug
       }
     })
   })

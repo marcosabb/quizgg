@@ -1,5 +1,9 @@
 {
   "id": 1,
   "title": "O quanto você conhece das skins do Fortnite?",
-  "badge": "questionário"
+  "badge": "questionário",
+  "image": {
+    "name": "test",
+    "src": "../images/test.jpg"
+  }
 }

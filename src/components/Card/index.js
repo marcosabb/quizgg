@@ -1,35 +1,21 @@
 import React from 'react'
 import t from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
 
 import { Container, Image, Content, Title, Badge } from './styles'
 
-const Card = ({ featured }) => {
-  const { file: { childImageSharp: { fixed } } } = useStaticQuery(
-    graphql`
-      query {
-        file(relativePath: { eq: "test.jpg" }) {
-          childImageSharp {
-            fixed(width: 600, height: 600) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `
-  )
-
-  console.log(fixed)
-
+const Card = ({ image, title, slug, badge, featured }) => {
   return (
-    <Container featured={featured}>
-      <Image fixed={fixed} objectFit='cover' objectPosition='50% 50%' />
+    <Link to={slug}>
+      <Container featured={featured}>
+        <Image fluid={image} />
 
-      <Content>
-        <Title>Lorem ipsum dolor sit amet.</Title>
-        <Badge>Teste</Badge>
-      </Content>
-    </Container>
+        <Content>
+          <Title>{title}</Title>
+          <Badge>{badge}</Badge>
+        </Content>
+      </Container>
+    </Link>
   )
 }
 
@@ -38,6 +24,10 @@ Card.defaultProps = {
 }
 
 Card.propTypes = {
+  image: t.object,
+  title: t.string.isRequired,
+  slug: t.string.isRequired,
+  badge: t.string.isRequired,
   featured: t.string
 }
 
