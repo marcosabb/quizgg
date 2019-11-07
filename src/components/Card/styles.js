@@ -5,7 +5,7 @@ export const Container = styled.div`
   position: relative;
   width: calc(50% - 10px);
   height: calc(50% - 5px);
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
 
   &:nth-child(1) {

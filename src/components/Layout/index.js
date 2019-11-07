@@ -3,17 +3,19 @@ import t from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import Header from '../Header'
+import Footer from '../Footer'
 
 import Global from '../../styles/global'
 import { Container, Wrapper } from './styles'
 
 const Layout = ({ children }) => {
-  const { site: { siteMetadata: { title } } } = useStaticQuery(
+  const { site: { siteMetadata: { title, year } } } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
+            year
           }
         }
       }
@@ -27,6 +29,7 @@ const Layout = ({ children }) => {
       <Wrapper>
         {children}
       </Wrapper>
+      <Footer title={title} year={year} />
     </Container>
   )
 }

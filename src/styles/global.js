@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import normalize from 'styled-normalize'
+import { rem } from 'polished'
 
 export default createGlobalStyle`
   ${normalize}
@@ -24,20 +25,11 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    letter-spacing: .0625rem;
+    letter-spacing: ${rem(2)};
     color: #101010;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     background-color: rgba(0, 57, 160, .02);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0;
   }
 
   a {

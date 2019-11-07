@@ -3,16 +3,22 @@ import t from 'prop-types'
 
 import { Container, Counter, Title, Options, Option, Key } from './styles'
 
-const Question = ({ title, options }) => (
+const Question = ({
+  question,
+  counterQuestion,
+  totalQuestions,
+  handleCheck,
+  handleState
+}) => (
   <Container>
-    <Counter>1/10</Counter>
-    <Title>{title}</Title>
+    <Counter>{counterQuestion}/{totalQuestions}</Counter>
+    <Title>{question.title}</Title>
     <Options>
-      {options && options.map((option) => (
+      {question.options && question.options.map((option) => (
         <Option
           key={option.id}
-          state=''
-          onClick={() => {}}
+          state={handleState(option)}
+          onClick={() => handleCheck(question, option)}
         >
           <Key>{option.key}</Key>
           {option.text}
@@ -23,13 +29,19 @@ const Question = ({ title, options }) => (
 )
 
 Question.propTypes = {
-  title: t.string.isRequired,
-  options: t.arrayOf(t.shape({
-    id: t.string,
-    key: t.string,
-    text: t.string,
-    correct: t.oneOfType([t.bool, t.string])
-  })).isRequired
+  question: t.shape({
+    title: t.string,
+    options: t.arrayOf(t.shape({
+      id: t.string,
+      key: t.string,
+      text: t.string,
+      correct: t.oneOfType([t.bool, t.string])
+    }))
+  }).isRequired,
+  counterQuestion: t.number.isRequired,
+  totalQuestions: t.number.isRequired,
+  handleCheck: t.func.isRequired,
+  handleState: t.func.isRequired
 }
 
 export default Question

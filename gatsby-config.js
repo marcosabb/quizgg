@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Gaming',
+    year: new Date().getFullYear(),
     description: 'Lorem ipsum dolor sit amet.',
     author: '@marcosabb'
   },
