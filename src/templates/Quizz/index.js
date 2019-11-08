@@ -2,10 +2,8 @@ import React from 'react'
 import t from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import Questions from '../containers/Questions'
-
-// import { Container } from './styles';
+import Layout from '../../components/Layout'
+import Questions from '../../containers/Questions'
 
 const Quizz = ({ data: { quizzesJson: { title, questions } } }) => {
   return (

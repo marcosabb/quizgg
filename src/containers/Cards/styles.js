@@ -9,13 +9,13 @@ export const Featured = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   height: 500px;
 `
 
 export const Content = styled.div`
-
-  /* &:not(:last-child) {
-    margin-right: 20px;
-  } */
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 80px;
 `

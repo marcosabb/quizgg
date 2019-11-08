@@ -1,12 +1,11 @@
 {
-  "id": "25b95548-9f17-4f27-8d18-ff8c6b240d2e",
+  "id": 513525252242342,
   "title": "O quanto você conhece sobre Fortnite?",
   "game": "Fortnite",
   "image": {
     "name": "thanos",
     "src": "../images/cover/thanos.jpg"
   },
-  "featured": true,
   "questions": [
     {
       "id": "6802dfc4-45a8-4fba-8611-bdb073743efe",

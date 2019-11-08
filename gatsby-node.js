@@ -50,7 +50,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     createPage({
       path: node.fields.slug,
-      component: path.resolve('src/templates/quizz.js'),
+      component: path.resolve('src/templates/Quizz/index.js'),
       context: {
         slug: node.fields.slug
       }

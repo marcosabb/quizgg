@@ -5,6 +5,7 @@ export const Container = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60px;
 `
 
 export const Copyright = styled.p`

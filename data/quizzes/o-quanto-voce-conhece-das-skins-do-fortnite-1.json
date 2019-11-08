@@ -1,10 +1,9 @@
 {
-  "id": 1,
+  "id": 123,
   "title": "O quanto você conhece das skins do Fortnite?",
   "game": "CS:GO",
   "image": {
     "name": "test",
     "src": "../images/cover/thanos.jpg"
-  },
-  "featured": true
+  }
 }

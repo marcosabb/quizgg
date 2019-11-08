@@ -32,6 +32,15 @@ export default createGlobalStyle`
     background-color: rgba(0, 57, 160, .02);
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
