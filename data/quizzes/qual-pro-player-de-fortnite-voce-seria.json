@@ -1,0 +1,214 @@
+{
+  "id": "df7e1093-cb96-4255-9bf7-dc282d6fbe78",
+  "title": "Qual pro player de Fortnite você é?",
+  "game": "Fortnite",
+  "image": {
+    "name": "test",
+    "src": "../images/qual-pro-player-de-fortnite-voce-seria/cover.jpeg"
+  },
+  "featured": true,
+  "questions": [
+    {
+      "id": "7d69e2d6-dded-4d73-8ee4-77f598218866",
+      "title": "Qual sua escopeta favorita?",
+      "options": [
+        {
+          "id": "ba49eb68-7cfd-40fd-86d3-dae261057264",
+          "key": "A",
+          "text": "Pump"
+        },
+        {
+          "id": "61728e01-b3c5-407b-b9b2-ca36d422bfa9",
+          "key": "B",
+          "text": "Tática"
+        },
+        {
+          "id": "e90bb777-2fa1-4030-85d8-003087f7e1b1",
+          "key": "C",
+          "text": "Combate"
+        },
+        {
+          "id": "04a37013-671e-42d7-b35e-9650b4d9101c",
+          "key": "D",
+          "text": "Tambor"
+        }
+      ]
+    },
+    {
+      "id": "de53b91e-fb9b-4885-9fce-f825ebbf1e6d",
+      "title": "Qual sua temporada preferida?",
+      "options": [
+        {
+          "id": "fda5cd18-46e5-4a37-8e8a-45d6d32c00dc",
+          "key": "A",
+          "text": "Temporada X"
+        },
+        {
+          "id": "7a7a21ec-2bb2-491d-af1c-14cead0ca974",
+          "key": "B",
+          "text": "Temporada 1"
+        },
+        {
+          "id": "1dfea5ad-93a5-4e36-9fad-24eb4af223a9",
+          "key": "C",
+          "text": "Temporada 5"
+        },
+        {
+          "id": "9dd3e10f-f203-4bef-baa1-0cf2b87235c5",
+          "key": "D",
+          "text": "Temporada 1 Capítulo 2"
+        }
+      ]
+    },
+    {
+      "id": "40b52bc1-efb8-4d41-a47b-969b4378ff04",
+      "title": "",
+      "options": [
+        {
+          "id": "7359e10a-4e30-4e42-abf9-e3f805875c8e",
+          "key": "A",
+          "text": ""
+        },
+        {
+          "id": "2b5ce1b9-a8d8-40c3-a46e-144477df420a",
+          "key": "B",
+          "text": ""
+        },
+        {
+          "id": "7adf4373-1221-4dc1-9aee-218f65973fb5",
+          "key": "C",
+          "text": ""
+        },
+        {
+          "id": "98b7a9af-9d19-4b79-8d86-5e0310e25301",
+          "key": "D",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "9d1ae521-5004-4ea8-a1b6-ca26e781a820",
+      "title": "",
+      "options": [
+        {
+          "id": "8a783001-d914-4a27-82fc-1a2827b51706",
+          "key": "A",
+          "text": ""
+        },
+        {
+          "id": "58ed395f-f27d-4a28-9b25-7abf007cc7d3",
+          "key": "B",
+          "text": ""
+        },
+        {
+          "id": "7fdcf950-0ed0-4c71-b252-37f925515a03",
+          "key": "C",
+          "text": ""
+        },
+        {
+          "id": "b09e0e75-0c51-428a-9d8c-bd0eb7759fc2",
+          "key": "D",
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "cc09d8a9-5c9c-450b-83d3-0908a02329d4",
+      "title": "",
+      "options": [
+        {
+          "id": "f80c4b42-4a1c-4392-8d34-ee8ff14323d2",
+          "key": "A",
+          "text": ""
+        },
+        {
+          "id": "ca29380d-ea42-48bd-85bc-af0d6b7ea2ef",
+          "key": "B",
+          "text": ""
+        },
+        {
+          "id": "0d1f841f-5533-418e-ab2f-05a3732ee383",
+          "key": "C",
+          "text": ""
+        },
+        {
+          "id": "ab89b9d4-6a23-4b43-945e-209655eab571",
+          "key": "D",
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "name": "Igor \"drakoNz\" Fernandes",
+      "image": {
+        "name": "Igor Fernandes",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/igor-fernandes.jpg"
+      }
+    },
+    {
+      "name": "Nicolas \"Nicks\" Polonio",
+      "image": {
+        "name": "Nicolas Polonio",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/nicolas-polonio.jpg"
+      }
+    },
+    {
+      "name": "Gabriel \"MasteerXD\" Marques",
+      "image": {
+        "name": "Gabriel Marques",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/gabriel-marques.jpg"
+      }
+    },
+    {
+      "name": "Patrick \"blackoutz\" Garcia",
+      "image": {
+        "name": "Patrick Garcia",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/patrick-garcia.jpg"
+      }
+    },
+    {
+      "name": "Leonardo \"leleo\" Dametto",
+      "image": {
+        "name": "Leonardo Dametto",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/leonardo-dametto.jpg"
+      }
+    },
+    {
+      "name": "Thales \"Pulgaboy\" Henrique",
+      "image": {
+        "name": "Thales Henrique",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/thales-henrique.jpg"
+      }
+    },
+    {
+      "name": "Rodrigo \"Avlr\" Avelar",
+      "image": {
+        "name": "Rodrigo Avelar",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/rodrigo-avelar.jpg"
+      }
+    },
+    {
+      "name": "Henrique \"kurtz\" Kurtz",
+      "image": {
+        "name": "Henrique Kurtz",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/henrique-kurtz.jpg"
+      }
+    },
+    {
+      "name": "Fabio \"Faah\" Henrique",
+      "image": {
+        "name": "Fabio Henrique",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/fabio-henrique.jpg"
+      }
+    },
+    {
+      "name": "Gustavo \"technoviking46\" Trevisan",
+      "image": {
+        "name": "Gustavo Trevisan",
+        "src": "../images/qual-pro-player-de-fortnite-voce-seria/gustavo-trevisan.jpg"
+      }
+    }
+  ]
+}
