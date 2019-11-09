@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Layout from '../../components/Layout'
 import Questions from '../../containers/Questions'
 
-const Quizz = ({ data: { quizzesJson: { title, questions } } }) => {
+const Quizz = ({ data: { quizzesYaml: { title, questions } } }) => {
   return (
     <Layout>
       <Questions questions={questions} />
@@ -15,7 +15,7 @@ const Quizz = ({ data: { quizzesJson: { title, questions } } }) => {
 
 Quizz.propTypes = {
   data: t.shape({
-    quizzesJson: t.shape({
+    quizzesYaml: t.shape({
       title: t.string,
       questions: t.array
     })
@@ -26,7 +26,7 @@ export default Quizz
 
 export const quizzQuery = graphql`
   query($slug: String!) {
-    quizzesJson(fields: { slug: { eq: $slug } }) {
+    quizzesYaml(fields: { slug: { eq: $slug } }) {
       title
       questions {
         id

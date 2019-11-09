@@ -7,13 +7,13 @@ import { Container, Featured, Content } from './styles'
 
 const Cards = () => {
   const {
-    allQuizzesJson: {
+    allQuizzesYaml: {
       edges: quizzes
     }
   } = useStaticQuery(
     graphql`
       query {
-        allQuizzesJson {
+        allQuizzesYaml {
           edges {
             node {
               id
@@ -24,11 +24,10 @@ const Cards = () => {
                 slug
               }
               image {
-                name
                 src {
                   childImageSharp {
                     fluid {
-                      ...GatsbyImageSharpFluid_withWebp
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }

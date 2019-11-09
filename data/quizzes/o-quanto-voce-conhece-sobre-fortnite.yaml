@@ -1,0 +1,137 @@
+---
+id: 25b95548-9f17-4f27-8d18-ff8c6b240d2e
+title: O quanto você conhece sobre Fortnite?
+game: Fortnite
+image:
+  name: thanos
+  src: ../images/thanos.jpg
+featured: true
+questions:
+- id: 6802dfc4-45a8-4fba-8611-bdb073743efe
+  title: Em que data Fortnite foi lançado oficialmente?
+  options:
+  - id: 43ad6abe-ff33-453b-9dd6-1ba148a887ee
+    key: A
+    text: 31 de Junho de 2017
+  - id: 8df66f23-b02a-4b32-a343-17e2eb379061
+    key: B
+    text: 25 de Julho de 2017
+    correct: true
+  - id: 8675d0e0-940e-4817-8fca-3143479e041b
+    key: C
+    text: 2 de Agosto de 2017
+  - id: 668443ce-fb6a-4d2a-b69f-77c0b62c7490
+    key: D
+    text: 15 de Setembro de 2017
+- id: 89ba941c-4012-4e8a-9c1e-c95e448a0187
+  title: Quem foi o vencedor da Copa do Mundo no modo Solo em 2019?
+  options:
+  - id: e5e583de-cdec-4ff9-8e97-8700be7bdcd5
+    key: A
+    text: Thiago “King” Lapp
+  - id: 77045227-85c9-496d-9b7f-16a73389ad22
+    key: B
+    text: Kyle “Mongraal” Jackson
+  - id: b2d07e6a-f305-470b-b464-efe2d7b5f3f4
+    key: C
+    text: Kyle “Bugha“ Giersdorf
+    correct: true
+  - id: 3c755ff4-2d75-420c-a7ec-3461392446b5
+    key: D
+    text: Nicollas “Nicks” Polonio
+- id: 003a6075-bf29-4389-98b9-f221a9f080c6
+  title: Quantas horas durou o evento final da Temporada X (Buraco Negro)?
+  options:
+  - id: eb60b0d7-3a2a-4519-8881-5599768de4a8
+    key: A
+    text: 16 Horas
+  - id: b7805273-3d79-4394-ba5e-3cf2b57ff9cb
+    key: B
+    text: 20 Horas
+  - id: 263a678b-7eb4-4418-9289-d7742f0bbaea
+    key: C
+    text: 26 Horas
+  - id: 945f0ae9-ab63-4af3-9756-2847e59d947c
+    key: D
+    text: 38 Horas
+    correct: true
+- id: 20f97f6a-a228-4bff-bbde-1fe5d9d4cc4b
+  title: Qual escopeta foi colocada no Cofre na temporada X?
+  options:
+  - id: 6dcb4f46-c911-411a-a8af-72bb45b00e28
+    key: A
+    text: Combate
+    correct: true
+  - id: 672bab21-1ab1-4ba9-8a1b-c6fed878e08a
+    key: B
+    text: Pump
+  - id: 6ccd5bfd-87d1-484c-88a9-a96fe60b2d4f
+    key: C
+    text: Tática Épica
+  - id: 1983547b-bee9-4af3-873c-8e6bf32842ad
+    key: D
+    text: Tática Lendária
+- id: 2fd0cc04-a834-417e-8bf6-cef44fba86ec
+  title: Qual Trio foi campeão da FNCS na Temporada X?
+  options:
+  - id: aca4e1dd-567f-4688-b2a2-10669718e608
+    key: A
+    text: drakoNz, blackoutz e Masteer
+  - id: 0a26bb99-71d0-41c4-b0ad-736372771f36
+    key: B
+    text: Snow, Avlr e technoviking
+  - id: 80ab7112-4d7a-4c1e-bd8a-57b10743a539
+    key: C
+    text: Pulgaboy, zotieboy e Barboysa
+  - id: 5cb6a5a4-c898-460c-b89a-c64bd158dbbd
+    key: D
+    text: leleo, wisheydp e kurtz
+    correct: true
+- id: 3fc37ed7-2cc3-49b4-a4f1-41688caacb29
+  title: Qual total máximo de material que se pode carregar no modo Arena?
+  options:
+  - id: b734d120-546b-496a-8334-dc4b936fbe92
+    key: A
+    text: '1.000'
+  - id: f7bc6455-791d-4a4b-8df7-781a2eb5680f
+    key: B
+    text: '1.500'
+    correct: true
+  - id: 05cd8d84-a2e0-41c0-960a-0a2cc82e3ba2
+    key: C
+    text: '500'
+  - id: be6d86ae-8975-4a40-81bd-14f17376249d
+    key: D
+    text: '3.000'
+- id: 079a5644-2662-4327-acf5-b8aa03f9f815
+  title: Em qual temporada o veículo Avião foi adicionado ao jogo?
+  options:
+  - id: 7e1a9e1b-9d96-4747-9893-fdcad29e602b
+    key: A
+    text: Temporada 4
+  - id: 4859a84f-efbc-450d-a0a5-078706fa99f4
+    key: B
+    text: Temporada 1
+  - id: 54e64201-0b9d-451a-9cad-64cc77fd8eb9
+    key: C
+    text: Temporada 9
+  - id: e99fd859-2c07-461a-816c-ee76fe719cea
+    key: D
+    text: Temporada 7
+    correct: true
+- id: 70b85b98-fa2b-4145-82b5-f0606af476b2
+  title: Qual foi a premiação total distribuída durante a Copa do Mundo de 2019?
+  options:
+  - id: 79441fcc-e694-4609-b27f-c145a5c08deb
+    key: A
+    text: US$ 30 milhões
+  - id: 47988f2b-14f2-44ff-8d46-0273f9195652
+    key: B
+    text: US$ 50 milhões
+  - id: 574f8c39-f93b-4374-9502-40f666f872a2
+    key: C
+    text: US$ 100 milhões
+    correct: true
+  - id: bf2ac1ea-bde2-433b-8b4e-d2af30e0ac15
+    key: D
+    text: US$ 10 milhões
