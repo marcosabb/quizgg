@@ -24,23 +24,23 @@ questions:
         text: Tambor
   -
     id: de53b91e-fb9b-4885-9fce-f825ebbf1e6d
-    title: Qual sua temporada preferida?
+    title: Em qual temporada você começou a jogar?
     options:
       -
         key: A
-        text: Temporada X
+        text: Temporada 1, 2 ou 3
       -
         key: B
-        text: Temporada 1
+        text: Temporada 4, 5 ou 6
       -
         key: C
-        text: Temporada 5
+        text: Temporada 7, 8 ou 9
       -
         key: D
         text: Temporada 1 Capítulo 2
   -
     id: 40b52bc1-efb8-4d41-a47b-969b4378ff04
-    title: Qual seu time brasiliero preferido?
+    title: Qual seu time brasileiro preferido?
     options:
       -
         key: A

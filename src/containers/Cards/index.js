@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import v4 from 'uuid/v4'
 
 import Card from '../../components/Card'
 
@@ -45,7 +46,6 @@ const Cards = () => {
     return items.map((
       {
         node: {
-          id,
           title,
           game,
           fields: { slug },
@@ -60,7 +60,7 @@ const Cards = () => {
       }
     ) => (
       <Card
-        key={id}
+        key={v4()}
         image={fluid}
         title={title}
         slug={slug}

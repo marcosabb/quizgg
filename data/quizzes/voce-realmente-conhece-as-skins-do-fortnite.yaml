@@ -105,22 +105,22 @@ questions:
   -
     id: c3902457-630e-40b1-b66b-784782b64368
     image: 
-      name: Especialista em Brilhos
-      src: ../images/voce-realmente-conhece-todas-as-skins-do-fortnite/especialista-em-brilhos.png
+      name: Voyager Sombrio
+      src: ../images/voce-realmente-conhece-todas-as-skins-do-fortnite/voyager-sombrio.png
     options:
       -
         key: A
-        text: Guerreira do Apito
+        text: Lorde da Ferrugem
       -
         key: B
-        text: Fazendeira
-      -
-        key: C
-        text: Especialista em Brilhos
+        text: Voyager Sombrio
         correct: true
       -
+        key: C
+        text: Papa-Moscas
+      -
         key: D
-        text: Demi
+        text: Divergente
   -
     id: 13d9b8da-cfac-4fc3-92e7-c93f5527e849
     image: 
@@ -129,13 +129,13 @@ questions:
     options:
       -
         key: A
-        text: Guerreira do Apito
+        text: Bandoleiro
       -
         key: B
-        text: Fazendeira
+        text: Tritão Nebuloso
       -
         key: C
-        text: Especialista em Brilhos
+        text: Forças Especiais
       -
         key: D
         text: Carboneto
@@ -152,13 +152,13 @@ questions:
         correct: true
       -
         key: B
-        text: Fazendeira
+        text: Atira-Nozes
       -
         key: C
-        text: Especialista em Brilhos
+        text: Tatu
       -
         key: D
-        text: Demi
+        text: Magnus
   -
     id: 176a239f-5638-433a-9a28-37070d889fc1
     image: 
@@ -171,13 +171,13 @@ questions:
         correct: true
       -
         key: B
-        text: Fazendeira
+        text: Leviatã
       -
         key: C
-        text: Especialista em Brilhos
+        text: Rex
       -
         key: D
-        text: Demi
+        text: Infinito
   -
     id: 9f41eb8c-ca5b-4e67-8231-a8a551dd9328
     image: 
@@ -186,14 +186,14 @@ questions:
     options:
       -
         key: A
-        text: Guerreira do Apito
+        text: Ameaça Tripla
       -
         key: B
         text: Operações Snorkel
         correct: true
       -
         key: C
-        text: Especialista em Brilhos
+        text: Audácia
       -
         key: D
-        text: Demi
+        text: Criptograma
