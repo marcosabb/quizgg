@@ -48,8 +48,12 @@ export const Counter = styled.p`
 `
 
 export const Image = styled.div`
-  margin: 0 auto 30px;
   width: 250px;
+  margin: 0 auto 30px;
+
+  img {
+    border-radius: 6px;
+  }
 `
 
 export const Title = styled.p`

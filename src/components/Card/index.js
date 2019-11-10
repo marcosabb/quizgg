@@ -2,7 +2,7 @@ import React from 'react'
 import t from 'prop-types'
 import { Link } from 'gatsby'
 
-import { Container, Image, Content, Title, Game } from './styles'
+import { Container, Image, Wrapper, Content, Title, Game } from './styles'
 
 const Card = ({ image, title, slug, game, size }) => {
   console.log('Card', image)
@@ -11,8 +11,11 @@ const Card = ({ image, title, slug, game, size }) => {
       <Image
         Tag='div'
         fluid={image}
+        className='background'
         backgroundColor='#040e18'
-      >
+      />
+
+      <Wrapper>
         <Link to={slug}>
           <Game>{game}</Game>
 
@@ -20,7 +23,7 @@ const Card = ({ image, title, slug, game, size }) => {
             <Title>{title}</Title>
           </Content>
         </Link>
-      </Image>
+      </Wrapper>
     </Container>
   )
 }

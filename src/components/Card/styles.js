@@ -25,11 +25,29 @@ export const Container = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  .background {
+    transition: all .2s linear;
+  }
+
+  &:hover {
+    .background {
+      transform: scale(1.1)
+    }
+  }
 `
 
 export const Image = styled(Background)`
   height: 100%;
   width: 100%;
+`
+
+export const Wrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 `
 
 export const Content = styled.div`
