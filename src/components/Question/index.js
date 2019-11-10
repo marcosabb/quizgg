@@ -1,7 +1,16 @@
 import React from 'react'
 import t from 'prop-types'
+import Img from 'gatsby-image'
+import v4 from 'uuid/v4'
 
-import { Container, Counter, Title, Options, Option, Key } from './styles'
+import {
+  Container,
+  Counter,
+  Image,
+  Title,
+  Options,
+  Option, Key
+} from './styles'
 
 const Question = ({
   question,
@@ -12,11 +21,16 @@ const Question = ({
 }) => (
   <Container>
     <Counter>{counterQuestion}/{totalQuestions}</Counter>
-    <Title>{question.title}</Title>
+    {question.image && (
+      <Image>
+        <Img fluid={question.image.src.childImageSharp.fluid} />
+      </Image>
+    )}
+    {!question.image && <Title>{question.title}</Title>}
     <Options>
       {question.options && question.options.map((option) => (
         <Option
-          key={option.id}
+          key={v4()}
           state={handleState(option)}
           onClick={() => handleCheck(question, option)}
         >
@@ -31,6 +45,7 @@ const Question = ({
 Question.propTypes = {
   question: t.shape({
     title: t.string,
+    image: t.object,
     options: t.arrayOf(t.shape({
       id: t.string,
       key: t.string,

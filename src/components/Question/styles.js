@@ -47,6 +47,11 @@ export const Counter = styled.p`
   color: #0039a0;
 `
 
+export const Image = styled.div`
+  margin: 0 auto 30px;
+  width: 250px;
+`
+
 export const Title = styled.p`
   margin-bottom: 30px;
   font-size: ${rem(20)};
@@ -60,6 +65,7 @@ export const Options = styled.div`
 export const Option = styled.p`
   padding: 12px 16px;
   font-size: ${rem(14)};
+  background-color: rgba(0, 57, 160, .01);
   border: 1px solid rgba(0, 57, 160, .1);
   border-radius: 6px;
   cursor: pointer;

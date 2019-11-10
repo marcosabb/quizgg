@@ -11,13 +11,15 @@ const Questions = ({ questions: q }) => {
 
   function updateQuestions (question, option) {
     const correctOption = question.options.find(q => q.correct)
-    const isRight = correctOption.id === option.id
+    const isRight = correctOption.key === option.key
     const isWrong = !isRight
+
+    console.log('isRight', isRight)
 
     if (isRight) {
       const rightQuestion = {
         ...question,
-        options: question.options.map(o => o.id === correctOption.id ? { ...o, right: true } : o)
+        options: question.options.map(o => o.key === correctOption.key ? { ...o, right: true } : o)
       }
 
       setQuestions(questions.map(q =>
@@ -31,11 +33,11 @@ const Questions = ({ questions: q }) => {
       const wrongQuestion = {
         ...question,
         options: question.options.map(o => {
-          if (o.id === correctOption.id) {
+          if (o.key === correctOption.key) {
             return { ...o, right: true }
           }
 
-          if (o.id === option.id) {
+          if (o.key === option.key) {
             return { ...o, wrong: true }
           }
 
@@ -54,9 +56,9 @@ const Questions = ({ questions: q }) => {
 
   function handleCheck (question, option) {
     if (!(questions.length === currentQuestion + 1)) {
-      setTimeout(() => {
-        setCurrentQuestion(currentQuestion + 1)
-      }, 1000)
+      // setTimeout(() => {
+      // }, 0)
+      setCurrentQuestion(currentQuestion + 1)
     } else {
       // alert(`Parabéns, você acertou ${totalCorrect} perguntas!`)
     }

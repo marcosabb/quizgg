@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import { Container, Image, Content, Title, Game } from './styles'
 
 const Card = ({ image, title, slug, game, size }) => {
+  console.log('Card', image)
   return (
     <Container size={size}>
       <Image

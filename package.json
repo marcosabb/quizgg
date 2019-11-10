@@ -24,7 +24,8 @@
     "react-helmet": "^5.2.1",
     "styled-components": "^4.4.1",
     "styled-normalize": "^8.0.6",
-    "styled-tools": "^1.7.1"
+    "styled-tools": "^1.7.1",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "eslint": "^6.6.0",

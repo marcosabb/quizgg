@@ -46,11 +46,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   result.data.allQuizzesYaml.edges.forEach(({ node }) => {
-    console.log('SLUG', node.fields.slug)
-
     createPage({
       path: node.fields.slug,
-      component: path.resolve('src/templates/Quizz/index.js'),
+      component: path.resolve('src/templates/quiz.js'),
       context: {
         slug: node.fields.slug
       }

@@ -16,7 +16,6 @@ const Cards = () => {
         allQuizzesYaml {
           edges {
             node {
-              id
               title
               game
               featured
@@ -40,7 +39,7 @@ const Cards = () => {
   )
 
   const featured = quizzes.filter(q => q.node.featured)
-  const all = quizzes.filter(q => !q.node.featured)
+  const normal = quizzes.filter(q => !q.node.featured)
 
   function renderCards (items, size) {
     return items.map((
@@ -77,7 +76,7 @@ const Cards = () => {
         {renderCards(featured)}
       </Featured>
       <Content>
-        {renderCards(all, 'small')}
+        {renderCards(normal, 'small')}
       </Content>
     </Container>
   )

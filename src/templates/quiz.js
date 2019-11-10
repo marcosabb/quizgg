@@ -2,10 +2,10 @@ import React from 'react'
 import t from 'prop-types'
 import { graphql } from 'gatsby'
 
-import Layout from '../../components/Layout'
-import Questions from '../../containers/Questions'
+import Layout from '../components/Layout'
+import Questions from '../containers/Questions'
 
-const Quizz = ({ data: { quizzesYaml: { title, questions } } }) => {
+const Quiz = ({ data: { quizzesYaml: { questions } } }) => {
   return (
     <Layout>
       <Questions questions={questions} />
@@ -13,26 +13,35 @@ const Quizz = ({ data: { quizzesYaml: { title, questions } } }) => {
   )
 }
 
-Quizz.propTypes = {
+Quiz.propTypes = {
   data: t.shape({
     quizzesYaml: t.shape({
-      title: t.string,
       questions: t.array
     })
   }).isRequired
 }
 
-export default Quizz
+export default Quiz
 
 export const quizzQuery = graphql`
   query($slug: String!) {
     quizzesYaml(fields: { slug: { eq: $slug } }) {
+      type
       title
       questions {
         id
         title
+        image {
+          name
+          src {
+            childImageSharp {
+              fluid(maxWidth: 250) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
         options {
-          id
           key
           text
           correct
