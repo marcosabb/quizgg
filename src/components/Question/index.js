@@ -16,6 +16,7 @@ const Question = ({
   question,
   counterQuestion,
   totalQuestions,
+  answeredQuestion,
   handleCheck,
   handleState
 }) => (
@@ -32,7 +33,11 @@ const Question = ({
         <Option
           key={v4()}
           state={handleState(option)}
-          onClick={() => handleCheck(question, option)}
+          onClick={
+            !answeredQuestion
+              ? () => { handleCheck(question, option) }
+              : () => {}
+          }
         >
           <Key>{option.key}</Key>
           {option.text}
@@ -55,6 +60,7 @@ Question.propTypes = {
   }).isRequired,
   counterQuestion: t.number.isRequired,
   totalQuestions: t.number.isRequired,
+  answeredQuestion: t.bool.isRequired,
   handleCheck: t.func.isRequired,
   handleState: t.func.isRequired
 }

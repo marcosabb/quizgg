@@ -8,6 +8,7 @@ import { Container } from './styles'
 const Questions = ({ type, questions: q }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [answeredQuestion, setAnsweredQuestion] = useState(false)
 
   function check (question, option) {
     const correctOption = question.options.find(q => q.correct)
@@ -74,7 +75,6 @@ const Questions = ({ type, questions: q }) => {
   }
 
   function updateQuestions (question, option) {
-    console.log(type)
     if (type === 'quiz') {
       check(question, option)
     }
@@ -87,10 +87,12 @@ const Questions = ({ type, questions: q }) => {
   function handleCheck (question, option) {
     if (!(questions.length === currentQuestion + 1)) {
       setTimeout(() => {
+        setAnsweredQuestion(false)
         setCurrentQuestion(currentQuestion + 1)
       }, 1000)
     }
 
+    setAnsweredQuestion(true)
     updateQuestions(question, option)
   }
 
@@ -105,6 +107,7 @@ const Questions = ({ type, questions: q }) => {
         question={questions[currentQuestion]}
         counterQuestion={currentQuestion + 1}
         totalQuestions={questions.length}
+        answeredQuestion={answeredQuestion}
         handleCheck={handleCheck}
         handleState={handleState}
       />
