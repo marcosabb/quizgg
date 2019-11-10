@@ -5,21 +5,23 @@ import Question from '../../components/Question'
 
 import { Container } from './styles'
 
-const Questions = ({ questions: q }) => {
+const Questions = ({ type, questions: q }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
 
-  function updateQuestions (question, option) {
+  function check (question, option) {
     const correctOption = question.options.find(q => q.correct)
     const isRight = correctOption.key === option.key
     const isWrong = !isRight
 
-    console.log('isRight', isRight)
-
     if (isRight) {
       const rightQuestion = {
         ...question,
-        options: question.options.map(o => o.key === correctOption.key ? { ...o, right: true } : o)
+        options: question.options.map(
+          o => o.key === correctOption.key
+            ? { ...o, right: true }
+            : o
+        )
       }
 
       setQuestions(questions.map(q =>
@@ -54,13 +56,39 @@ const Questions = ({ questions: q }) => {
     }
   }
 
+  function select (question, option) {
+    const selectedQuestion = {
+      ...question,
+      options: question.options.map(
+        o => o.key === option.key
+          ? { ...o, right: true }
+          : o
+      )
+    }
+
+    setQuestions(questions.map(q =>
+      q.id === question.id
+        ? selectedQuestion
+        : q
+    ))
+  }
+
+  function updateQuestions (question, option) {
+    console.log(type)
+    if (type === 'quiz') {
+      check(question, option)
+    }
+
+    if (type === 'test') {
+      select(question, option)
+    }
+  }
+
   function handleCheck (question, option) {
     if (!(questions.length === currentQuestion + 1)) {
-      // setTimeout(() => {
-      // }, 0)
-      setCurrentQuestion(currentQuestion + 1)
-    } else {
-      // alert(`Parabéns, você acertou ${totalCorrect} perguntas!`)
+      setTimeout(() => {
+        setCurrentQuestion(currentQuestion + 1)
+      }, 1000)
     }
 
     updateQuestions(question, option)
@@ -85,6 +113,7 @@ const Questions = ({ questions: q }) => {
 }
 
 Questions.propTypes = {
+  type: t.string.isRequired,
   questions: t.arrayOf(t.shape({
     id: t.string,
     title: t.string,

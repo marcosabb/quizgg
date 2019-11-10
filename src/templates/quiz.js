@@ -5,10 +5,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Questions from '../containers/Questions'
 
-const Quiz = ({ data: { quizzesYaml: { questions } } }) => {
+const Quiz = ({ data: { quizzesYaml: { type, questions } } }) => {
   return (
     <Layout>
-      <Questions questions={questions} />
+      <Questions type={type} questions={questions} />
     </Layout>
   )
 }
@@ -16,6 +16,7 @@ const Quiz = ({ data: { quizzesYaml: { questions } } }) => {
 Quiz.propTypes = {
   data: t.shape({
     quizzesYaml: t.shape({
+      type: t.string.isRequired,
       questions: t.array
     })
   }).isRequired
