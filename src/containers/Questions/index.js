@@ -62,7 +62,7 @@ const Questions = ({ type, questions: q }) => {
       ...question,
       options: question.options.map(
         o => o.key === option.key
-          ? { ...o, right: true }
+          ? { ...o, select: true }
           : o
       )
     }
@@ -99,6 +99,7 @@ const Questions = ({ type, questions: q }) => {
   function handleState (option) {
     if (option.right) return 'right'
     if (option.wrong) return 'wrong'
+    if (option.select) return 'select'
   }
 
   return (

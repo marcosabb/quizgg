@@ -22,10 +22,20 @@ const animate = (status) => {
       background-color: rgba(192, 57, 43, .6);
     }
   `
+  const select = keyframes`
+      0% {
+        background-color: rgba(0, 57, 160, .2);
+      }
+
+      100% {
+        background-color: rgba(0, 57, 160, .6);
+      }
+    `
 
   const states = {
     right: css`${right} .5s 0s infinite linear`,
-    wrong: css`${wrong} .5s 0s infinite linear`
+    wrong: css`${wrong} .5s 0s infinite linear`,
+    select: css`${select} .5s 0s infinite linear`
   }
 
   return states[status]
@@ -76,7 +86,8 @@ export const Option = styled.p`
 
   animation: ${switchProp('state', {
     right: animate('right'),
-    wrong: animate('wrong')
+    wrong: animate('wrong'),
+    select: animate('select')
   })};
 
   &:not(:last-child) {
@@ -85,12 +96,14 @@ export const Option = styled.p`
 
   background-color: ${switchProp('state', {
     right: 'rgba(46, 204, 113, .2)',
-    wrong: 'rgba(192, 57, 43, .2)'
+    wrong: 'rgba(192, 57, 43, .2)',
+    select: 'rgba(0, 57, 160, .2)'
   })};
 
   border-color: ${switchProp('state', {
     right: '#2ecc71',
-    wrong: '#c0392b'
+    wrong: '#c0392b',
+    select: ' #0039a0'
   })};
 `
 
