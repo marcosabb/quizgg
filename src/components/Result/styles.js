@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { rem } from 'polished'
+import { rem, rgba } from 'polished'
+
+import { color } from '../../styles/variables'
 
 export const Container = styled.div`
   width: 500px;
   padding: 20px;
-  background-color: #fff;
+  background-color: ${color.white};
   border-radius: 6px;
-  box-shadow: 0 20px 20px -20px rgba(0, 57, 160, .1);
+  box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.1)};
 `
 
 export const Statement = styled.p`
@@ -15,7 +17,7 @@ export const Statement = styled.p`
   font-size: ${rem(22)};
   font-weight: 700;
   text-align: center;
-  color: #0039a0;
+  color: ${color.blue};
 
   ${media.lessThan('small')`
     font-size: ${rem(20)};

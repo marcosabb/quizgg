@@ -2,6 +2,8 @@ import React from 'react'
 import t from 'prop-types'
 import { Link } from 'gatsby'
 
+import { color } from '../../styles/variables'
+
 import { Container, Image, Wrapper, Content, Title, Game } from './styles'
 
 const Card = ({ image, title, slug, game, featured }) => (
@@ -10,7 +12,7 @@ const Card = ({ image, title, slug, game, featured }) => (
       Tag='div'
       fluid={image}
       className='background'
-      backgroundColor='#040e18'
+      backgroundColor={color.blue}
     />
 
     <Wrapper>

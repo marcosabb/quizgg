@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 import normalize from 'styled-normalize'
-import { rem } from 'polished'
+import { rem, rgba } from 'polished'
+
+import { color } from './variables'
 
 export default createGlobalStyle`
   ${normalize}
@@ -26,10 +28,10 @@ export default createGlobalStyle`
     font-weight: 400;
     font-size: 16px;
     letter-spacing: ${rem(2)};
-    color: #101010;
+    color: ${color.text};
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background-color: rgba(0, 57, 160, .02);
+    background-color: ${rgba(color.blue, 0.02)};
   }
 
   h1,

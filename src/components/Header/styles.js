@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import { rem } from 'polished'
+import { rem, rgba } from 'polished'
+
+import { color } from '../../styles/variables'
 
 export const Container = styled.header`
   position: fixed;
@@ -13,8 +15,8 @@ export const Container = styled.header`
   height: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 57, 160, .06);
+  background-color: ${color.white};
+  border-bottom: 1px solid ${rgba(color.blue, 0.06)};
   z-index: 1;
 `
 
@@ -22,5 +24,5 @@ export const Title = styled.h1`
   font-size: ${rem(24)};
   font-weight: 300;
   text-transform: uppercase;
-  color: #0039a0;
+  color: ${color.blue};
 `

@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import Background from 'gatsby-background-image'
 import { ifProp } from 'styled-tools'
-import { rem } from 'polished'
+import { rem, rgba } from 'polished'
+
+import { color } from '../../styles/variables'
 
 export const Container = styled.div`
   position: relative;
@@ -60,8 +62,8 @@ export const Content = styled.div`
 export const Title = styled.h2`
   font-size: ${rem(24)};
   text-transform: uppercase;
-  text-shadow: 1px 1px rgba(16, 16, 16, .8);
-  color: #fff;
+  text-shadow: 1px 1px ${rgba(color.text, 0.8)};
+  color: ${color.white};
 `
 
 export const Game = styled.span`
@@ -73,7 +75,7 @@ export const Game = styled.span`
   font-size: ${rem(10)};
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
-  background-color: #0039a0;
+  color: ${color.white};
+  background-color: ${color.blue};
   border-radius: 3px;
 `

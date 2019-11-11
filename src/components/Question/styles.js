@@ -1,35 +1,37 @@
 import styled, { css, keyframes } from 'styled-components'
 import media from 'styled-media-query'
 import { switchProp } from 'styled-tools'
-import { rem } from 'polished'
+import { rem, rgba } from 'polished'
+
+import { color } from '../../styles/variables'
 
 const animate = (status) => {
   const right = keyframes`
     0% {
-      background-color: rgba(46, 204, 113, .2);
+      background-color: ${rgba(color.green, 0.2)};
     }
 
     100% {
-      background-color: rgba(46, 204, 113, .6);
+      background-color: ${rgba(color.green, 0.6)};
     }
   `
 
   const wrong = keyframes`
     0% {
-      background-color: rgba(192, 57, 43, .2);
+      background-color: ${rgba(color.red, 0.2)};
     }
 
     100% {
-      background-color: rgba(192, 57, 43, .6);
+      background-color: ${rgba(color.red, 0.6)};
     }
   `
   const select = keyframes`
       0% {
-        background-color: rgba(0, 57, 160, .2);
+        background-color: ${rgba(color.blue, 0.2)};
       }
 
       100% {
-        background-color: rgba(0, 57, 160, .6);
+        background-color: ${rgba(color.blue, 0.6)};
       }
     `
 
@@ -63,9 +65,9 @@ const animate = (status) => {
 export const Container = styled.div`
   width: 500px;
   padding: 20px;
-  background-color: #fff;
+  background-color: ${color.white};
   border-radius: 6px;
-  box-shadow: 0 20px 20px -20px rgba(0, 57, 160, .1);
+  box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.1)};
 
   ${media.lessThan('medium')`
     padding: 10px;
@@ -77,7 +79,7 @@ export const Counter = styled.p`
   font-size: ${rem(22)};
   font-weight: 700;
   text-align: center;
-  color: #0039a0;
+  color: ${color.blue};
 
   ${media.lessThan('small')`
     margin-bottom: 20px;
@@ -118,8 +120,8 @@ export const Option = styled.p`
   align-items: center;
   padding: 12px 16px;
   font-size: ${rem(14)};
-  background-color: rgba(0, 57, 160, .01);
-  border: 1px solid rgba(0, 57, 160, .1);
+  background-color: ${rgba(color.blue, 0.01)};
+  border: 1px solid ${rgba(color.blue, 0.1)};
   border-radius: 6px;
   cursor: pointer;
 
@@ -138,15 +140,15 @@ export const Option = styled.p`
   }
 
   background-color: ${switchProp('state', {
-    right: 'rgba(46, 204, 113, .2)',
-    wrong: 'rgba(192, 57, 43, .2)',
-    select: 'rgba(0, 57, 160, .2)'
+    right: rgba(color.green, 0.2),
+    wrong: rgba(color.red, 0.2),
+    select: rgba(color.blue, 0.2)
   })};
 
   border-color: ${switchProp('state', {
-    right: '#2ecc71',
-    wrong: '#c0392b',
-    select: ' #0039a0'
+    right: color.green,
+    wrong: color.red,
+    select: color.blue
   })};
 
   ${media.lessThan('small')`
@@ -162,8 +164,8 @@ export const Key = styled.div`
   padding: 8px 10px;
   font-size: ${rem(10)};
   font-weight: 600;
-  color: #fff;
-  background-color: #0039a0;
+  color: ${color.white};
+  background-color: ${color.blue};
   border-radius: 6px;
 
   ${media.lessThan('small')` 
