@@ -42,12 +42,13 @@ const Cards = () => {
   const featured = documents.filter(q => q.node.featured)
   const normal = documents.filter(q => !q.node.featured)
 
-  function renderCards (items, size) {
+  function render (items) {
     return items.map((
       {
         node: {
           title,
           game,
+          featured,
           fields: { slug },
           image: {
             src: {
@@ -65,7 +66,7 @@ const Cards = () => {
         title={title}
         slug={slug}
         game={game}
-        size={size}
+        featured={featured}
       />
     ))
   }
@@ -73,10 +74,10 @@ const Cards = () => {
   return (
     <Container>
       <Featured>
-        {renderCards(featured)}
+        {render(featured)}
       </Featured>
       <Content>
-        {renderCards(normal, 'small')}
+        {render(normal)}
       </Content>
     </Container>
   )

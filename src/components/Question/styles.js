@@ -1,4 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
+import media from 'styled-media-query'
 import { switchProp } from 'styled-tools'
 import { rem } from 'polished'
 
@@ -33,9 +34,27 @@ const animate = (status) => {
     `
 
   const states = {
-    right: css`${right} .5s 0s infinite linear`,
-    wrong: css`${wrong} .5s 0s infinite linear`,
-    select: css`${select} .5s 0s infinite linear`
+    right: css`
+      animation-name: ${right};
+      animation-duration: .5s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    `,
+    wrong: css`
+      animation-name: ${wrong};
+      animation-duration: .5s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    `,
+    select: css`
+      animation-name: ${select};
+      animation-duration: .5s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    `
   }
 
   return states[status]
@@ -47,6 +66,10 @@ export const Container = styled.div`
   background-color: #fff;
   border-radius: 6px;
   box-shadow: 0 20px 20px -20px rgba(0, 57, 160, .1);
+
+  ${media.lessThan('medium')`
+    padding: 10px;
+  `}
 `
 
 export const Counter = styled.p`
@@ -55,6 +78,11 @@ export const Counter = styled.p`
   font-weight: 700;
   text-align: center;
   color: #0039a0;
+
+  ${media.lessThan('small')`
+    margin-bottom: 20px;
+    font-size: ${rem(20)};
+  `}
 `
 
 export const Image = styled.div`
@@ -64,6 +92,10 @@ export const Image = styled.div`
   img {
     border-radius: 6px;
   }
+
+  ${media.lessThan('small')`
+    margin-bottom: 20px;
+  `}
 `
 
 export const Title = styled.p`
@@ -71,12 +103,19 @@ export const Title = styled.p`
   font-size: ${rem(20)};
   font-weight: 600;
   text-align: center;
+
+  ${media.lessThan('small')`
+    margin-bottom: 20px;
+    font-size: ${rem(16)};
+  `}
 `
 
 export const Options = styled.div`
 `
 
 export const Option = styled.p`
+  display: flex;
+  align-items: center;
   padding: 12px 16px;
   font-size: ${rem(14)};
   background-color: rgba(0, 57, 160, .01);
@@ -84,7 +123,7 @@ export const Option = styled.p`
   border-radius: 6px;
   cursor: pointer;
 
-  animation: ${switchProp('state', {
+  ${switchProp('state', {
     right: animate('right'),
     wrong: animate('wrong'),
     select: animate('select')
@@ -92,6 +131,10 @@ export const Option = styled.p`
 
   &:not(:last-child) {
     margin-bottom: 16px;
+
+    ${media.lessThan('small')` 
+      margin-bottom: 12px;
+    `}
   }
 
   background-color: ${switchProp('state', {
@@ -105,19 +148,25 @@ export const Option = styled.p`
     wrong: '#c0392b',
     select: ' #0039a0'
   })};
+
+  ${media.lessThan('small')`
+    font-size: ${rem(12)};
+    padding: 12px;
+  `}
 `
 
-export const Key = styled.span`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
+export const Key = styled.div`
+  width: 26px;
+  height: 26px;
   margin-right: 16px;
-  padding: 6px;
-  font-size: ${rem(12)};
+  padding: 8px 10px;
+  font-size: ${rem(10)};
   font-weight: 600;
   color: #fff;
   background-color: #0039a0;
   border-radius: 6px;
+
+  ${media.lessThan('small')` 
+    margin-right: 12px;
+  `}
 `

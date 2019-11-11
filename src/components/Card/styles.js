@@ -3,21 +3,19 @@ import Background from 'gatsby-background-image'
 import { ifProp } from 'styled-tools'
 import { rem } from 'polished'
 
-const small = { size: 'small' }
-
 export const Container = styled.div`
   position: relative;
-  flex: ${ifProp(small, '0 0 calc(33.3333% - 20px)', null)};
-  width: ${ifProp(small, null, 'calc(50% - 20px)')};
-  height: ${ifProp(small, '250px', 'calc(50% - 10px)')};
-  margin-right: ${ifProp(small, '10px', null)};
-  margin-left: ${ifProp(small, '10px', null)};
-  margin-bottom: ${ifProp(small, '20px', null)};
+  flex: ${ifProp('featured', null, '0 0 calc(33.3333% - 20px)')};
+  width: ${ifProp('featured', 'calc(50% - 20px)', null)};
+  height: ${ifProp('featured', 'calc(50% - 10px)', '250px')};
+  margin-right: ${ifProp('featured', null, '10px')};
+  margin-left: ${ifProp('featured', null, '10px')};
+  margin-bottom: ${ifProp('featured', null, '20px')};
   border-radius: 6px;
   overflow: hidden;
 
   &:nth-child(1) {
-    height: ${ifProp(small, '250px', '100%')};
+    height: ${ifProp('featured', '100%', '250px')};
   }
 
   a {

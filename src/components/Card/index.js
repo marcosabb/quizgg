@@ -4,8 +4,8 @@ import { Link } from 'gatsby'
 
 import { Container, Image, Wrapper, Content, Title, Game } from './styles'
 
-const Card = ({ image, title, slug, game, size }) => (
-  <Container size={size}>
+const Card = ({ image, title, slug, game, featured }) => (
+  <Container featured={featured}>
     <Image
       Tag='div'
       fluid={image}
@@ -30,7 +30,7 @@ Card.propTypes = {
   title: t.string.isRequired,
   slug: t.string.isRequired,
   game: t.string.isRequired,
-  size: t.string
+  featured: t.bool
 }
 
 export default Card
