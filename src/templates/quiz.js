@@ -2,6 +2,8 @@ import React from 'react'
 import t from 'prop-types'
 import { graphql } from 'gatsby'
 
+import { shuffle } from '../utils'
+
 import Layout from '../components/Layout'
 import Questions from '../containers/Questions'
 
@@ -12,7 +14,7 @@ const Quiz = ({
     <Questions
       type={type}
       image={image}
-      questions={questions}
+      questions={shuffle(questions)}
       result={result}
     />
   </Layout>
