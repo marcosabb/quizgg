@@ -20,8 +20,10 @@ import {
   Social
 } from './styles'
 
-const url = 'https://github.com/marcosabb'
-const quote = 'Github'
+// title Eu acertei 10 perguntas, você consegue me passar?
+
+const url = 'https://mystifying-engelbart-a15508.netlify.com/result/?title=Eu acertei 10 perguntas, você consegue me passar?'
+const quote = 'Result'
 
 const Result = ({
   result: {
