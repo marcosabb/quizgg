@@ -8,13 +8,13 @@ import { Container, Featured, Content } from './styles'
 
 const Cards = () => {
   const {
-    allQuizzesYaml: {
-      edges: quizzes
+    allDocumentsYaml: {
+      edges: documents
     }
   } = useStaticQuery(
     graphql`
       query {
-        allQuizzesYaml {
+        allDocumentsYaml {
           edges {
             node {
               title
@@ -39,8 +39,8 @@ const Cards = () => {
     `
   )
 
-  const featured = quizzes.filter(q => q.node.featured)
-  const normal = quizzes.filter(q => !q.node.featured)
+  const featured = documents.filter(q => q.node.featured)
+  const normal = documents.filter(q => !q.node.featured)
 
   function renderCards (items, size) {
     return items.map((

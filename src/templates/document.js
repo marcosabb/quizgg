@@ -7,8 +7,8 @@ import { shuffle } from '../utils'
 import Layout from '../components/Layout'
 import Questions from '../containers/Questions'
 
-const Quiz = ({
-  data: { quizzesYaml: { type, image, questions, result } }
+const Document = ({
+  data: { documentsYaml: { type, image, questions, result } }
 }) => (
   <Layout>
     <Questions
@@ -20,9 +20,9 @@ const Quiz = ({
   </Layout>
 )
 
-Quiz.propTypes = {
+Document.propTypes = {
   data: t.shape({
-    quizzesYaml: t.shape({
+    documentsYaml: t.shape({
       type: t.string,
       image: t.object,
       questions: t.array,
@@ -31,11 +31,11 @@ Quiz.propTypes = {
   }).isRequired
 }
 
-export default Quiz
+export default Document
 
-export const quizzQuery = graphql`
+export const documentQuery = graphql`
   query($slug: String!) {
-    quizzesYaml(fields: { slug: { eq: $slug } }) {
+    documentsYaml(fields: { slug: { eq: $slug } }) {
       type
       title
       image {

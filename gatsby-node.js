@@ -4,7 +4,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  if (node.internal.type === 'QuizzesYaml') {
+  if (node.internal.type === 'DocumentsYaml') {
     const slug = createFilePath({
       node,
       getNode,
@@ -14,7 +14,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: 'slug',
-      value: `/${slug.replace('/quizzes/', '')}`
+      value: `/${slug.replace('/documents/', '')}`
     })
   }
 }
@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allQuizzesYaml(limit: 1000) {
+        allDocumentsYaml(limit: 1000) {
           edges {
             node {
               fields {
@@ -45,10 +45,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  result.data.allQuizzesYaml.edges.forEach(({ node }) => {
+  result.data.allDocumentsYaml.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve('src/templates/quiz.js'),
+      component: path.resolve('src/templates/document.js'),
       context: {
         slug: node.fields.slug
       }
