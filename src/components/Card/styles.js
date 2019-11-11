@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Background from 'gatsby-background-image'
+import media from 'styled-media-query'
 import { ifProp } from 'styled-tools'
 import { rem, rgba } from 'polished'
 
@@ -10,15 +11,9 @@ export const Container = styled.div`
   flex: ${ifProp('featured', null, '0 0 calc(33.3333% - 20px)')};
   width: ${ifProp('featured', 'calc(50% - 20px)', null)};
   height: ${ifProp('featured', 'calc(50% - 10px)', '250px')};
-  margin-right: ${ifProp('featured', null, '10px')};
-  margin-left: ${ifProp('featured', null, '10px')};
   margin-bottom: ${ifProp('featured', null, '20px')};
   border-radius: 6px;
   overflow: hidden;
-
-  &:nth-child(1) {
-    height: ${ifProp('featured', '100%', '250px')};
-  }
 
   a {
     display: block;
@@ -35,6 +30,24 @@ export const Container = styled.div`
       transform: scale(1.1)
     }
   }
+
+  ${media.greaterThan('medium')`
+    margin-right: ${ifProp('featured', null, '10px')};
+    margin-left: ${ifProp('featured', null, '10px')};
+
+    &:nth-child(1) {
+      height: ${ifProp('featured', '100%', '250px')};
+    }
+  `}
+
+  ${media.lessThan('medium')`
+    width: 100%;
+    height: ${ifProp('featured', '250px', '150px')};
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  `}
 `
 
 export const Image = styled(Background)`
