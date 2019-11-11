@@ -5,19 +5,26 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Questions from '../containers/Questions'
 
-const Quiz = ({ data: { quizzesYaml: { type, questions } } }) => {
-  return (
-    <Layout>
-      <Questions type={type} questions={questions} />
-    </Layout>
-  )
-}
+const Quiz = ({
+  data: { quizzesYaml: { type, image, questions, result } }
+}) => (
+  <Layout>
+    <Questions
+      type={type}
+      image={image}
+      questions={questions}
+      result={result}
+    />
+  </Layout>
+)
 
 Quiz.propTypes = {
   data: t.shape({
     quizzesYaml: t.shape({
-      type: t.string.isRequired,
-      questions: t.array
+      type: t.string,
+      image: t.object,
+      questions: t.array,
+      result: t.object
     })
   }).isRequired
 }
@@ -29,6 +36,16 @@ export const quizzQuery = graphql`
     quizzesYaml(fields: { slug: { eq: $slug } }) {
       type
       title
+      image {
+        name
+        src {
+          childImageSharp {
+            fluid(maxWidth: 250) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
       questions {
         id
         title
@@ -46,6 +63,22 @@ export const quizzQuery = graphql`
           key
           text
           correct
+        }
+      }
+      result {
+        statement
+        items {
+          title
+          image {
+            name
+            src {
+              childImageSharp {
+                fluid(maxWidth: 250) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -86,54 +86,57 @@ questions:
       -
         key: D
         text: Squad
-results:
-  -
-    name: Igor "drakoNz" Fernandes
-    image:
-      name: Igor Fernandes
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/igor-fernandes.jpg
-  -
-    name: Nicolas "Nicks" Polonio
-    image:
-      name: Nicolas Polonio
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/nicolas-polonio.jpg
-  -
-    name: Gabriel "MasteerXD" Marques
-    image:
-      name: Gabriel Marques
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/gabriel-marques.jpg
-  -
-    name: Patrick "blackoutz" Garcia
-    image:
-      name: Patrick Garcia
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/patrick-garcia.jpg
-  -
-    name: Leonardo "leleo" Dametto
-    image:
-      name: Leonardo Dametto
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/leonardo-dametto.jpg
-  -
-    name: Thales "Pulgaboy" Henrique
-    image:
-      name: Thales Henrique
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/thales-henrique.jpg
-  -
-    name: Rodrigo "Avlr" Avelar
-    image:
-      name: Rodrigo Avelar
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/rodrigo-avelar.jpg
-  -
-    name: Henrique "kurtz" Kurtz
-    image:
-      name: Henrique Kurtz
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/henrique-kurtz.jpg
-  -
-    name: Fabio "Faah" Henrique
-    image:
-      name: Fabio Henrique
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/fabio-henrique.jpg
-  -
-    name: Gustavo "technoviking46" Trevisan
-    image:
-      name: Gustavo Trevisan
-      src: ../images/qual-pro-player-de-fortnite-voce-seria/gustavo-trevisan.jpg
+result:
+  statement: Você seria
+  items:
+      -
+        title: Igor "drakoNz" Fernandes
+        image:
+          name: Igor Fernandes
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/igor-fernandes.jpg
+      -
+        title: Nicolas "Nicks" Polonio
+        image:
+          name: Nicolas Polonio
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/nicolas-polonio.jpg
+      -
+        title: Gabriel "MasteerXD" Marques
+        image:
+          name: Gabriel Marques
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/gabriel-marques.jpg
+      -
+        title: Patrick "blackoutz" Garcia
+        image:
+          name: Patrick Garcia
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/patrick-garcia.jpg
+      -
+        title: Leonardo "leleo" Dametto
+        image:
+          name: Leonardo Dametto
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/leonardo-dametto.jpg
+      -
+        title: Thales "Pulgaboy" Henrique
+        image:
+          name: Thales Henrique
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/thales-henrique.jpg
+      -
+        title: Rodrigo "Avlr" Avelar
+        image:
+          name: Rodrigo Avelar
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/rodrigo-avelar.jpg
+      -
+        title: Henrique "kurtz" Kurtz
+        image:
+          name: Henrique Kurtz
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/henrique-kurtz.jpg
+      -
+        title: Fabio "Faah" Henrique
+        image:
+          name: Fabio Henrique
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/fabio-henrique.jpg
+      -
+        title: Gustavo "technoviking46" Trevisan
+        image:
+          name: Gustavo Trevisan
+          src: ../images/qual-pro-player-de-fortnite-voce-seria/gustavo-trevisan.jpg
+

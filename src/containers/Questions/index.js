@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import t from 'prop-types'
 
 import Question from '../../components/Question'
+import Result from '../../components/Result'
 
 import { Container } from './styles'
 
-const Questions = ({ type, questions: q }) => {
+const Questions = ({ type, image, questions: q, result }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answeredQuestion, setAnsweredQuestion] = useState(false)
+  const [score, setScore] = useState(0)
+  const [showResult, setShowResult] = useState(false)
 
   function check (question, option) {
     const correctOption = question.options.find(q => q.correct)
@@ -24,6 +27,8 @@ const Questions = ({ type, questions: q }) => {
             : o
         )
       }
+
+      setScore(score + 1)
 
       setQuestions(questions.map(q =>
         q.id === rightQuestion.id
@@ -90,6 +95,10 @@ const Questions = ({ type, questions: q }) => {
         setAnsweredQuestion(false)
         setCurrentQuestion(currentQuestion + 1)
       }, 1000)
+    } else {
+      setTimeout(() => {
+        setShowResult(true)
+      }, 1000)
     }
 
     setAnsweredQuestion(true)
@@ -102,22 +111,49 @@ const Questions = ({ type, questions: q }) => {
     if (option.select) return 'select'
   }
 
+  function generateResult () {
+    if (type === 'quiz') {
+      return {
+        statement: 'Você acertou',
+        title: `${score} pergunta${score > 1 || score <= 0 ? 's' : ''}!`,
+        image
+      }
+    }
+
+    if (type === 'test') {
+      const item = result.items[Math.floor(Math.random() * result.items.length)]
+
+      return {
+        statement: result.statement,
+        title: item.title,
+        image: item.image
+      }
+    }
+  }
+  console.log(questions)
   return (
     <Container>
-      <Question
-        question={questions[currentQuestion]}
-        counterQuestion={currentQuestion + 1}
-        totalQuestions={questions.length}
-        answeredQuestion={answeredQuestion}
-        handleCheck={handleCheck}
-        handleState={handleState}
-      />
+      {showResult
+        ? (
+          <Result result={generateResult()} />
+        )
+        : (
+          <Question
+            question={questions[currentQuestion]}
+            counterQuestion={currentQuestion + 1}
+            totalQuestions={questions.length}
+            answeredQuestion={answeredQuestion}
+            handleCheck={handleCheck}
+            handleState={handleState}
+          />
+        )}
     </Container>
   )
 }
 
 Questions.propTypes = {
   type: t.string.isRequired,
+  image: t.object.isRequired,
   questions: t.arrayOf(t.shape({
     id: t.string,
     title: t.string,
@@ -127,7 +163,14 @@ Questions.propTypes = {
       text: t.string,
       correct: t.oneOfType([t.bool, t.string])
     }))
-  })).isRequired
+  })).isRequired,
+  result: t.shape({
+    statement: t.string,
+    items: t.arrayOf(t.shape({
+      title: t.string,
+      image: t.object
+    }))
+  }).isRequired
 }
 
 export default Questions
