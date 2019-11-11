@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import t from 'prop-types'
 
+import { shuffle } from '../../utils'
+
 import Question from '../../components/Question'
 import Result from '../../components/Result'
 
 import { Container } from './styles'
 
 const Questions = ({ type, image, questions: q, result }) => {
-  const [questions, setQuestions] = useState(q)
+  const [questions, setQuestions] = useState(shuffle(q))
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answeredQuestion, setAnsweredQuestion] = useState(false)
   const [score, setScore] = useState(0)
@@ -130,7 +132,7 @@ const Questions = ({ type, image, questions: q, result }) => {
       }
     }
   }
-  console.log(questions)
+
   return (
     <Container>
       {showResult
