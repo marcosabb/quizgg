@@ -8,30 +8,31 @@ import { color } from '../../styles/variables'
 const animate = (status) => {
   const right = keyframes`
     0% {
-      background-color: ${rgba(color.green, 0.2)};
+      background-color: ${rgba(color.green, 0.1)};
     }
 
     100% {
-      background-color: ${rgba(color.green, 0.6)};
+      background-color: ${rgba(color.green, 0.2)};
     }
   `
 
   const wrong = keyframes`
     0% {
-      background-color: ${rgba(color.red, 0.2)};
+      background-color: ${rgba(color.red, 0.1)};
     }
 
     100% {
-      background-color: ${rgba(color.red, 0.6)};
+      background-color: ${rgba(color.red, 0.2)};
     }
   `
+
   const select = keyframes`
       0% {
-        background-color: ${rgba(color.blue, 0.2)};
+        background-color: ${rgba(color.blue, 0.1)};
       }
 
       100% {
-        background-color: ${rgba(color.blue, 0.6)};
+        background-color: ${rgba(color.blue, 0.2)};
       }
     `
 
@@ -67,7 +68,8 @@ export const Container = styled.div`
   padding: 20px;
   background-color: ${color.white};
   border-radius: 6px;
-  box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.1)};
+  border: 1px solid ${rgba(color.blue, 0.04)};
+  box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.2)};
 
   ${media.lessThan('medium')`
     padding: 10px;
@@ -140,15 +142,15 @@ export const Option = styled.p`
   }
 
   background-color: ${switchProp('state', {
-    right: rgba(color.green, 0.2),
-    wrong: rgba(color.red, 0.2),
-    select: rgba(color.blue, 0.2)
+    right: rgba(color.green, 0.1),
+    wrong: rgba(color.red, 0.1),
+    select: rgba(color.blue, 0.1)
   })};
 
   border-color: ${switchProp('state', {
-    right: color.green,
-    wrong: color.red,
-    select: color.blue
+    right: rgba(color.green, 0.6),
+    wrong: rgba(color.red, 0.6),
+    select: rgba(color.blue, 0.6)
   })};
 
   ${media.lessThan('small')`

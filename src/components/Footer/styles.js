@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import { rem } from 'polished'
+import { rem, rgba } from 'polished'
+
+import { color } from '../../styles/variables'
 
 export const Container = styled.footer`
   position: absolute;
@@ -15,5 +17,5 @@ export const Container = styled.footer`
 export const Copyright = styled.p`
   font-size: ${rem(10)};
   text-transform: uppercase;
-  color: rgba(16, 16, 16, .5);
+  color: ${rgba(color.text, 0.5)};
 `

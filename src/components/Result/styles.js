@@ -9,7 +9,8 @@ export const Container = styled.div`
   padding: 20px;
   background-color: ${color.white};
   border-radius: 6px;
-  box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.1)};
+  border: 1px solid ${rgba(color.blue, 0.04)};
+  box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.2)};
 `
 
 export const Statement = styled.p`
