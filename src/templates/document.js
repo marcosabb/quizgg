@@ -17,7 +17,7 @@ const Document = ({
       image={image}
       questions={shuffle(questions)}
       result={result}
-      url='https://mystifying-engelbart-a15508.netlify.com/qual-pro-player-de-fortnite-voce-seria/'
+      url='https://gamenario.netlify.com/qual-pro-player-de-fortnite-voce-seria/'
     />
   </Layout>
 )
