@@ -44,7 +44,7 @@ const Result = ({
 
       <Social>
         <TwitterShareButton
-          url={`${url}?r=${r}`}
+          url={`${url}?r=${20}`}
           className='button'
         >
           <TwitterIcon
@@ -54,7 +54,7 @@ const Result = ({
         </TwitterShareButton>
 
         <FacebookShareButton
-          url={`${url}?r=${r}`}
+          url={`${url}?r=${20}`}
           className='button'
         >
           <FacebookIcon
@@ -64,7 +64,7 @@ const Result = ({
         </FacebookShareButton>
 
         <WhatsappShareButton
-          url={`${url}?r=${r}`}
+          url={`${url}?r=${20}`}
           className='button'
         >
           <WhatsappIcon
