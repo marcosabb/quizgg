@@ -70,7 +70,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           context: {
             slug,
             type: 'quiz',
-            r: Number(r)
+            r: String(r)
           }
         })
       })
@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           context: {
             slug,
             type: 'test',
-            r: Number(id)
+            r: String(id)
           }
         })
       })

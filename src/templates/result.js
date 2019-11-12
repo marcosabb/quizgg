@@ -22,6 +22,7 @@ const Result = ({
   }
 
   if (type === 'test') {
+    console.log(r)
     console.log(items.find(item => item.id === r))
     const item = items.find(item => item.id === r)
     // Eu seria ${title}! Qual pro player de Fortnite você seria?
