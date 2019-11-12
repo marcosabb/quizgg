@@ -26,7 +26,8 @@ const Result = ({
     title,
     image
   },
-  url
+  url,
+  r
 }) => (
   <Container>
     <Statement>{statement}</Statement>
@@ -43,7 +44,7 @@ const Result = ({
 
       <Social>
         <TwitterShareButton
-          url={url}
+          url={`${url}?r=${r}`}
           className='button'
         >
           <TwitterIcon
@@ -53,7 +54,7 @@ const Result = ({
         </TwitterShareButton>
 
         <FacebookShareButton
-          url={url}
+          url={`${url}?r=${r}`}
           className='button'
         >
           <FacebookIcon
@@ -63,7 +64,7 @@ const Result = ({
         </FacebookShareButton>
 
         <WhatsappShareButton
-          url={url}
+          url={`${url}?r=${r}`}
           className='button'
         >
           <WhatsappIcon
@@ -82,7 +83,8 @@ Result.propTypes = {
     title: t.oneOfType([t.string, t.number]),
     image: t.object
   }).isRequired,
-  url: t.string.isRequired
+  url: t.string.isRequired,
+  r: t.number.isRequired
 }
 
 export default Result

@@ -8,8 +8,8 @@ import Layout from '../components/Layout'
 import Questions from '../containers/Questions'
 
 const Document = ({
-  data: { documentsYaml: { type, image, questions, result } }
-  // location: { href }
+  data: { documentsYaml: { type, image, questions, result } },
+  location: { href, search }
 }) => (
   <Layout>
     <Questions
@@ -17,7 +17,8 @@ const Document = ({
       image={image}
       questions={shuffle(questions)}
       result={result}
-      url='https://gamenario.netlify.com/qual-pro-player-de-fortnite-voce-seria/'
+      url={href}
+      search={search}
     />
   </Layout>
 )
@@ -32,7 +33,8 @@ Document.propTypes = {
     })
   }).isRequired,
   location: t.shape({
-    href: t.string
+    href: t.string,
+    search: t.string
   }).isRequired
 }
 

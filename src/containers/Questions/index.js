@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import t from 'prop-types'
+import qs from 'query-string'
 
 import Seo from '../../components/Seo'
 import Question from '../../components/Question'
@@ -7,7 +8,7 @@ import Result from '../../components/Result'
 
 import { Container } from './styles'
 
-const Questions = ({ type, image, questions: q, result, url }) => {
+const Questions = ({ type, image, questions: q, result, url, search }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answeredQuestion, setAnsweredQuestion] = useState(false)
@@ -132,20 +133,22 @@ const Questions = ({ type, image, questions: q, result, url }) => {
     }
   }
 
+  const { r } = qs.parse(search)
+
   return (
     <Container>
       <Seo
         meta={[
           {
             property: 'og:title',
-            content: `Acertei ${score} perguntas, acha que consegue me passar?`
+            content: `Acertei ${r} perguntas, acha que consegue me passar?`
           }
         ]}
       />
 
       {showResult
         ? (
-          <Result result={generateResult()} url={url} />
+          <Result result={generateResult()} url={url} r={r} />
         )
         : (
           <Question
@@ -181,7 +184,8 @@ Questions.propTypes = {
       image: t.object
     }))
   }).isRequired,
-  url: t.string.isRequired
+  url: t.string.isRequired,
+  search: t.string.isRequired
 }
 
 export default Questions
