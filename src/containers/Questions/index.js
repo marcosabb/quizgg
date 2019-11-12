@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import t from 'prop-types'
 
+import Seo from '../../components/Seo'
 import Question from '../../components/Question'
 import Result from '../../components/Result'
 
@@ -133,6 +134,15 @@ const Questions = ({ type, image, questions: q, result, url }) => {
 
   return (
     <Container>
+      <Seo
+        meta={[
+          {
+            property: 'og:title',
+            content: 'Acertei 10 perguntas, acha que consegue me passar?'
+          }
+        ]}
+      />
+
       {showResult
         ? (
           <Result result={generateResult()} url={url} />

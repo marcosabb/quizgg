@@ -3,8 +3,6 @@ import t from 'prop-types'
 import Img from 'gatsby-image'
 import v4 from 'uuid/v4'
 
-import Seo from '../Seo'
-
 import {
   Container,
   Counter,
@@ -23,16 +21,6 @@ const Question = ({
   handleState
 }) => (
   <Container>
-    <Seo
-      title='Acertei 4 perguntas, acha que consegue me passar?'
-      meta={[
-        {
-          property: 'og:title',
-          content: 'Acertei 4 perguntas, acha que consegue me passar?'
-        }
-      ]}
-    />
-
     <Counter>{counterQuestion}/{totalQuestions}</Counter>
     {question.image && (
       <Image>
