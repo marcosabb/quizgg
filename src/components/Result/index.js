@@ -33,6 +33,8 @@ const Result = ({
     <Statement>{statement}</Statement>
     <Title>{title}</Title>
 
+    {/* {console.log(`${url}?r=${20}`)} */}
+
     {image && (
       <Image>
         <Img fluid={image.src.childImageSharp.fluid} />
@@ -44,7 +46,7 @@ const Result = ({
 
       <Social>
         <TwitterShareButton
-          url={`${url}?r=${20}`}
+          url={`${url}r/${r}`}
           className='button'
         >
           <TwitterIcon
@@ -54,7 +56,7 @@ const Result = ({
         </TwitterShareButton>
 
         <FacebookShareButton
-          url={`${url}?r=${20}`}
+          url={`${url}r/${r}`}
           className='button'
         >
           <FacebookIcon
@@ -64,7 +66,7 @@ const Result = ({
         </FacebookShareButton>
 
         <WhatsappShareButton
-          url={`${url}?r=${20}`}
+          url={`${url}r/${r}`}
           className='button'
         >
           <WhatsappIcon

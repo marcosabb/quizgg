@@ -22,17 +22,23 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const result = await graphql(
+  const response = await graphql(
     `
       {
         allDocumentsYaml(limit: 1000) {
           edges {
             node {
+              type
+              result {
+                statement
+                items {
+                  title
+                  id
+                }
+              }
               fields {
                 slug
               }
-              id
-              title
             }
           }
         }
@@ -40,18 +46,48 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   )
 
-  if (result.errors) {
+  if (response.errors) {
     reporter.panicOnBuild('Error while running GraphQL query.')
     return
   }
 
-  result.data.allDocumentsYaml.edges.forEach(({ node }) => {
+  response.data.allDocumentsYaml.edges.forEach((
+    { node: { type, result, fields: { slug } } }
+  ) => {
     createPage({
-      path: node.fields.slug,
+      path: slug,
       component: path.resolve('src/templates/document.js'),
       context: {
-        slug: node.fields.slug
+        slug
       }
     })
+
+    if (type === 'quiz') {
+      Array.from(Array(10).keys()).forEach(r => {
+        createPage({
+          path: `${slug}r/${r + 1}`,
+          component: path.resolve('src/templates/result.js'),
+          context: {
+            slug,
+            type: 'quiz',
+            r
+          }
+        })
+      })
+    }
+
+    if (type === 'test') {
+      result.items.forEach(({ id, title }) => {
+        createPage({
+          path: `${slug}r/${id}`,
+          component: path.resolve('src/templates/result.js'),
+          context: {
+            slug,
+            type: 'test',
+            r: id
+          }
+        })
+      })
+    }
   })
 }

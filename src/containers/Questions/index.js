@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import t from 'prop-types'
-import qs from 'query-string'
 
-import Seo from '../../components/Seo'
 import Question from '../../components/Question'
 import Result from '../../components/Result'
 
@@ -118,7 +116,8 @@ const Questions = ({ type, image, questions: q, result, url, search }) => {
       return {
         statement: 'Você acertou',
         title: `${score} pergunta${score > 1 || score <= 0 ? 's' : ''}!`,
-        image
+        image,
+        r: score
       }
     }
 
@@ -128,27 +127,17 @@ const Questions = ({ type, image, questions: q, result, url, search }) => {
       return {
         statement: result.statement,
         title: item.title,
-        image: item.image
+        image: item.image,
+        r: item.id
       }
     }
   }
 
-  const { r } = qs.parse(search)
-
   return (
     <Container>
-      <Seo
-        meta={[
-          {
-            property: 'og:title',
-            content: `Acertei ${r} perguntas, acha que consegue me passar?`
-          }
-        ]}
-      />
-
       {showResult
         ? (
-          <Result result={generateResult()} url={url} r={r} />
+          <Result result={generateResult()} url={url} />
         )
         : (
           <Question
@@ -180,6 +169,7 @@ Questions.propTypes = {
   result: t.shape({
     statement: t.string,
     items: t.arrayOf(t.shape({
+      id: t.number,
       title: t.string,
       image: t.object
     }))

@@ -9,7 +9,7 @@ import Questions from '../containers/Questions'
 
 const Document = ({
   data: { documentsYaml: { type, image, questions, result } },
-  location: { href, search }
+  location: { search }
 }) => (
   <Layout>
     <Questions
@@ -17,7 +17,8 @@ const Document = ({
       image={image}
       questions={shuffle(questions)}
       result={result}
-      url={href}
+      // url={href}
+      url='https://gamenario.netlify.com/voce-realmente-conhece-as-skins-do-fortnite/'
       search={search}
     />
   </Layout>
@@ -77,6 +78,7 @@ export const documentQuery = graphql`
       result {
         statement
         items {
+          id
           title
           image {
             name
