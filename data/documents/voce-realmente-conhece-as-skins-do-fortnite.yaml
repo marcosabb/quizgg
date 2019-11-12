@@ -197,3 +197,6 @@ questions:
       -
         key: D
         text: Criptograma
+result:
+  pre: Eu acertei
+  statement: Você acertou

@@ -8,6 +8,19 @@ const Result = ({
   data: { documentsYaml: { title, result: { pre, items } } },
   pageContext: { type, r }
 }) => {
+  if (type === 'quiz') {
+    const ogTitle = `${pre} ${r} perguntas! ${title}`
+
+    return (
+      <Seo
+        title={ogTitle}
+        meta={[
+          { property: 'og:title', content: ogTitle }
+        ]}
+      />
+    )
+  }
+
   if (type === 'test') {
     console.log(items.find(item => item.id === r))
     const item = items.find(item => item.id === r)
