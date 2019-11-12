@@ -138,7 +138,7 @@ const Questions = ({ type, image, questions: q, result, url }) => {
         meta={[
           {
             property: 'og:title',
-            content: 'Acertei 10 perguntas, acha que consegue me passar?'
+            content: `Acertei ${score} perguntas, acha que consegue me passar?`
           }
         ]}
       />
