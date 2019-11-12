@@ -9,6 +9,7 @@ import Questions from '../containers/Questions'
 
 const Document = ({
   data: { documentsYaml: { type, image, questions, result } }
+  // location: { href }
 }) => (
   <Layout>
     <Questions
@@ -16,6 +17,7 @@ const Document = ({
       image={image}
       questions={shuffle(questions)}
       result={result}
+      url='https://mystifying-engelbart-a15508.netlify.com/qual-pro-player-de-fortnite-voce-seria/'
     />
   </Layout>
 )
@@ -28,6 +30,9 @@ Document.propTypes = {
       questions: t.array,
       result: t.object
     })
+  }).isRequired,
+  location: t.shape({
+    href: t.string
   }).isRequired
 }
 

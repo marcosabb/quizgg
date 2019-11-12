@@ -6,7 +6,7 @@ import Result from '../../components/Result'
 
 import { Container } from './styles'
 
-const Questions = ({ type, image, questions: q, result }) => {
+const Questions = ({ type, image, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answeredQuestion, setAnsweredQuestion] = useState(false)
@@ -135,7 +135,7 @@ const Questions = ({ type, image, questions: q, result }) => {
     <Container>
       {showResult
         ? (
-          <Result result={generateResult()} />
+          <Result result={generateResult()} url={url} />
         )
         : (
           <Question
@@ -170,7 +170,8 @@ Questions.propTypes = {
       title: t.string,
       image: t.object
     }))
-  }).isRequired
+  }).isRequired,
+  url: t.string.isRequired
 }
 
 export default Questions

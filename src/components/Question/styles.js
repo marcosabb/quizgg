@@ -159,7 +159,7 @@ export const Option = styled.p`
   `}
 `
 
-export const Key = styled.div`
+export const Key = styled.span`
   width: 26px;
   height: 26px;
   margin-right: 16px;

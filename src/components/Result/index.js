@@ -20,17 +20,13 @@ import {
   Social
 } from './styles'
 
-// title Eu acertei 10 perguntas, você consegue me passar?
-
-const url = 'https://mystifying-engelbart-a15508.netlify.com/result/?title=Eu acertei 10 perguntas, você consegue me passar?'
-const quote = 'Result'
-
 const Result = ({
   result: {
     statement,
     title,
     image
-  }
+  },
+  url
 }) => (
   <Container>
     <Statement>{statement}</Statement>
@@ -48,7 +44,6 @@ const Result = ({
       <Social>
         <TwitterShareButton
           url={url}
-          quote={quote}
           className='button'
         >
           <TwitterIcon
@@ -59,7 +54,6 @@ const Result = ({
 
         <FacebookShareButton
           url={url}
-          quote={quote}
           className='button'
         >
           <FacebookIcon
@@ -70,7 +64,6 @@ const Result = ({
 
         <WhatsappShareButton
           url={url}
-          quote={quote}
           className='button'
         >
           <WhatsappIcon
@@ -88,7 +81,8 @@ Result.propTypes = {
     statement: t.string,
     title: t.oneOfType([t.string, t.number]),
     image: t.object
-  }).isRequired
+  }).isRequired,
+  url: t.string.isRequired
 }
 
 export default Result

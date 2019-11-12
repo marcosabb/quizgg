@@ -9,7 +9,11 @@ const Result = ({ location: { search } }) => {
 
   return (
     <div>
-      <Seo title={title} />
+      <Seo meta={[
+        { property: 'og:url', content: 'https://mystifying-engelbart-a15508.netlify.com/result/?title=Eu acertei 10 perguntas, você consegue me passar?' },
+        { property: 'og:title', content: title }
+      ]}
+      />
     </div>
   )
 }
