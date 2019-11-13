@@ -76,7 +76,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           context: {
             slug,
             type: 'quiz',
-            r: String(r)
+            r: String(r + 1)
           }
         })
       })
