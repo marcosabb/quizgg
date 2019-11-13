@@ -2,13 +2,6 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import posed from 'react-pose'
 
-export const Item = styled(posed.div({
-  enter: { opacity: 1 },
-  exit: { opacity: 0 }
-}))`
-  width: 500px;
-`
-
 export const Container = styled.section`
   display: flex;
   align-items: center;
@@ -20,22 +13,11 @@ export const Container = styled.section`
   ${media.lessThan('small')`
     padding-bottom: 20px;
   `}
+`
 
-  .question-enter {
-    opacity: 0;
-  }
-
-  .question-enter-active {
-    opacity: 1;
-    transition: opacity 800ms;
-  }
-
-  .question-exit {
-    opacity: 1;
-  }
-
-  .question-exit-active {
-    opacity: 0;
-    transition: opacity 800ms;
-  }
+export const Item = styled(posed.div({
+  enter: { opacity: 1 },
+  exit: { opacity: 0 }
+}))`
+  width: 500px;
 `
