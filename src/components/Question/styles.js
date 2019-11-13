@@ -98,6 +98,7 @@ export const Image = styled.div`
   }
 
   ${media.lessThan('small')`
+    width: 250px;
     margin-bottom: 20px;
   `}
 `
