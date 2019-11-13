@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import t from 'prop-types'
+import { debounce } from 'lodash'
 
 import Question from '../../components/Question'
 import Result from '../../components/Result'
@@ -89,16 +90,20 @@ const Questions = ({ type, image, questions: q, result, url }) => {
     }
   }
 
+  const goToNextQuestion = debounce(() => {
+    setAnsweredQuestion(false)
+    setCurrentQuestion(currentQuestion + 1)
+  }, 1000)
+
+  const goToResult = debounce(() => {
+    setShowResult(true)
+  }, 1000)
+
   function handleCheck (question, option) {
     if (!(questions.length === currentQuestion + 1)) {
-      setTimeout(() => {
-        setAnsweredQuestion(false)
-        setCurrentQuestion(currentQuestion + 1)
-      }, 1000)
+      goToNextQuestion()
     } else {
-      setTimeout(() => {
-        setShowResult(true)
-      }, 1000)
+      goToResult()
     }
 
     setAnsweredQuestion(true)

@@ -12,4 +12,22 @@ export const Container = styled.section`
   ${media.lessThan('small')`
     padding-bottom: 20px;
   `}
+
+  .question-enter {
+    opacity: 0;
+  }
+
+  .question-enter-active {
+    opacity: 1;
+    transition: opacity 800ms;
+  }
+
+  .question-exit {
+    opacity: 1;
+  }
+
+  .question-exit-active {
+    opacity: 0;
+    transition: opacity 800ms;
+  }
 `

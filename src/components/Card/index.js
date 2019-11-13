@@ -1,6 +1,6 @@
 import React from 'react'
 import t from 'prop-types'
-import { Link } from 'gatsby'
+import Link from 'gatsby-link'
 
 import { color } from '../../styles/variables'
 
@@ -15,15 +15,17 @@ const Card = ({ image, title, slug, game, featured }) => (
       backgroundColor={color.blue}
     />
 
-    <Wrapper>
-      <Link to={slug}>
+    <Link
+      to={slug}
+    >
+      <Wrapper>
         <Game>{game}</Game>
 
         <Content>
           <Title>{title}</Title>
         </Content>
-      </Link>
-    </Wrapper>
+      </Wrapper>
+    </Link>
   </Container>
 )
 
