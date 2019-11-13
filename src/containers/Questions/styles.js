@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import posed from 'react-pose'
+
+export const Item = styled(posed.div({
+  enter: { opacity: 1 },
+  exit: { opacity: 0 }
+}))`
+  width: 500px;
+`
 
 export const Container = styled.section`
   display: flex;

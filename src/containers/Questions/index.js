@@ -1,17 +1,12 @@
 import React, { useState } from 'react'
 import t from 'prop-types'
-import posed, { PoseGroup } from 'react-pose'
 import { debounce } from 'lodash'
+import { PoseGroup } from 'react-pose'
 
 import Question from '../../components/Question'
 import Result from '../../components/Result'
 
-import { Container } from './styles'
-
-const Item = posed.div({
-  enter: { opacity: 1 },
-  exit: { opacity: 0 }
-})
+import { Container, Item } from './styles'
 
 const Questions = ({ type, image, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)

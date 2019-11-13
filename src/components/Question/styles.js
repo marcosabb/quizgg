@@ -64,7 +64,7 @@ const animate = (status) => {
 }
 
 export const Container = styled.div`
-  width: 500px;
+  width: 100%;
   padding: 20px;
   background-color: ${color.white};
   border-radius: 6px;
