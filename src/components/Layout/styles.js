@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Container = styled.main`
   position: relative;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
 `
 
 export const Wrapper = styled.div`
