@@ -3,7 +3,8 @@ module.exports = {
     title: 'Gaming',
     year: new Date().getFullYear(),
     description: 'Lorem ipsum dolor sit amet.',
-    author: '@marcosabb'
+    author: '@marcosabb',
+    url: 'https://gamenario.netlify.com'
   },
   plugins: [
     'gatsby-plugin-eslint',

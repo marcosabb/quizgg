@@ -8,8 +8,11 @@ import Layout from '../components/Layout'
 import Questions from '../containers/Questions'
 
 const Document = ({
-  data: { documentsYaml: { type, image, questions, result } },
-  location: { search }
+  data: {
+    site: { siteMetadata: { url } },
+    documentsYaml: { type, image, questions, result }
+  },
+  path
 }) => (
   <Layout>
     <Questions
@@ -17,15 +20,18 @@ const Document = ({
       image={image}
       questions={shuffle(questions)}
       result={result}
-      // url={href}
-      url='https://gamenario.netlify.com/voce-realmente-conhece-as-skins-do-fortnite/'
-      search={search}
+      url={`${url}${path}`}
     />
   </Layout>
 )
 
 Document.propTypes = {
   data: t.shape({
+    site: t.shape({
+      siteMetadata: t.shape({
+        url: t.string
+      })
+    }).isRequired,
     documentsYaml: t.shape({
       type: t.string,
       image: t.object,
@@ -33,16 +39,19 @@ Document.propTypes = {
       result: t.object
     })
   }).isRequired,
-  location: t.shape({
-    href: t.string,
-    search: t.string
-  }).isRequired
+  path: t.string.isRequired
 }
 
 export default Document
 
 export const documentQuery = graphql`
   query($slug: String!) {
+    site {
+      siteMetadata {
+        url
+      }
+    }
+    
     documentsYaml(fields: { slug: { eq: $slug } }) {
       type
       title

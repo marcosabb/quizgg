@@ -6,7 +6,7 @@ import Result from '../../components/Result'
 
 import { Container } from './styles'
 
-const Questions = ({ type, image, questions: q, result, url, search }) => {
+const Questions = ({ type, image, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answeredQuestion, setAnsweredQuestion] = useState(false)
@@ -169,13 +169,12 @@ Questions.propTypes = {
   result: t.shape({
     statement: t.string,
     items: t.arrayOf(t.shape({
-      id: t.number,
+      id: t.string,
       title: t.string,
       image: t.object
     }))
   }).isRequired,
-  url: t.string.isRequired,
-  search: t.string.isRequired
+  url: t.string.isRequired
 }
 
 export default Questions

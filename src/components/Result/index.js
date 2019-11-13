@@ -24,16 +24,14 @@ const Result = ({
   result: {
     statement,
     title,
-    image
+    image,
+    r
   },
-  url,
-  r
+  url
 }) => (
   <Container>
     <Statement>{statement}</Statement>
     <Title>{title}</Title>
-
-    {/* {console.log(`${url}?r=${20}`)} */}
 
     {image && (
       <Image>
@@ -83,10 +81,10 @@ Result.propTypes = {
   result: t.shape({
     statement: t.string,
     title: t.oneOfType([t.string, t.number]),
-    image: t.object
+    image: t.object,
+    r: t.string
   }).isRequired,
-  url: t.string.isRequired,
-  r: t.number.isRequired
+  url: t.string.isRequired
 }
 
 export default Result
