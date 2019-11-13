@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
 import t from 'prop-types'
+import posed, { PoseGroup } from 'react-pose'
 import { debounce } from 'lodash'
 
 import Question from '../../components/Question'
 import Result from '../../components/Result'
 
 import { Container } from './styles'
+
+const Item = posed.div({
+  enter: { opacity: 1 },
+  exit: { opacity: 0 }
+})
 
 const Questions = ({ type, image, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)
@@ -138,22 +144,36 @@ const Questions = ({ type, image, questions: q, result, url }) => {
     }
   }
 
+  function renderQuestions () {
+    return (
+      <PoseGroup>
+        {questions.map((question, index) => {
+          const isVisible = currentQuestion + 1 === index + 1
+
+          return (
+            isVisible && (
+              <Item key={question.id}>
+                <Question
+                  question={question}
+                  counterQuestion={index + 1}
+                  totalQuestions={questions.length}
+                  answeredQuestion={answeredQuestion}
+                  handleCheck={handleCheck}
+                  handleState={handleState}
+                />
+              </Item>
+            )
+          )
+        })}
+      </PoseGroup>
+    )
+  }
+
   return (
     <Container>
       {showResult
-        ? (
-          <Result result={generateResult()} url={url} />
-        )
-        : (
-          <Question
-            question={questions[currentQuestion]}
-            counterQuestion={currentQuestion + 1}
-            totalQuestions={questions.length}
-            answeredQuestion={answeredQuestion}
-            handleCheck={handleCheck}
-            handleState={handleState}
-          />
-        )}
+        ? <Result result={generateResult()} url={url} />
+        : renderQuestions()}
     </Container>
   )
 }
