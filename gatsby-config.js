@@ -4,7 +4,7 @@ module.exports = {
     year: new Date().getFullYear(),
     description: 'Lorem ipsum dolor sit amet.',
     author: '@marcosabb',
-    url: 'https://gamenario.netlify.com'
+    url: 'https://quizi.netlify.com'
   },
   plugins: [
     'gatsby-plugin-eslint',
