@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import t from 'prop-types'
-import { graphql } from 'gatsby'
-// import { Redirect } from '@reach/router'
+import { graphql, navigate } from 'gatsby'
 
 import Seo from '../components/Seo'
 
@@ -9,9 +8,9 @@ const Result = ({
   data: { documentsYaml: { title, image: { src: { publicURL } }, result: { pre, items } } },
   pageContext: { type, r, slug }
 }) => {
-  // useEffect(() => {
-  //   navigate(slug)
-  // }, [])
+  useEffect(() => {
+    navigate(slug)
+  }, [])
 
   if (type === 'quiz') {
     const ogTitle = `${pre} ${r} perguntas! ${title}`
