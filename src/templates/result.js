@@ -1,27 +1,30 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import t from 'prop-types'
-import { graphql, navigate } from 'gatsby'
+import { graphql } from 'gatsby'
 // import { Redirect } from '@reach/router'
 
 import Seo from '../components/Seo'
 
 const Result = ({
-  data: { documentsYaml: { title, result: { pre, items } } },
+  data: { documentsYaml: { title, image: { src: { publicURL } }, result: { pre, items } } },
   pageContext: { type, r, slug }
 }) => {
-  useEffect(() => {
-    navigate(slug)
-  }, [])
+  // useEffect(() => {
+  //   navigate(slug)
+  // }, [])
 
   if (type === 'quiz') {
     const ogTitle = `${pre} ${r} perguntas! ${title}`
+
+    console.log('publicURL', publicURL)
 
     return (
       <>
         <Seo
           title={ogTitle}
           meta={[
-            { property: 'og:title', content: ogTitle }
+            { property: 'og:title', content: ogTitle },
+            { property: 'og:image', content: publicURL }
           ]}
         />
       </>
@@ -29,18 +32,18 @@ const Result = ({
   }
 
   if (type === 'test') {
-    console.log('URL', slug)
     const item = items.find(item => item.id === r)
     const ogTitle = `${pre} ${item.title}! ${title}`
 
-    console.log(ogTitle)
+    console.log('publicURL', publicURL)
 
     return (
       <>
         <Seo
           title={ogTitle}
           meta={[
-            { property: 'og:title', content: ogTitle }
+            { property: 'og:title', content: ogTitle },
+            { property: 'og:image', content: publicURL }
           ]}
         />
       </>
@@ -52,6 +55,11 @@ Result.propTypes = {
   data: t.shape({
     documentsYaml: t.shape({
       title: t.string,
+      image: t.shape({
+        src: t.shape({
+          publicURL: t.string
+        })
+      }),
       result: t.shape({
         pre: t.string,
         items: t.array
@@ -71,6 +79,12 @@ export const resultQuery = graphql`
   query($slug: String!) {
     documentsYaml(fields: { slug: { eq: $slug } }) {
       title
+      image {
+        name 
+        src {
+          publicURL
+        }
+      }
       result {
         pre
         items {
