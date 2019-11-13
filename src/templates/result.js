@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import t from 'prop-types'
-import { graphql } from 'gatsby'
-import { Redirect } from '@reach/router'
+import { graphql, navigate } from 'gatsby'
+// import { Redirect } from '@reach/router'
 
 import Seo from '../components/Seo'
 
 const Result = ({
   data: { documentsYaml: { title, result: { pre, items } } },
-  pageContext: { type, r, url }
+  pageContext: { type, r, slug }
 }) => {
+  useEffect(() => {
+    navigate(slug)
+  }, [])
+
   if (type === 'quiz') {
     const ogTitle = `${pre} ${r} perguntas! ${title}`
 
@@ -20,14 +24,12 @@ const Result = ({
             { property: 'og:title', content: ogTitle }
           ]}
         />
-
-        <Redirect to={url} />
       </>
     )
   }
 
   if (type === 'test') {
-    console.log('URL', url)
+    console.log('URL', slug)
     const item = items.find(item => item.id === r)
     const ogTitle = `${pre} ${item.title}! ${title}`
 
@@ -41,8 +43,6 @@ const Result = ({
             { property: 'og:title', content: ogTitle }
           ]}
         />
-
-        <Redirect to={url} />
       </>
     )
   }
