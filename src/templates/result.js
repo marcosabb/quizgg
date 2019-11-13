@@ -12,42 +12,28 @@ const Result = ({
     navigate(slug)
   }, [])
 
-  if (type === 'quiz') {
-    const ogTitle = `${pre} ${r} perguntas! ${title}`
+  const og = {
+    title: () => {
+      if (type === 'quiz') {
+        return `${pre} ${r} pergunta${r > 1 || r <= 0 ? 's' : ''}! ${title}`
+      }
 
-    console.log('publicURL', publicURL)
-
-    return (
-      <>
-        <Seo
-          title={ogTitle}
-          meta={[
-            { property: 'og:title', content: ogTitle },
-            { property: 'og:image', content: publicURL }
-          ]}
-        />
-      </>
-    )
+      if (type === 'test') {
+        const item = items.find(item => item.id === r)
+        return `${pre} ${item.title}! ${title}`
+      }
+    },
+    image: publicURL
   }
 
-  if (type === 'test') {
-    const item = items.find(item => item.id === r)
-    const ogTitle = `${pre} ${item.title}! ${title}`
-
-    console.log('publicURL', publicURL)
-
-    return (
-      <>
-        <Seo
-          title={ogTitle}
-          meta={[
-            { property: 'og:title', content: ogTitle },
-            { property: 'og:image', content: publicURL }
-          ]}
-        />
-      </>
-    )
-  }
+  return (
+    <Seo
+      meta={[
+        { property: 'og:title', content: og.title() },
+        { property: 'og:image', content: og.image }
+      ]}
+    />
+  )
 }
 
 Result.propTypes = {
@@ -68,7 +54,7 @@ Result.propTypes = {
   pageContext: t.shape({
     type: t.string,
     r: t.oneOfType([t.string, t.number]),
-    url: t.string
+    slug: t.string
   }).isRequired
 }
 
