@@ -1,43 +1,49 @@
 import React from 'react'
 import t from 'prop-types'
 import { graphql } from 'gatsby'
+import { Redirect } from '@reach/router'
 
 import Seo from '../components/Seo'
 
 const Result = ({
   data: { documentsYaml: { title, result: { pre, items } } },
-  pageContext: { type, r }
+  pageContext: { type, r, url }
 }) => {
   if (type === 'quiz') {
     const ogTitle = `${pre} ${r} perguntas! ${title}`
 
     return (
-      <Seo
-        title={ogTitle}
-        meta={[
-          { property: 'og:title', content: ogTitle }
-        ]}
-      />
+      <>
+        <Seo
+          title={ogTitle}
+          meta={[
+            { property: 'og:title', content: ogTitle }
+          ]}
+        />
+
+        <Redirect to={url} />
+      </>
     )
   }
 
   if (type === 'test') {
-    console.log(r)
-    console.log(items.find(item => item.id === r))
+    console.log('URL', url)
     const item = items.find(item => item.id === r)
-    // Eu seria ${title}! Qual pro player de Fortnite você seria?
-    // Eu acertei ${title} perguntas! Você realmente conhece as skins de Fortnite?
     const ogTitle = `${pre} ${item.title}! ${title}`
 
     console.log(ogTitle)
 
     return (
-      <Seo
-        title={ogTitle}
-        meta={[
-          { property: 'og:title', content: ogTitle }
-        ]}
-      />
+      <>
+        <Seo
+          title={ogTitle}
+          meta={[
+            { property: 'og:title', content: ogTitle }
+          ]}
+        />
+
+        <Redirect to={url} />
+      </>
     )
   }
 }
@@ -54,7 +60,8 @@ Result.propTypes = {
   }).isRequired,
   pageContext: t.shape({
     type: t.string,
-    r: t.oneOfType([t.string, t.number])
+    r: t.oneOfType([t.string, t.number]),
+    url: t.string
   }).isRequired
 }
 

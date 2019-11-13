@@ -25,6 +25,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const response = await graphql(
     `
       {
+        site {
+          siteMetadata {
+            url
+          }
+        }
+
         allDocumentsYaml(limit: 1000) {
           edges {
             node {
@@ -51,7 +57,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  response.data.allDocumentsYaml.edges.forEach((
+  const {
+    data: {
+      allDocumentsYaml: { edges },
+      site: { siteMetadata: { url } }
+    }
+  } = response
+
+  edges.forEach((
     { node: { type, result, fields: { slug } } }
   ) => {
     createPage({
@@ -70,7 +83,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           context: {
             slug,
             type: 'quiz',
-            r: String(r)
+            r: String(r),
+            url: `${url}${slug}`
           }
         })
       })
@@ -84,7 +98,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           context: {
             slug,
             type: 'test',
-            r: String(id)
+            r: String(id),
+            url: `${url}${slug}`
           }
         })
       })
