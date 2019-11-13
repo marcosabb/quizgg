@@ -5,12 +5,13 @@ import { graphql } from 'gatsby'
 import { shuffle } from '../utils'
 
 import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import Questions from '../containers/Questions'
 
 const Document = ({
   data: {
     site: { siteMetadata: { url } },
-    documentsYaml: { type, image, questions, result }
+    documentsYaml: { type, title, image, questions, result }
   },
   path
 }) => {
@@ -23,6 +24,10 @@ const Document = ({
 
   return (
     <Layout>
+      <Seo
+        title={title}
+      />
+
       <Questions
         type={type}
         image={image}
@@ -42,6 +47,7 @@ Document.propTypes = {
       })
     }).isRequired,
     documentsYaml: t.shape({
+      title: t.string,
       type: t.string,
       image: t.object,
       questions: t.array,

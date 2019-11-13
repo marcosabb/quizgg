@@ -38,7 +38,7 @@ export const Title = styled.p`
 `
 
 export const Image = styled.div`
-  width: 250px;
+  width: 350px;
   margin: 0 auto 30px;
 
   img {
