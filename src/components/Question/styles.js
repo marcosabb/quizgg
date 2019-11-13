@@ -120,7 +120,7 @@ export const Options = styled.div`
 export const Option = styled.p`
   display: flex;
   align-items: center;
-  padding: 12px 16px;
+  padding: 16px 20px;
   font-size: ${rem(14)};
   background-color: ${rgba(color.blue, 0.01)};
   border: 1px solid ${rgba(color.blue, 0.1)};
@@ -156,21 +156,5 @@ export const Option = styled.p`
   ${media.lessThan('small')`
     font-size: ${rem(12)};
     padding: 12px;
-  `}
-`
-
-export const Key = styled.span`
-  width: 26px;
-  height: 26px;
-  margin-right: 16px;
-  padding: 8px 10px;
-  font-size: ${rem(10)};
-  font-weight: 600;
-  color: ${color.white};
-  background-color: ${color.blue};
-  border-radius: 6px;
-
-  ${media.lessThan('small')` 
-    margin-right: 12px;
   `}
 `

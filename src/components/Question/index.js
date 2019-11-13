@@ -9,7 +9,7 @@ import {
   Image,
   Title,
   Options,
-  Option, Key
+  Option
 } from './styles'
 
 const Question = ({
@@ -39,7 +39,6 @@ const Question = ({
               : () => {}
           }
         >
-          <Key>{option.key}</Key>
           {option.text}
         </Option>
       ))}

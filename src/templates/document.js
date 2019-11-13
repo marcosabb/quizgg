@@ -13,17 +13,26 @@ const Document = ({
     documentsYaml: { type, image, questions, result }
   },
   path
-}) => (
-  <Layout>
-    <Questions
-      type={type}
-      image={image}
-      questions={shuffle(questions)}
-      result={result}
-      url={`${url}${path}`}
-    />
-  </Layout>
-)
+}) => {
+  const q = shuffle(questions).map(item => {
+    return {
+      ...item,
+      options: shuffle(item.options)
+    }
+  })
+
+  return (
+    <Layout>
+      <Questions
+        type={type}
+        image={image}
+        questions={q}
+        result={result}
+        url={`${url}${path}`}
+      />
+    </Layout>
+  )
+}
 
 Document.propTypes = {
   data: t.shape({
