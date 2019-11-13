@@ -4,11 +4,11 @@ import { rem, rgba } from 'polished'
 import { color } from '../../styles/variables'
 
 export const Container = styled.header`
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  right: 0;
+  right: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
