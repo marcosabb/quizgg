@@ -156,6 +156,6 @@ export const Option = styled.p`
 
   ${media.lessThan('small')`
     font-size: ${rem(12)};
-    padding: 12px;
+    padding: 12px 16px;
   `}
 `

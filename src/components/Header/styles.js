@@ -4,11 +4,6 @@ import { rem, rgba } from 'polished'
 import { color } from '../../styles/variables'
 
 export const Container = styled.header`
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +12,6 @@ export const Container = styled.header`
   padding-bottom: 20px;
   background-color: ${color.white};
   border-bottom: 1px solid ${rgba(color.blue, 0.06)};
-  z-index: 1;
 `
 
 export const Title = styled.h1`
