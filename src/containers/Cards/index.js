@@ -53,7 +53,7 @@ const Cards = () => {
 
   const push = debounce(() => {
     setItems(normal.slice(0, (limit.current += 6)))
-  }, 1000000)
+  }, 1000)
 
   function fetchData () {
     if (items.length >= normal.length) {
