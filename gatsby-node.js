@@ -82,14 +82,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
 
     if (type === 'test') {
-      result.items.forEach(({ id }) => {
+      result.items.forEach(({ id, title }) => {
         createPage({
           path: `${slug}r/${id}`,
           component: path.resolve('src/templates/result.js'),
           context: {
             slug,
             type: 'test',
-            r: String(id)
+            r: String(title)
           }
         })
       })

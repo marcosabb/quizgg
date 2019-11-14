@@ -7,24 +7,15 @@ import { replace } from '../utils'
 import Seo from '../components/Seo'
 
 const Result = ({
-  data: { documentsYaml: { image: { src: { publicURL } }, result: { share, items } } },
-  pageContext: { type, r, slug }
+  data: { documentsYaml: { image: { src: { publicURL } }, result: { share } } },
+  pageContext: { r, slug }
 }) => {
   useEffect(() => {
     navigate(slug)
   }, [])
 
   const og = {
-    title: () => {
-      if (type === 'quiz') {
-        return replace(share, r)
-      }
-
-      if (type === 'test') {
-        const item = items.find(item => item.id === r)
-        return replace(share, item.title)
-      }
-    },
+    title: replace(share, r),
     image: publicURL
   }
 
@@ -47,8 +38,7 @@ Result.propTypes = {
         })
       }),
       result: t.shape({
-        share: t.string,
-        items: t.array
+        share: t.string
       })
     })
   }).isRequired,
