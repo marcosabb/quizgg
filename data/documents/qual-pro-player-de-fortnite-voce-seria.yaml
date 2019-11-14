@@ -87,8 +87,10 @@ questions:
         key: D
         text: Squad
 result:
-  pre: Eu seria
-  statement: Você seria
+  statement:
+    final: Você seria
+    share: Eu seria %s! E você, qual pro player de Fortnite você seria?
+
   items:
       -
         id: b8d723ec-c8dd-4ca1-ad81-a634067bda08

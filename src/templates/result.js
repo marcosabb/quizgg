@@ -5,7 +5,7 @@ import { graphql, navigate } from 'gatsby'
 import Seo from '../components/Seo'
 
 const Result = ({
-  data: { documentsYaml: { title, image: { src: { publicURL } }, result: { pre, items } } },
+  data: { documentsYaml: { title, image: { src: { publicURL } }, result: { share, items } } },
   pageContext: { type, r, slug }
 }) => {
   useEffect(() => {
@@ -15,12 +15,12 @@ const Result = ({
   const og = {
     title: () => {
       if (type === 'quiz') {
-        return `${pre} ${r} pergunta${r > 1 || r <= 0 ? 's' : ''}! ${title}`
+        return `${share}`
       }
 
       if (type === 'test') {
-        const item = items.find(item => item.id === r)
-        return `${pre} ${item.title}! ${title}`
+        // const item = items.find(item => item.id === r)
+        return `${share}`
       }
     },
     image: publicURL
@@ -46,7 +46,7 @@ Result.propTypes = {
         })
       }),
       result: t.shape({
-        pre: t.string,
+        share: t.string,
         items: t.array
       })
     })
@@ -71,7 +71,6 @@ export const resultQuery = graphql`
         }
       }
       result {
-        pre
         items {
           id
           title

@@ -120,8 +120,11 @@ const Questions = ({ type, image, questions: q, result, url }) => {
   function generateResult () {
     if (type === 'quiz') {
       return {
-        statement: 'Você acertou',
-        title: `${score} pergunta${score > 1 || score <= 0 ? 's' : ''}!`,
+        statement: {
+          final: result.statement.final,
+          share: result.statement.share
+        },
+        title: `${score} pergunta${(score <= 0 || score > 1) ? 's' : ''}!`,
         image,
         r: score
       }
@@ -131,7 +134,10 @@ const Questions = ({ type, image, questions: q, result, url }) => {
       const item = result.items[Math.floor(Math.random() * result.items.length)]
 
       return {
-        statement: result.statement,
+        statement: {
+          final: result.statement.final,
+          share: result.statement.share
+        },
         title: item.title,
         image: item.image,
         r: item.id

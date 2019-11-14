@@ -27,7 +27,7 @@ const Document = ({
       <Seo
         title={title}
       />
-
+      {console.log(result)}
       <Questions
         type={type}
         image={image}
@@ -100,7 +100,10 @@ export const documentQuery = graphql`
         }
       }
       result {
-        statement
+        statement {
+          final
+          share
+        }
         items {
           id
           title

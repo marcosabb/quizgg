@@ -30,7 +30,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               type
               result {
-                statement
                 items {
                   title
                   id

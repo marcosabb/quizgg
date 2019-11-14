@@ -1,24 +1,30 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { rem } from 'polished'
+import { rem, rgba } from 'polished'
 
 import { color } from '../../styles/variables'
 
+export const Wrapper = styled.div`
+  max-width: 350px;
+  margin: 0 auto;
+`
+
 export const Statement = styled.p`
   margin-bottom: 12px;
-  font-size: ${rem(22)};
-  font-weight: 700;
+  font-size: ${rem(18)};
+  font-weight: 400;
+  text-transform: uppercase;
   text-align: center;
   color: ${color.blue};
 
   ${media.lessThan('small')`
-    font-size: ${rem(20)};
+    font-size: ${rem(16)};
   `}
 `
 
 export const Title = styled.p`
   margin-bottom: 30px;
-  font-size: ${rem(20)};
+  font-size: ${rem(22)};
   font-weight: 600;
   text-align: center;
 
@@ -50,7 +56,9 @@ export const Share = styled.div`
 
 export const Call = styled.p`
   margin-bottom: 20px;
-  font-size: ${rem(14)};
+  font-size: ${rem(10)};
+  text-transform: uppercase;
+  color: ${rgba(color.text, 0.8)}
 `
 
 export const Social = styled.div`

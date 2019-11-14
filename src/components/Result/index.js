@@ -10,9 +10,12 @@ import {
   WhatsappIcon
 } from 'react-share'
 
+// import { replace } from '../../utils'
+
 import Box from '../Box'
 
 import {
+  Wrapper,
   Statement,
   Title,
   Image,
@@ -23,7 +26,7 @@ import {
 
 const Result = ({
   result: {
-    statement,
+    statement: { final },
     title,
     image,
     r
@@ -31,8 +34,10 @@ const Result = ({
   url
 }) => (
   <Box>
-    <Statement>{statement}</Statement>
-    <Title>{title}</Title>
+    <Wrapper>
+      <Statement>{final}</Statement>
+      <Title>{title}</Title>
+    </Wrapper>
 
     {image && (
       <Image>
@@ -80,7 +85,9 @@ const Result = ({
 
 Result.propTypes = {
   result: t.shape({
-    statement: t.string,
+    statement: t.shape({
+      final: t.string
+    }),
     title: t.oneOfType([t.string, t.number]),
     image: t.object,
     r: t.string

@@ -6,7 +6,7 @@ import { color } from '../../styles/variables'
 
 export const Container = styled.div`
   width: 100%;
-  padding: 20px;
+  padding: 40px 20px;
   background-color: ${color.white};
   border-radius: 6px;
   border: 1px solid ${rgba(color.blue, 0.04)};
