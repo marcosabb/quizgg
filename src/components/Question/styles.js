@@ -72,7 +72,8 @@ export const Container = styled.div`
   box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.2)};
 
   ${media.lessThan('medium')`
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   `}
 `
 
