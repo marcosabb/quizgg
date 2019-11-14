@@ -25,3 +25,10 @@ export const Content = styled.div`
     flex-wrap: wrap;
   `}
 `
+
+export const LoadingWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+`

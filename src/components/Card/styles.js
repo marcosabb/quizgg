@@ -36,7 +36,7 @@ export const Container = styled.div`
 
   ${media.lessThan('medium')`
     width: 100%;
-    height: ${ifProp('featured', '250px', '150px')};
+    height: ${ifProp('featured', '350px', '250px')};
 
     &:not(:last-child) {
       margin-bottom: 20px;
