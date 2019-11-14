@@ -11,6 +11,11 @@ export const Container = styled.div`
   border-radius: 6px;
   border: 1px solid ${rgba(color.blue, 0.04)};
   box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.2)};
+
+  ${media.lessThan('medium')`
+    padding-left: 10px;
+    padding-right: 10px;
+  `}
 `
 
 export const Statement = styled.p`
