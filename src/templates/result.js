@@ -7,7 +7,7 @@ import { replace } from '../utils'
 import Seo from '../components/Seo'
 
 const Result = ({
-  data: { documentsYaml: { image: { src: { publicURL } }, result: { share } } },
+  data: { documentsYaml: { image: { src: { publicURL } }, result: { statement: { share } } } },
   pageContext: { r, slug }
 }) => {
   useEffect(() => {
@@ -38,7 +38,9 @@ Result.propTypes = {
         })
       }),
       result: t.shape({
-        share: t.string
+        statement: t.shape({
+          share: t.string
+        })
       })
     })
   }).isRequired,
@@ -62,6 +64,9 @@ export const resultQuery = graphql`
         }
       }
       result {
+        statement {
+          share
+        }
         items {
           id
           title
