@@ -6,7 +6,7 @@ import { PoseGroup } from 'react-pose'
 import Question from '../../components/Question'
 import Result from '../../components/Result'
 
-import { Container, Item } from './styles'
+import { Container, Item, ResultWrapper } from './styles'
 
 const Questions = ({ type, image, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)
@@ -167,7 +167,11 @@ const Questions = ({ type, image, questions: q, result, url }) => {
   return (
     <Container>
       {showResult
-        ? <Result result={generateResult()} url={url} />
+        ? (
+          <ResultWrapper>
+            <Result result={generateResult()} url={url} />
+          </ResultWrapper>
+        )
         : renderQuestions()}
     </Container>
   )

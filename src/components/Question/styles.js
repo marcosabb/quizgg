@@ -63,20 +63,6 @@ const animate = (status) => {
   return states[status]
 }
 
-export const Container = styled.div`
-  width: 100%;
-  padding: 20px;
-  background-color: ${color.white};
-  border-radius: 6px;
-  border: 1px solid ${rgba(color.blue, 0.04)};
-  box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.2)};
-
-  ${media.lessThan('medium')`
-    padding-left: 10px;
-    padding-right: 10px;
-  `}
-`
-
 export const Counter = styled.p`
   margin-bottom: 30px;
   font-size: ${rem(22)};

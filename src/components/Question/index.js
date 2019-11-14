@@ -3,8 +3,9 @@ import t from 'prop-types'
 import Img from 'gatsby-image'
 import v4 from 'uuid/v4'
 
+import Box from '../Box'
+
 import {
-  Container,
   Counter,
   Image,
   Title,
@@ -20,7 +21,7 @@ const Question = ({
   handleCheck,
   handleState
 }) => (
-  <Container>
+  <Box>
     <Counter>{counterQuestion}/{totalQuestions}</Counter>
     {question.image && (
       <Image>
@@ -43,7 +44,7 @@ const Question = ({
         </Option>
       ))}
     </Options>
-  </Container>
+  </Box>
 )
 
 Question.propTypes = {

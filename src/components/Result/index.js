@@ -10,8 +10,9 @@ import {
   WhatsappIcon
 } from 'react-share'
 
+import Box from '../Box'
+
 import {
-  Container,
   Statement,
   Title,
   Image,
@@ -29,7 +30,7 @@ const Result = ({
   },
   url
 }) => (
-  <Container>
+  <Box>
     <Statement>{statement}</Statement>
     <Title>{title}</Title>
 
@@ -74,7 +75,7 @@ const Result = ({
         </WhatsappShareButton>
       </Social>
     </Share>
-  </Container>
+  </Box>
 )
 
 Result.propTypes = {

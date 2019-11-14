@@ -21,3 +21,7 @@ export const Item = styled(posed.div({
 }))`
   width: 500px;
 `
+
+export const ResultWrapper = styled.div`
+  width: 500px;
+`
