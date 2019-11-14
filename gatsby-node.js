@@ -1,5 +1,15 @@
+const fs = require('fs')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+
+const writeRedirect = (from, to) => {
+  const file = path.resolve('public/_redirects')
+  const data = `${from} ${to}\n`
+
+  fs.writeFile(file, data, { flag: 'a+' }, (error) => {
+    if (error) console.log(error)
+  })
+}
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -69,8 +79,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     if (type === 'quiz') {
       Array.from(Array(10).keys()).forEach(r => {
+        const url = `${slug}r/${r + 1}`
+
+        writeRedirect(url, slug)
+
         createPage({
-          path: `${slug}r/${r + 1}`,
+          path: url,
           component: path.resolve('src/templates/result.js'),
           context: {
             slug,
@@ -83,8 +97,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     if (type === 'test') {
       result.items.forEach(({ id, title }) => {
+        const url = `${slug}r/${id}`
+
+        writeRedirect(url, slug)
+
         createPage({
-          path: `${slug}r/${id}`,
+          path: url,
           component: path.resolve('src/templates/result.js'),
           context: {
             slug,

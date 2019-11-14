@@ -27,7 +27,7 @@ const Document = ({
       <Seo
         title={title}
       />
-      {console.log(result)}
+
       <Questions
         type={type}
         image={image}

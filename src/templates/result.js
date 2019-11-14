@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import t from 'prop-types'
-import { graphql, navigate } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import { replace } from '../utils'
 
@@ -10,10 +10,6 @@ const Result = ({
   data: { documentsYaml: { image: { src: { publicURL } }, result: { statement: { share } } } },
   pageContext: { r, slug }
 }) => {
-  useEffect(() => {
-    navigate(slug)
-  }, [])
-
   const og = {
     title: replace(share, r),
     image: publicURL
