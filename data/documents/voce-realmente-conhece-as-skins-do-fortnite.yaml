@@ -5,6 +5,7 @@ image:
   name: Skins Fortnite
   src: ../images/voce-realmente-conhece-todas-as-skins-do-fortnite/cover.jpg
 featured: true
+
 questions:
   -
     id: 9cd51776-2c66-48e9-90ff-feba1fd1a88c
@@ -197,6 +198,7 @@ questions:
       -
         key: D
         text: Criptograma
+        
 result:
   statement:
     final: Você acertou

@@ -1,0 +1,33 @@
+type: quiz
+title: 
+game:
+image:
+  name:
+  src:
+featured:
+
+questions:
+  -
+    id:
+    image: 
+      name:
+      src: 
+    options:
+      -
+        key: A 
+        text:
+        correct:
+      -
+        key: B
+        text: 
+      -
+        key: C
+        text:
+      -
+        key: D
+        text:
+        
+result:
+  statement:
+    final: Você acertou
+    share: Eu acertei %s pergunta(s)! E você, realmente conhece as skins do Fortnite?

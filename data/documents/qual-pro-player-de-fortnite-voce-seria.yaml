@@ -5,6 +5,7 @@ image:
   name: Fortnite Competitivo
   src: ../images/qual-pro-player-de-fortnite-voce-seria/cover.jpeg
 featured: true
+
 questions:
   -
     id: 7d69e2d6-dded-4d73-8ee4-77f598218866
@@ -86,6 +87,7 @@ questions:
       -
         key: D
         text: Squad
+        
 result:
   statement:
     final: Você seria
