@@ -18,7 +18,7 @@ const Document = ({
   const q = shuffle(questions).map(item => {
     return {
       ...item,
-      options: shuffle(item.options)
+      options: type === 'test' ? item.options : shuffle(item.options)
     }
   })
 
