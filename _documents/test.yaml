@@ -30,9 +30,9 @@ result:
     share: Eu seria %s! E você, qual pro player de Fortnite você seria?
 
   items:
-      -
-        id:
-        title:
-        image:
-          name:
-          src:
+    -
+      id:
+      title:
+      image:
+        name:
+        src:

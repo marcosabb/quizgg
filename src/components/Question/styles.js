@@ -109,6 +109,7 @@ export const Option = styled.p`
   display: flex;
   align-items: center;
   padding: 16px 20px;
+  height: 50px;
   font-size: ${rem(14)};
   background-color: ${rgba(color.blue, 0.01)};
   border: 1px solid ${rgba(color.blue, 0.1)};
