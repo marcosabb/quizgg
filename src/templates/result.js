@@ -2,10 +2,12 @@ import React, { useEffect } from 'react'
 import t from 'prop-types'
 import { graphql, navigate } from 'gatsby'
 
+import { replace } from '../utils'
+
 import Seo from '../components/Seo'
 
 const Result = ({
-  data: { documentsYaml: { title, image: { src: { publicURL } }, result: { share, items } } },
+  data: { documentsYaml: { image: { src: { publicURL } }, result: { share, items } } },
   pageContext: { type, r, slug }
 }) => {
   useEffect(() => {
@@ -15,12 +17,12 @@ const Result = ({
   const og = {
     title: () => {
       if (type === 'quiz') {
-        return `${share}`
+        return replace(share, r)
       }
 
       if (type === 'test') {
-        // const item = items.find(item => item.id === r)
-        return `${share}`
+        const item = items.find(item => item.id === r)
+        return replace(share, item.title)
       }
     },
     image: publicURL
@@ -39,7 +41,6 @@ const Result = ({
 Result.propTypes = {
   data: t.shape({
     documentsYaml: t.shape({
-      title: t.string,
       image: t.shape({
         src: t.shape({
           publicURL: t.string
