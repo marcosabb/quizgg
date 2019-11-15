@@ -93,7 +93,7 @@ result:
       title: Micael "micaO" Rodrigues
       image:
         name: Micae Rodrigues
-        src: ../static/assets/images/micael-rodrigues.jpg
+        src: ../static/assets/images/micael-rodrigues.png
     - id: 90eae5c9-69aa-4d5a-b93e-3643b7fdc9f2
       title: Murilo "takeshi" Alves
       image:
