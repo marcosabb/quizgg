@@ -94,6 +94,11 @@ result:
       image:
         name: Micael "micaO" Rodrigues
         src: ../static/assets/images/micael-rodrigues.jpg
+    - id: 90eae5c9-69aa-4d5a-b93e-3643b7fdc9f2
+      title: Murilo "takeshi" Alves
+      image:
+        name: Murilo "takeshi" Alves
+        src: ../static/assets/images/murilo-alves.jpg
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual pro player de LoL você seria?'
