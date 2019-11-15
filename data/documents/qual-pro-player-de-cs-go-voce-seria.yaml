@@ -3,7 +3,7 @@ title: Qual pro player de CS:GO você seria?
 game: CS:GO
 image:
   name: CS:GO Pro Players
-  src: ../images/qual-pro-player-de-cs-go-voce-seria/cover.jpg
+  src: ../../static/assets/images/csgo-ct.jpg
 featured: true
 
 questions:
@@ -99,58 +99,58 @@ result:
       title: Gabriel "FalleN" Toledo
       image:
         name: Gabriel Toledo
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/gabriel-toledo.jpg
+        src: ../../static/assets/images/gabriel-toledo.jpg
     -
       id: 1b16f074-ef04-463f-b35b-50289d4ae1a8
       title: Marcelo "Coldzera" David
       image: 
         name: Marcelo David
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/marcelo-david.jpg
+        src: ../../static/assets/images/marcelo-david.jpg
     -
       id: 52075492-7231-481f-9352-e83593921e63
       title: Lincoln "fnx" Lau
       image: 
         name: Lincoln Lau
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/lincoln-lau.jpg
+        src: ../../static/assets/images/lincoln-lau.jpg
     -
       id: 418e30f3-a5c5-4d66-abf4-f5b6defc4e62
       title: Fernando "fer" Alvarenga
       image:
         name: Fernando Alvarenga
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/fernando-alvarenga.jpg
+        src: ../../static/assets/images/fernando-alvarenga.jpg
     -
       id: 29a73dd7-6f1e-4146-9096-257e82799be5
       title: Vito "kNgV-" Giuseppe
       image: 
         name: Vito Giuseppe
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/vito-giuseppe.jpg
+        src: ../../static/assets/images/vito-giuseppe.jpg
     -
       id: f2b9e967-128a-47a1-b3f0-ed533407024c
       title: Epitacio "TACO" de Melo
       image:
         name: Epitacio de Melo
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/epitacio-de-melo.jpg
+        src: ../../static/assets/images/epitacio-de-melo.jpg
     -
       id: 04c2af11-3ba9-407f-a76b-c9fe887102ec
       title: Lucas "LUCAS1" Teles
       image:
         name: Lucas Teles
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/lucas-teles.jpg
+        src: ../../static/assets/images/lucas-teles.jpg
     -
       id: 894c4aca-e935-4aa3-9faf-b57fbe992634
       title: Henrique "HEN1" Teles
       image:
         name: Henrique Teles
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/henrique-teles.jpg
+        src: ../../static/assets/images/henrique-teles.jpg
     -
       id: 40c6f4bd-0d23-4276-a730-90917533e4cc
       title: Kaike "kscerato" Cerato
       image: 
         name: Kaike Cerato
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/kaike-cerato.jpg
+        src: ../../static/assets/images/kaike-cerato.jpg
     -
       id: d7b15cdd-eb3a-4ac4-a02f-1ec33610f666
       title: Yuri "yuurih" Boian
       image:
         name: Yuri Boian
-        src: ../images/qual-pro-player-de-cs-go-voce-seria/yuri-boian.jpg
+        src: ../../static/assets/images/yuri-boian.jpg

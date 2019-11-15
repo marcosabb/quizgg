@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: marcosabb/q
+  branch: master
+  site_domain: https://quizi.netlify.com/
+
+publish_mode: editorial_workflow
+media_folder: static/assets/img
+public_folder: assets/img
+
+collections:
+  - name: "documents"
+    label: "Documents"
+    folder: "data/documents"
+    create: true
+    slug: "{{slug}}"
+    editor:
+     preview: false
+    fields:
+      - { label: "Type", name: "type", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Game", name: "game", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", allow_multiple: false }
+      - { label: "Featured", name: "featured", widget: "boolean" }
+
+      # -
+      # - { label: "Publish Date", name: "date", widget: "datetime" }
+      # - { label: "Description", name: "description", widget: "string" }
+      # - { label: "Body", name: "body", widget: "markdown" }
