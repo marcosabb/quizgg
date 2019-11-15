@@ -34,6 +34,14 @@ collections:
           
       - { label: 'Featured', name: 'featured', widget: 'boolean' }
 
+      - label: 'Questions'
+        name: 'questions'
+        widget: 'list'
+        fields:
+          - { label: 'ID', name: 'id', widget: 'string'}
+          - { label: 'Title', name: 'title', widget: 'string'}
+        
+
       # -
       # - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       # - { label: 'Description', name: 'description', widget: 'string' }
