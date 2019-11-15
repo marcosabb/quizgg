@@ -5,8 +5,8 @@ backend:
   site_domain: https://quizi.netlify.com/
 
 publish_mode: editorial_workflow
-media_folder: static/assets/img
-public_folder: assets/img
+media_folder: static/assets/images
+public_folder: assets/images
 
 collections:
   - name: "documents"
