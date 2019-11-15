@@ -32,17 +32,40 @@ collections:
           - { label: 'Name', name: 'name', widget: 'string'}
           - { label: 'Source', name: 'src', widget: 'string'}
           
-      - { label: 'Featured', name: 'featured', widget: 'boolean' }
+      - { label: 'Featured', name: 'featured', widget: 'boolean', default: false }
 
       - label: 'Questions'
         name: 'questions'
         widget: 'list'
         fields:
-          - { label: 'ID', name: 'id', widget: 'string'}
+          - { label: 'Id', name: 'id', widget: 'string'}
           - { label: 'Title', name: 'title', widget: 'string'}
+          - label: 'Options'
+            name: 'options'
+            widget: 'list'
+            fields:
+              - { label: 'Key', name: 'key', widget: 'string' }
+              - { label: 'Text', name: 'text', widget: 'string' }
         
-
-      # -
-      # - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      # - { label: 'Description', name: 'description', widget: 'string' }
-      # - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Result'
+        name: 'result'
+        widget: 'object'
+        fields: 
+          - label: 'Statement'
+            name: 'statement'
+            widget: 'object'
+            fields:
+              - { label: 'Final', name: 'final', widget: 'string' }
+              - { label: 'Share', name: 'share', widget: 'string' }
+          - label: 'Items'
+            name: 'items'
+            widget: 'list'
+            fields:
+              - { label: 'Id', name: 'id', widget: 'string' }
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - label: 'Image'
+                name: 'image'
+                widget: 'object'
+                fields:
+                  - { label: 'Name', name: 'name', widget: 'string'}
+                  - { label: 'Source', name: 'src', widget: 'string'}
