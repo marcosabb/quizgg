@@ -4,7 +4,7 @@ title: Qual pro player de LoL você seria?
 game: LoL
 image:
   name: League of Legends
-  src: ../../static/assets/images/lol-competitivo.jpg
+  src: ../static/assets/images/lol-competitivo.jpg
 featured: false
 questions:
   - id: c1fc0899-ddf2-4e2d-9174-186ec6b53d95
@@ -68,7 +68,7 @@ result:
       title: Felipe "BrTT" Gonçalves
       image:
         name: Felipe Gonçalves
-        src: ../../static/assets/images/felipe-goncalves.jpg
+        src: ../static/assets/images/felipe-goncalves.jpg
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual pro player de LoL você seria?'
