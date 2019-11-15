@@ -69,7 +69,13 @@ result:
       image:
         name: Felipe Gonçalves
         src: ../static/assets/images/felipe-goncalves.jpg
+    - id: 82673ea4-1aed-4fd4-be85-eeaa296b2f93
+      title: Gabriel "Kami" Bohm
+      image:
+        name: Gabriel Bohm
+        src: ../static/assets/images/gabriel-bohm.jpg
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual pro player de LoL você seria?'
 ---
+
