@@ -8,7 +8,6 @@ import { Container, Image, Wrapper, Content, Title, Game } from './styles'
 
 const Card = ({ image, title, slug, game, featured }) => (
   <Container featured={featured}>
-    {console.log('featured', featured)}
     <Image
       Tag='div'
       fluid={image}
