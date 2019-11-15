@@ -89,6 +89,11 @@ result:
       image:
         name: Leonardo "ROBO" Souza
         src: ../static/assets/images/leonardo-souza.jpg
+    - id: 843d0937-87a8-4c19-aae8-07ff663e10ff
+      title: Micael "micaO" Rodrigues
+      image:
+        name: Micael "micaO" Rodrigues
+        src: ../static/assets/images/micael-rodrigues.jpg
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual pro player de LoL você seria?'
