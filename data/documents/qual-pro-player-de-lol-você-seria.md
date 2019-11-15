@@ -5,7 +5,7 @@ game: LoL
 image:
   name: League of Legends
   src: ../../static/assets/images/lol-competitivo.jpg
-featured: true
+featured: false
 questions:
   - id: c1fc0899-ddf2-4e2d-9174-186ec6b53d95
     options:
