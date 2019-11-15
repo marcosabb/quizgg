@@ -32,14 +32,14 @@ questions:
   - id: f717eaea-8674-4c67-b890-20acd8d63315
     options:
       - key: A
-        text: Top
+        text: Tanques
       - key: B
-        text: Mid
+        text: Lutadores
       - key: C
-        text: Bot
+        text: Atiradores
       - key: D
-        text: Jungle
-    title: Qual a sua lane favorita?
+        text: Magos
+    title: Qual a sua classe preferida?
   - id: e2a0dbe3-76d1-4dfa-af4b-17285644d7df
     options:
       - key: A
