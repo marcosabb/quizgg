@@ -9,7 +9,7 @@ featured: true
 questions:
   -
     id: 7d69e2d6-dded-4d73-8ee4-77f598218866
-    title: Qual sua escopeta favorita?
+    title: Qual a sua escopeta favorita?
     options:
       -
         key: A
@@ -41,7 +41,7 @@ questions:
         text:  'Capítulo 2: Temporada 1'
   -
     id: 40b52bc1-efb8-4d41-a47b-969b4378ff04
-    title: Qual seu time brasileiro preferido?
+    title: Qual o seu time brasileiro preferido?
     options:
       -
         key: A
@@ -57,20 +57,20 @@ questions:
         text: DC Team
   -
     id: 9d1ae521-5004-4ea8-a1b6-ca26e781a820
-    title: Qual seu rifle favorito?
+    title: Qual o seu spot favorito?
     options:
       -
         key: A
-        text: M4
+        text: Fontes Salgadas
       -
         key: B
-        text: AUG
+        text: Parque Agradável
       -
         key: C
-        text: Scar
+        text: Via do Varejo
       -
         key: D
-        text: Famas
+        text: Pântano Glup
   -
     id: cc09d8a9-5c9c-450b-83d3-0908a02329d4
     title: Qual seu modo de jogo preferido?

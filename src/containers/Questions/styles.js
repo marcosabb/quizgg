@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import posed from 'react-pose'
 
 export const Container = styled.section`
   display: flex;
@@ -13,15 +12,4 @@ export const Container = styled.section`
   ${media.lessThan('small')`
     padding-bottom: 20px;
   `}
-`
-
-export const Item = styled(posed.div({
-  enter: { opacity: 1 },
-  exit: { opacity: 0 }
-}))`
-  width: 500px;
-`
-
-export const ResultWrapper = styled.div`
-  width: 500px;
 `

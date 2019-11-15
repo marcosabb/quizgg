@@ -5,7 +5,7 @@ import { rgba } from 'polished'
 import { color } from '../../styles/variables'
 
 export const Container = styled.div`
-  width: 100%;
+  width: 500px;
   padding: 40px 20px;
   background-color: ${color.white};
   border-radius: 6px;

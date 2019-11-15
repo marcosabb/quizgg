@@ -1,19 +1,18 @@
 import React, { useState } from 'react'
 import t from 'prop-types'
 import { debounce } from 'lodash'
-import { PoseGroup } from 'react-pose'
 
 import Question from '../../components/Question'
 import Result from '../../components/Result'
 
-import { Container, Item, ResultWrapper } from './styles'
+import { Container } from './styles'
 
 const Questions = ({ type, image, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answeredQuestion, setAnsweredQuestion] = useState(false)
   const [score, setScore] = useState(0)
-  const [showResult, setShowResult] = useState(false)
+  const [showFinish, setShowFinish] = useState(false)
 
   function check (question, option) {
     const correctOption = question.options.find(q => q.correct)
@@ -97,7 +96,7 @@ const Questions = ({ type, image, questions: q, result, url }) => {
   }, 1000)
 
   const goToResult = debounce(() => {
-    setShowResult(true)
+    setShowFinish(true)
   }, 1000)
 
   function handleCheck (question, option) {
@@ -146,39 +145,29 @@ const Questions = ({ type, image, questions: q, result, url }) => {
   }
 
   function renderQuestions () {
-    return (
-      <PoseGroup>
-        {questions.map((question, index) => {
-          const isVisible = currentQuestion + 1 === index + 1
+    return questions.map((question, index) => {
+      const isVisible = currentQuestion + 1 === index + 1
 
-          return (
-            isVisible && (
-              <Item key={question.id}>
-                <Question
-                  question={question}
-                  counterQuestion={index + 1}
-                  totalQuestions={questions.length}
-                  answeredQuestion={answeredQuestion}
-                  handleCheck={handleCheck}
-                  handleState={handleState}
-                />
-              </Item>
-            )
-          )
-        })}
-      </PoseGroup>
-    )
+      return (
+        isVisible && (
+          <Question
+            key={question.id}
+            question={question}
+            counterQuestion={index + 1}
+            totalQuestions={questions.length}
+            answeredQuestion={answeredQuestion}
+            handleCheck={handleCheck}
+            handleState={handleState}
+          />
+        )
+      )
+    })
   }
 
   return (
     <Container>
-      {showResult
-        ? (
-          <ResultWrapper>
-            <Result result={generateResult()} url={url} />
-          </ResultWrapper>
-        )
-        : renderQuestions()}
+      {showFinish && <Result result={generateResult()} url={url} />}
+      {!showFinish && renderQuestions()}
     </Container>
   )
 }
