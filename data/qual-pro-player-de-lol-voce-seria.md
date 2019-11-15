@@ -74,6 +74,21 @@ result:
       image:
         name: Gabriel Bohm
         src: ../static/assets/images/gabriel-bohm.jpg
+    - id: 57e3c5d6-3a19-4d13-8fc1-56c357341fb3
+      title: Felipe "YoDa" Noronha
+      image:
+        name: Felipe Noronha
+        src: ../static/assets/images/felipe-noronha.jpg
+    - id: 117136b5-e408-493b-94f7-44a76c36dfa5
+      title: Alexandre "TitaN" Lima
+      image:
+        name: Alexandre "TitaN" Lima
+        src: ../static/assets/images/alexandre-lima.jpg
+    - id: 666fbc58-843a-4a12-8e69-f5263acf5394
+      title: Leonardo "ROBO" Souza
+      image:
+        name: Leonardo "ROBO" Souza
+        src: ../static/assets/images/leonardo-souza.jpg
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual pro player de LoL você seria?'
