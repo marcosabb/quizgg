@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: marcosabb/q
+  name: git-gateway
   branch: master
-  site_domain: https://quizi.netlify.com
 
 publish_mode: editorial_workflow
 media_folder: static/assets/images
