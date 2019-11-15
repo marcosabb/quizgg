@@ -2,7 +2,7 @@ backend:
   name: github
   repo: marcosabb/q
   branch: master
-  site_domain: https://quizi.netlify.com/
+  site_domain: https://quizi.netlify.com
 
 publish_mode: editorial_workflow
 media_folder: static/assets/images
