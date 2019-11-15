@@ -17,14 +17,23 @@ collections:
     editor:
      preview: false
     fields:
-      - { label: 'Type', name: 'type', widget: 'string' }
+      - { 
+        label: 'Type', 
+        name: 'type', 
+        widget: 'select', 
+        options: ['quiz', 'test']
+      }
+
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Game', name: 'game', widget: 'string' }
-      - label: 'Image', 
-        name: 'image', 
+
+      - label: 'Image'
+        name: 'image'
         widget: 'object'
-        - { label: 'Name', name: 'name', widget: 'string'}
-        - { label: 'Source', name: 'src', widget: 'string'}
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string'}
+          - { label: 'Source', name: 'src', widget: 'string'}
+          
       - { label: 'Featured', name: 'featured', widget: 'boolean' }
 
       # -
