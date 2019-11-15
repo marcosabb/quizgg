@@ -9,19 +9,14 @@ public_folder: assets/images
 collections:
   - name: 'document'
     label: 'Document'
-    folder: 'data/documents'
+    folder: 'data'
     create: true
     slug: '{{slug}}'
     editor:
      preview: false
-    fields:
-      - { 
-        label: 'Type', 
-        name: 'type', 
-        widget: 'select', 
-        options: ['quiz', 'test']
-      }
 
+    fields:
+      - { label: 'Type', name: 'type', widget: 'select', options: ['quiz', 'test'] }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Game', name: 'game', widget: 'string' }
 
@@ -29,8 +24,8 @@ collections:
         name: 'image'
         widget: 'object'
         fields:
-          - { label: 'Name', name: 'name', widget: 'string'}
-          - { label: 'Source', name: 'src', widget: 'string'}
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Source', name: 'src', widget: 'string' }
           
       - { label: 'Featured', name: 'featured', widget: 'boolean', default: false }
 
@@ -38,8 +33,8 @@ collections:
         name: 'questions'
         widget: 'list'
         fields:
-          - { label: 'Id', name: 'id', widget: 'string'}
-          - { label: 'Title', name: 'title', widget: 'string'}
+          - { label: 'Id', name: 'id', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string' }
           - label: 'Options'
             name: 'options'
             widget: 'list'
@@ -67,5 +62,5 @@ collections:
                 name: 'image'
                 widget: 'object'
                 fields:
-                  - { label: 'Name', name: 'name', widget: 'string'}
-                  - { label: 'Source', name: 'src', widget: 'string'}
+                  - { label: 'Name', name: 'name', widget: 'string' }
+                  - { label: 'Source', name: 'src', widget: 'string' }
