@@ -99,6 +99,16 @@ result:
       image:
         name: Murilo "takeshi" Alves
         src: ../static/assets/images/murilo-alves.jpg
+    - id: 8c8e4d21-d57e-4712-8e2c-62f377ac835e
+      title: Thiago "Tinowns" Sartori
+      image:
+        name: Thiago "Tinowns" Sartori
+        src: ../static/assets/images/thiago-sartori.jpg
+    - id: 6fa98381-acc1-4432-aab7-825e04fdf627
+      title: Gustavo "Minerva" Queiroz
+      image:
+        name: Gustavo "Minerva" Queiroz
+        src: ../static/assets/images/gustavo-queiroz.jpg
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual pro player de LoL você seria?'
