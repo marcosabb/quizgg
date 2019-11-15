@@ -10,8 +10,6 @@ import {
   WhatsappIcon
 } from 'react-share'
 
-// import { replace } from '../../utils'
-
 import Box from '../Box'
 
 import {

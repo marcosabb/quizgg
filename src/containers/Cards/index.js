@@ -12,29 +12,31 @@ import { Container, Featured, Content, LoadingWrapper } from './styles'
 
 const Cards = () => {
   const {
-    allDocumentsYaml: {
+    allMarkdownRemark: {
       edges: documents
     }
   } = useStaticQuery(
     graphql`
       query {
-        allDocumentsYaml {
+        allMarkdownRemark {
           edges {
             node {
-              title
-              game
-              featured
-              fields {
-                slug
-              }
-              image {
-                src {
-                  childImageSharp {
-                    fluid {
-                      ...GatsbyImageSharpFluid
+              frontmatter {
+                title
+                game
+                featured
+                image {
+                  src {
+                    childImageSharp {
+                      fluid {
+                        ...GatsbyImageSharpFluid
+                      }
                     }
                   }
                 }
+              }
+              fields {
+                slug
               }
             }
           }
@@ -43,10 +45,9 @@ const Cards = () => {
     `
   )
 
-  
   const limit = useRef(6)
-  const featured = documents.filter(q => q.node.featured)
-  const normal = documents.filter(q => !q.node.featured)
+  const featured = documents.filter(document => document.node.frontmatter.featured)
+  const normal = documents.filter(document => !document.node.frontmatter.featured)
 
   const [items, setItems] = useState(normal.slice(0, limit.current))
   const [hasMore, setHasMore] = useState(true)
@@ -68,17 +69,19 @@ const Cards = () => {
     return items.map((
       {
         node: {
-          title,
-          game,
-          featured,
-          fields: { slug },
-          image: {
-            src: {
-              childImageSharp: {
-                fluid
+          frontmatter: {
+            title,
+            game,
+            featured,
+            image: {
+              src: {
+                childImageSharp: {
+                  fluid
+                }
               }
             }
-          }
+          },
+          fields: { slug },
         }
       }
     ) => (

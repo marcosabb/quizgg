@@ -1,3 +1,4 @@
+---
 type: quiz
 title: Você realmente conhece as skins do Fortnite?
 game: Fortnite
@@ -203,3 +204,4 @@ result:
   statement:
     final: Você acertou
     share: Eu acertei %s pergunta(s)! E você, realmente conhece as skins do Fortnite?
+---

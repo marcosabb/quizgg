@@ -1,3 +1,4 @@
+---
 type: test
 title: Qual pro player de CS:GO você seria?
 game: CS:GO
@@ -154,3 +155,4 @@ result:
       image:
         name: Yuri Boian
         src: ../../static/assets/images/yuri-boian.jpg
+---

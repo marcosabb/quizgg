@@ -7,7 +7,14 @@ import { replace } from '../utils'
 import Seo from '../components/Seo'
 
 const Result = ({
-  data: { documentsYaml: { image: { src: { publicURL } }, result: { statement: { share } } } },
+  data: {
+    markdownRemark: {
+      frontmatter: {
+        image: { src: { publicURL } },
+        result: { statement: { share } }
+      }
+    }
+  },
   pageContext: { r, slug }
 }) => {
   useEffect(() => {
@@ -31,15 +38,17 @@ const Result = ({
 
 Result.propTypes = {
   data: t.shape({
-    documentsYaml: t.shape({
-      image: t.shape({
-        src: t.shape({
-          publicURL: t.string
-        })
-      }),
-      result: t.shape({
-        statement: t.shape({
-          share: t.string
+    markdownRemark: t.shape({
+      frontmatter: t.shape({
+        image: t.shape({
+          src: t.shape({
+            publicURL: t.string
+          })
+        }),
+        result: t.shape({
+          statement: t.shape({
+            share: t.string
+          })
         })
       })
     })
@@ -55,21 +64,23 @@ export default Result
 
 export const resultQuery = graphql`
   query($slug: String!) {
-    documentsYaml(fields: { slug: { eq: $slug } }) {
-      title
-      image {
-        name 
-        src {
-          publicURL
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        title
+        image {
+          name 
+          src {
+            publicURL
+          }
         }
-      }
-      result {
-        statement {
-          share
-        }
-        items {
-          id
-          title
+        result {
+          statement {
+            share
+          }
+          items {
+            id
+            title
+          }
         }
       }
     }

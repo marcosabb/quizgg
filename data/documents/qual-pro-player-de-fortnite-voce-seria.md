@@ -1,3 +1,4 @@
+---
 type: test
 title: Qual pro player de Fortnite você seria?
 game: Fortnite
@@ -154,3 +155,4 @@ result:
       image:
         name: Gustavo Trevisan
         src: ../../static/assets/images/gustavo-trevisan.jpg
+---

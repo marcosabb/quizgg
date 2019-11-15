@@ -11,7 +11,9 @@ import Questions from '../containers/Questions'
 const Document = ({
   data: {
     site: { siteMetadata: { siteUrl: url } },
-    documentsYaml: { type, title, image, questions, result }
+    markdownRemark: {
+      frontmatter: { type, title, image, questions, result }
+    }
   },
   path
 }) => {
@@ -46,12 +48,14 @@ Document.propTypes = {
         siteUrl: t.string
       })
     }).isRequired,
-    documentsYaml: t.shape({
-      title: t.string,
-      type: t.string,
-      image: t.object,
-      questions: t.array,
-      result: t.object
+    markdownRemark: t.shape({
+      frontmatter: t.shape({
+        title: t.string,
+        type: t.string,
+        image: t.object,
+        questions: t.array,
+        result: t.object
+      })
     })
   }).isRequired,
   path: t.string.isRequired
@@ -67,21 +71,9 @@ export const documentQuery = graphql`
       }
     }
     
-    documentsYaml(fields: { slug: { eq: $slug } }) {
-      type
-      title
-      image {
-        name
-        src {
-          childImageSharp {
-            fluid(maxWidth: 250) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-      questions {
-        id
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        type
         title
         image {
           name
@@ -93,18 +85,7 @@ export const documentQuery = graphql`
             }
           }
         }
-        options {
-          key
-          text
-          correct
-        }
-      }
-      result {
-        statement {
-          final
-          share
-        }
-        items {
+        questions {
           id
           title
           image {
@@ -113,6 +94,31 @@ export const documentQuery = graphql`
               childImageSharp {
                 fluid(maxWidth: 250) {
                   ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          options {
+            key
+            text
+            correct
+          }
+        }
+        result {
+          statement {
+            final
+            share
+          }
+          items {
+            id
+            title
+            image {
+              name
+              src {
+                childImageSharp {
+                  fluid(maxWidth: 250) {
+                    ...GatsbyImageSharpFluid
+                  }
                 }
               }
             }
