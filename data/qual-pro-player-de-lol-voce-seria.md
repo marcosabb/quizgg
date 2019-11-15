@@ -21,14 +21,14 @@ questions:
   - id: 5263c51c-9f1a-4b03-a787-65b672a167fb
     options:
       - key: A
-        text: Top
+        text: Flamengo eSports
       - key: B
-        text: Mid
+        text: INTZ e-Sports Club
       - key: C
-        text: Bot
+        text: paiN Gaming
       - key: D
-        text: Jungle
-    title: Qual a sua lane favorita?
+        text: Team oNe e-Sports
+    title: Qual o seu time favorito?
   - id: f717eaea-8674-4c67-b890-20acd8d63315
     options:
       - key: A
