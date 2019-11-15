@@ -4,7 +4,7 @@ module.exports = {
     year: new Date().getFullYear(),
     description: 'Lorem ipsum dolor sit amet.',
     author: '@marcosabb',
-    url: 'https://quizi.netlify.com'
+    siteUrl: 'https://quizi.netlify.com'
   },
   plugins: [
     'gatsby-plugin-eslint',
@@ -46,9 +46,13 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
       }
-    }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', disallow: '/*/r/*' }]
+      }
+    },
+    'gatsby-plugin-offline'
   ]
 }

@@ -10,7 +10,7 @@ import Questions from '../containers/Questions'
 
 const Document = ({
   data: {
-    site: { siteMetadata: { url } },
+    site: { siteMetadata: { siteUrl: url } },
     documentsYaml: { type, title, image, questions, result }
   },
   path
@@ -43,7 +43,7 @@ Document.propTypes = {
   data: t.shape({
     site: t.shape({
       siteMetadata: t.shape({
-        url: t.string
+        siteUrl: t.string
       })
     }).isRequired,
     documentsYaml: t.shape({
@@ -63,7 +63,7 @@ export const documentQuery = graphql`
   query($slug: String!) {
     site {
       siteMetadata {
-        url
+        siteUrl
       }
     }
     

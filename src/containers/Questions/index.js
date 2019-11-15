@@ -179,9 +179,6 @@ const Questions = ({ type, image, questions: q, result, url }) => {
           </ResultWrapper>
         )
         : renderQuestions()}
-      {result.items.map(i => (
-        <pre key={i.id}>{JSON.stringify(i.image.src.childImageSharp)}</pre>
-      ))}
     </Container>
   )
 }
