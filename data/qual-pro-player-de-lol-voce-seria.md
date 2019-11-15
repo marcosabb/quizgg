@@ -82,33 +82,38 @@ result:
     - id: 117136b5-e408-493b-94f7-44a76c36dfa5
       title: Alexandre "TitaN" Lima
       image:
-        name: Alexandre "TitaN" Lima
+        name: Alexandre Lima
         src: ../static/assets/images/alexandre-lima.jpg
     - id: 666fbc58-843a-4a12-8e69-f5263acf5394
       title: Leonardo "Robo" Souza
       image:
-        name: Leonardo "Robo" Souza
+        name: Leonardo Souza
         src: ../static/assets/images/leonardo-souza.jpg
     - id: 843d0937-87a8-4c19-aae8-07ff663e10ff
       title: Micael "micaO" Rodrigues
       image:
-        name: Micael "micaO" Rodrigues
+        name: Micae Rodrigues
         src: ../static/assets/images/micael-rodrigues.jpg
     - id: 90eae5c9-69aa-4d5a-b93e-3643b7fdc9f2
       title: Murilo "takeshi" Alves
       image:
-        name: Murilo "takeshi" Alves
+        name: Murilo Alves
         src: ../static/assets/images/murilo-alves.jpg
     - id: 8c8e4d21-d57e-4712-8e2c-62f377ac835e
       title: Thiago "Tinowns" Sartori
       image:
-        name: Thiago "Tinowns" Sartori
+        name: Thiago Sartori
         src: ../static/assets/images/thiago-sartori.jpg
     - id: 6fa98381-acc1-4432-aab7-825e04fdf627
       title: Gustavo "Minerva" Queiroz
       image:
-        name: Gustavo "Minerva" Queiroz
-        src: ../static/assets/images/gustavo-queiroz.jpg
+        name: Gustavo Queiroz
+        src: ../static/assets/images/gustavo-queiroz.png
+    - id: 46749a1e-8a6e-4c2c-a3e2-ecd936ad881e
+      title: Matheus "Dynquedo" Rossini
+      image:
+        name: Matheus Rossini
+        src: ../static/assets/images/matheus-rossini.jpg
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual pro player de LoL você seria?'
