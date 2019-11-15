@@ -85,9 +85,9 @@ result:
         name: Alexandre "TitaN" Lima
         src: ../static/assets/images/alexandre-lima.jpg
     - id: 666fbc58-843a-4a12-8e69-f5263acf5394
-      title: Leonardo "ROBO" Souza
+      title: Leonardo "Robo" Souza
       image:
-        name: Leonardo "ROBO" Souza
+        name: Leonardo "Robo" Souza
         src: ../static/assets/images/leonardo-souza.jpg
     - id: 843d0937-87a8-4c19-aae8-07ff663e10ff
       title: Micael "micaO" Rodrigues
