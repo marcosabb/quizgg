@@ -9,8 +9,8 @@ media_folder: static/assets/images
 public_folder: assets/images
 
 collections:
-  - name: "documents"
-    label: "Documents"
+  - name: "document"
+    label: "Document"
     folder: "data/documents"
     create: true
     slug: "{{slug}}"
