@@ -26,6 +26,7 @@ const Cards = () => {
                 game
                 featured
                 image {
+                  name
                   src {
                     childImageSharp {
                       fluid {

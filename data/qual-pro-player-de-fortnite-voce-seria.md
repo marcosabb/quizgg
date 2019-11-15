@@ -4,7 +4,7 @@ title: Qual pro player de Fortnite você seria?
 game: Fortnite
 image:
   name: Fortnite Pro Players
-  src: ../../static/assets/images/fortnite-competitivo.jpeg
+  src: ../static/assets/images/fortnite-competitivo.jpeg
 featured: true
 
 questions:
@@ -100,59 +100,59 @@ result:
       title: Igor "drakoNz" Fernandes
       image:
         name: Igor Fernandes
-        src: ../../static/assets/images/igor-fernandes.jpg
+        src: ../static/assets/images/igor-fernandes.jpg
     -
       id: f7780242-43b0-4324-a33d-850cbb6f5082
       title: Nicolas "Nicks" Polonio
       image:
         name: Nicolas Polonio
-        src: ../../static/assets/images/nicolas-polonio.jpg
+        src: ../static/assets/images/nicolas-polonio.jpg
     -
       id: 252aa0f8-52c8-4195-8d7c-c0f26079d244
       title: Gabriel "MasteerXD" Marques
       image:
         name: Gabriel Marques
-        src: ../../static/assets/images/gabriel-marques.jpg
+        src: ../static/assets/images/gabriel-marques.jpg
     -
       id: af197dcd-64ea-4097-b6e7-b0d4308b869e
       title: Patrick "blackoutz" Garcia
       image:
         name: Patrick Garcia
-        src: ../../static/assets/images/patrick-garcia.jpg
+        src: ../static/assets/images/patrick-garcia.jpg
     -
       id: c97fe387-dba8-4484-8a0b-a6b4a57eee0b
       title: Leonardo "leleo" Dametto
       image:
         name: Leonardo Dametto
-        src: ../../static/assets/images/leonardo-dametto.jpg
+        src: ../static/assets/images/leonardo-dametto.jpg
     -
       id: d80019c7-e6d8-4237-ba01-f71a6dce9617
       title: Thales "Pulgaboy" Henrique
       image:
         name: Thales Henrique
-        src: ../../static/assets/images/thales-henrique.jpg
+        src: ../static/assets/images/thales-henrique.jpg
     -
       id: 214a8896-ef64-4677-9bf0-342ba736b618
       title: Rodrigo "Avlr" Avelar
       image:
         name: Rodrigo Avelar
-        src: ../../static/assets/images/rodrigo-avelar.jpg
+        src: ../static/assets/images/rodrigo-avelar.jpg
     -
       id: fe7bd473-5c02-40e3-a917-3cdb01975b56
       title: Henrique "kurtz" Kurtz
       image:
         name: Henrique Kurtz
-        src: ../../static/assets/images/henrique-kurtz.jpg
+        src: ../static/assets/images/henrique-kurtz.jpg
     -
       id: a2da94ee-83d3-47de-bafb-18ed777d1979
       title: Fabio "Faah" Henrique
       image:
         name: Fabio Henrique
-        src: ../../static/assets/images/fabio-henrique.jpg
+        src: ../static/assets/images/fabio-henrique.jpg
     -
       id: e9982abe-f587-4872-84dd-e80743ca1c2a
       title: Gustavo "technoviking46" Trevisan
       image:
         name: Gustavo Trevisan
-        src: ../../static/assets/images/gustavo-trevisan.jpg
+        src: ../static/assets/images/gustavo-trevisan.jpg
 ---

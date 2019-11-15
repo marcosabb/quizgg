@@ -1,4 +1,5 @@
 const path = require('path')
+const slugify = require('slug')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -8,13 +9,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const slug = createFilePath({
       node,
       getNode,
-      basePath: 'data/'
+      basePath: 'data'
     })
 
     createNodeField({
       node,
       name: 'slug',
-      value: `/${slug.replace('/documents/', '')}`
+      value: `/${slugify(slug)}/`
     })
   }
 }

@@ -4,7 +4,7 @@ title: Você realmente conhece as skins do Fortnite?
 game: Fortnite
 image:
   name: Skins Fortnite
-  src: ../../static/assets/images/temporada-x.jpg
+  src: ../static/assets/images/temporada-x.jpg
 featured: true
 
 questions:
@@ -12,7 +12,7 @@ questions:
     id: 9cd51776-2c66-48e9-90ff-feba1fd1a88c
     image: 
       name: Bombardeira Estelar
-      src: ../../static/assets/images/bombardeira-estelar.png
+      src: ../static/assets/images/bombardeira-estelar.png
     options:
       -
         key: A
@@ -31,7 +31,7 @@ questions:
     id: 7e4ac111-beef-4992-84ab-903a7923fd2a
     image: 
       name: Defensora Escarlate
-      src: ../../static/assets/images/defensora-escarlate.png
+      src: ../static/assets/images/defensora-escarlate.png
     options:
       -
         key: A
@@ -51,7 +51,7 @@ questions:
     id: 0c2d5db0-6d48-4534-8d21-840f3bbb0ba4
     image: 
       name: Dinamo
-      src: ../../static/assets/images/dinamo.png
+      src: ../static/assets/images/dinamo.png
     options:
       -
         key: A
@@ -70,7 +70,7 @@ questions:
     id: 307edb2a-c32b-41e3-8c1b-41e3b475b8f5
     image: 
       name: O Ceifador
-      src: ../../static/assets/images/ceifador.png
+      src: ../static/assets/images/ceifador.png
     options:
       -
         key: A
@@ -89,7 +89,7 @@ questions:
     id: 6a9d8c3c-7090-4f31-9114-d5fb30323221
     image: 
       name: Especialista em Brilhos
-      src: ../../static/assets/images/especialista-em-brilhos.png
+      src: ../static/assets/images/especialista-em-brilhos.png
     options:
       -
         key: A
@@ -108,7 +108,7 @@ questions:
     id: c3902457-630e-40b1-b66b-784782b64368
     image: 
       name: Voyager Sombrio
-      src: ../../static/assets/images/voyager-sombrio.png
+      src: ../static/assets/images/voyager-sombrio.png
     options:
       -
         key: A
@@ -127,7 +127,7 @@ questions:
     id: 13d9b8da-cfac-4fc3-92e7-c93f5527e849
     image: 
       name: Carboneto
-      src: ../../static/assets/images/carboneto.png
+      src: ../static/assets/images/carboneto.png
     options:
       -
         key: A
@@ -146,7 +146,7 @@ questions:
     id: bcd4cba3-b783-4f65-a776-c2e5adce8482
     image: 
       name: Guarda do Amor
-      src: ../../static/assets/images/guarda-do-amor.png
+      src: ../static/assets/images/guarda-do-amor.png
     options:
       -
         key: A
@@ -165,7 +165,7 @@ questions:
     id: 176a239f-5638-433a-9a28-37070d889fc1
     image: 
       name: Corvo
-      src: ../../static/assets/images/corvo.png
+      src: ../static/assets/images/corvo.png
     options:
       -
         key: A
@@ -184,7 +184,7 @@ questions:
     id: 9f41eb8c-ca5b-4e67-8231-a8a551dd9328
     image: 
       name: Operações Snorkel
-      src: ../../static/assets/images/operacoes-snorkel.png
+      src: ../static/assets/images/operacoes-snorkel.png
     options:
       -
         key: A
