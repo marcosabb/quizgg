@@ -20,7 +20,8 @@ const Question = memo(({
   totalQuestions,
   answeredQuestion,
   handleCheck,
-  handleState
+  handleState,
+  inline
 }) => (
   <Box>
     <Counter>{counterQuestion}/{totalQuestions}</Counter>
@@ -30,7 +31,7 @@ const Question = memo(({
       </Image>
     )}
     {!question.image && <Title>{question.title}</Title>}
-    <Options>
+    <Options inline={inline}>
       {question.options && question.options.map((option) => (
         <Option
           key={v4()}
@@ -40,6 +41,7 @@ const Question = memo(({
               ? () => { handleCheck(question, option) }
               : () => {}
           }
+          inline={inline}
         >
           {option.text}
         </Option>
@@ -63,7 +65,8 @@ Question.propTypes = {
   totalQuestions: t.number.isRequired,
   answeredQuestion: t.bool.isRequired,
   handleCheck: t.func.isRequired,
-  handleState: t.func.isRequired
+  handleState: t.func.isRequired,
+  inline: t.bool,
 }
 
 export default Question

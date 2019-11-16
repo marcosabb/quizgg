@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components'
 import media from 'styled-media-query'
-import { switchProp } from 'styled-tools'
+import { switchProp, ifProp } from 'styled-tools'
 import { rem, rgba } from 'polished'
 
 import { color } from '../../styles/variables'
@@ -103,6 +103,11 @@ export const Title = styled.p`
 `
 
 export const Options = styled.div`
+  ${ifProp('inline', css`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  `, null)}
 `
 
 export const Option = styled.p`
@@ -146,4 +151,20 @@ export const Option = styled.p`
     font-size: ${rem(12)};
     padding: 12px 16px;
   `}
+
+  ${ifProp('inline', css`
+    width: calc(50% - 10px);
+
+   &:nth-last-child(2) {
+      margin-bottom: 0;
+
+      ${media.lessThan('small')` 
+        margin-bottom: 12px;
+      `}
+    }
+
+    ${media.lessThan('small')`
+      width: calc(50% - 6px);
+    `}
+  `, null)}
 `

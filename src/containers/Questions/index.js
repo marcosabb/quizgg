@@ -157,6 +157,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
             answeredQuestion={answeredQuestion}
             handleCheck={handleCheck}
             handleState={handleState}
+            inline={question.options.length >= 5}
           />
         )
       )
