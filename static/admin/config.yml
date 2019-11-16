@@ -26,7 +26,7 @@ collections:
         widget: 'object'
         fields:
           - { label: 'Name', name: 'name', widget: 'string' }
-          - { label: 'Source', name: 'src', widget: 'image' }
+          - { label: 'Source', name: 'src', widget: 'string' }
           
       - { label: 'Featured', name: 'featured', widget: 'boolean', default: false }
 
