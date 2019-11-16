@@ -35,7 +35,6 @@ const Result = memo(({
     r
   },
   url,
-  redo
 }) => {
   const [loading, setLoading] = useState(true)
 
@@ -119,7 +118,6 @@ Result.propTypes = {
     r: t.string
   }).isRequired,
   url: t.string.isRequired,
-  redo: t.func.isRequired
 }
 
 export default Result

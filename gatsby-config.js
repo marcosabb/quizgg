@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Quizi',
+    title: 'Queasy',
     year: new Date().getFullYear(),
     description: 'Lorem ipsum dolor sit amet.',
     author: '@marcosabb',
-    siteUrl: 'https://quizi.netlify.com'
+    siteUrl: 'https://queasy.netlify.com'
   },
   plugins: [
     'gatsby-plugin-eslint',

@@ -1,6 +1,6 @@
 ---
-type: test
-title: 'Qual pro player de CS:GO você seria?'
+type: teste
+title: Qual jogador profissional de Counter Strike você seria?
 game: Counter Strike
 image:
   name: Counter Strike

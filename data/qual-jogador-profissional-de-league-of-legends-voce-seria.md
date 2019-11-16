@@ -1,6 +1,6 @@
 ---
-type: test
-title: Qual pro player de League of Legends você seria?
+type: teste
+title: Qual jogador profissional de League of Legends você seria?
 game: League of Legends
 image:
   name: League of Legends

@@ -85,7 +85,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
       check(question, option)
     }
 
-    if (type === 'test') {
+    if (type === 'teste') {
       select(question, option)
     }
   }
@@ -116,6 +116,8 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
     if (option.select) return 'select'
   }
 
+  console.log(result)
+
   function generateResult () {
     if (type === 'quiz') {
       return {
@@ -129,7 +131,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
       }
     }
 
-    if (type === 'test') {
+    if (type === 'teste') {
       const item = result.items[Math.floor(Math.random() * result.items.length)]
 
       return {
@@ -142,14 +144,6 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
         r: item.id
       }
     }
-  }
-
-  function redo () {
-    setQuestions(q)
-    setAnsweredQuestion(false)
-    setCurrentQuestion(0)
-    setScore(0)
-    setShowFinish(false)
   }
 
   function renderQuestions () {
@@ -174,7 +168,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
 
   return (
     <Container>
-      {showFinish && <Result result={generateResult()} url={url} redo={redo} />}
+      {showFinish && <Result result={generateResult()} url={url} />}
       {!showFinish && renderQuestions()}
     </Container>
   )
@@ -194,7 +188,10 @@ Questions.propTypes = {
     }))
   })).isRequired,
   result: t.shape({
-    statement: t.string,
+    statement: t.shape({
+      final: t.string,
+      share: t.string
+    }),
     items: t.arrayOf(t.shape({
       id: t.string,
       title: t.string,

@@ -8,11 +8,11 @@ import { color } from '../../styles/variables'
 
 export const Container = styled.div`
   position: relative;
-  flex: ${ifProp('featured', null, '0 0 calc(33.3333% - 20px)')};
+  flex: ${ifProp('featured', null, '0 0 calc(50% - 20px)')};
   width: ${ifProp('featured', 'calc(50% - 20px)', null)};
   height: ${ifProp('featured', 'calc(50% - 10px)', '250px')};
   margin-bottom: ${ifProp('featured', null, '20px')};
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
 
   .background {
@@ -67,17 +67,21 @@ export const Content = styled.div`
 `
 
 export const Title = styled.h2`
-  font-size: ${rem(24)};
+  font-weight: 400;
+  font-size: ${rem(22)};
   text-transform: uppercase;
-  text-shadow: 1px 1px ${rgba(color.text, 0.8)};
+  text-shadow: 2px 2px ${rgba(color.text, 0.6)};
+  line-height: 1.4;
   color: ${color.white};
 `
 
-export const Game = styled.span`
+export const Badges = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
+`
 
+export const Badge = styled.span`
   padding: 4px 6px;
   font-size: ${rem(10)};
   font-weight: 700;
@@ -85,4 +89,8 @@ export const Game = styled.span`
   color: ${color.white};
   background-color: ${color.blue};
   border-radius: 3px;
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
 `

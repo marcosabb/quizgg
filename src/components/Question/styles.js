@@ -81,7 +81,7 @@ export const Image = styled.div`
   margin: 0 auto 30px;
 
   img {
-    border-radius: 6px;
+    border-radius: 4px;
   }
 
   ${media.lessThan('small')`
@@ -111,9 +111,9 @@ export const Option = styled.p`
   padding: 16px 20px;
   height: 50px;
   font-size: ${rem(14)};
-  background-color: ${rgba(color.blue, 0.01)};
+  background-color: ${rgba(color.blue, 0.008)};
   border: 1px solid ${rgba(color.blue, 0.1)};
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
 
   ${switchProp('state', {

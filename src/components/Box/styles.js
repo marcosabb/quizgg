@@ -8,7 +8,7 @@ export const Container = styled.div`
   width: 500px;
   padding: 40px 20px;
   background-color: ${color.white};
-  border-radius: 6px;
+  border-radius: 4px;
   border: 1px solid ${rgba(color.blue, 0.04)};
   box-shadow: 0 20px 20px -20px ${rgba(color.blue, 0.2)};
 

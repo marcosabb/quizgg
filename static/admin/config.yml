@@ -17,7 +17,7 @@ collections:
      preview: false
 
     fields:
-      - { label: 'Type', name: 'type', widget: 'select', options: ['quiz', 'test'] }
+      - { label: 'Type', name: 'type', widget: 'select', options: ['quiz', 'teste'] }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Game', name: 'game', widget: 'select', options: ['Fortnite', 'Counter Strike', 'League of Legends'] }
 

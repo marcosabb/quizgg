@@ -22,6 +22,7 @@ const Cards = memo(() => {
             node {
               frontmatter {
                 title
+                type
                 game
                 featured
                 image {
@@ -71,6 +72,7 @@ const Cards = memo(() => {
         node: {
           frontmatter: {
             title,
+            type,
             game,
             featured,
             image: {
@@ -90,6 +92,7 @@ const Cards = memo(() => {
         image={fluid}
         title={title}
         slug={slug}
+        type={type}
         game={game}
         featured={featured}
       />

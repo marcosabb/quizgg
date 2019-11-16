@@ -4,9 +4,17 @@ import Link from 'gatsby-link'
 
 import { color } from '../../styles/variables'
 
-import { Container, Image, Wrapper, Content, Title, Game } from './styles'
+import {
+  Container,
+  Image,
+  Wrapper,
+  Content,
+  Title,
+  Badges,
+  Badge
+} from './styles'
 
-const Card = memo(({ image, title, slug, game, featured }) => (
+const Card = memo(({ image, title, slug, type, game, featured }) => (
   <Container featured={featured}>
     <Image
       Tag='div'
@@ -19,7 +27,10 @@ const Card = memo(({ image, title, slug, game, featured }) => (
       to={slug}
     >
       <Wrapper>
-        <Game>{game}</Game>
+        <Badges>
+          <Badge>{type}</Badge>
+          <Badge>{game}</Badge>
+        </Badges>
 
         <Content>
           <Title>{title}</Title>
@@ -33,6 +44,7 @@ Card.propTypes = {
   image: t.object.isRequired,
   title: t.string.isRequired,
   slug: t.string.isRequired,
+  type: t.string.isRequired,
   game: t.string.isRequired,
   featured: t.bool
 }

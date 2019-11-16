@@ -55,7 +55,7 @@ export const Image = styled.div`
   margin: 0 auto 30px;
 
   img {
-    border-radius: 6px;
+    border-radius: 4px;
   }
 
   ${media.lessThan('small')`
