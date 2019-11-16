@@ -4,7 +4,7 @@ title: 'Qual pro player de CS:GO você seria?'
 game: Counter Strike
 image:
   name: Counter Strike
-  src: /assets/images/csgo-ct.jpg
+  src: ../static/assets/images/csgo-ct.jpg
 featured: true
 questions:
   - id: 9d95cd5c-c139-4a1f-8ad8-f47906cb463e
