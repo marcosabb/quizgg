@@ -3,7 +3,7 @@ type: test
 title: Qual pro player de Fortnite você seria?
 game: Fortnite
 image:
-  name: Fortnite Pro Players
+  name: Fortnite
   src: ../static/assets/images/fortnite-competitivo.jpeg
 featured: true
 

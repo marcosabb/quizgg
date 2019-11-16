@@ -1,7 +1,7 @@
 ---
 type: test
-title: Qual pro player de LoL você seria?
-game: LoL
+title: Qual pro player de League of Legends você seria?
+game: League of Legends
 image:
   name: League of Legends
   src: ../static/assets/images/lol-competitivo.png

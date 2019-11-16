@@ -1,9 +1,9 @@
 ---
 type: test
 title: Qual pro player de CS:GO você seria?
-game: CS:GO
+game: Counter Strike
 image:
-  name: CS:GO Pro Players
+  name: Counter Strike
   src: ../static/assets/images/csgo-ct.jpg
 featured: true
 

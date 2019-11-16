@@ -3,7 +3,7 @@ type: quiz
 title: Você realmente conhece as skins do Fortnite?
 game: Fortnite
 image:
-  name: Skins Fortnite
+  name: Fortnite
   src: ../static/assets/images/temporada-x.jpg
 featured: true
 
