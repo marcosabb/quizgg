@@ -115,9 +115,6 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
     if (option.wrong) return 'wrong'
     if (option.select) return 'select'
   }
-
-  console.log(result)
-
   function generateResult () {
     if (type === 'quiz') {
       return {
