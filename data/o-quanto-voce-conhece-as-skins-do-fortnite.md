@@ -203,5 +203,5 @@ questions:
 result:
   statement:
     final: Você acertou
-    share: Eu acertei %s pergunta(s)! E você, realmente conhece as skins do Fortnite?
+    share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins do Fortnite?
 ---

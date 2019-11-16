@@ -116,6 +116,6 @@ result:
         src: ../static/assets/images/yuri-boian.jpg
   statement:
     final: Você seria
-    share: 'Eu seria %s! E você, qual pro player de CS:GO você seria?'
+    share: Eu seria %s! E você, qual jogador profissional de Counter Strike seria?
 ---
 

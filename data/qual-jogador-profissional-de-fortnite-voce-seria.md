@@ -92,7 +92,7 @@ questions:
 result:
   statement:
     final: Você seria
-    share: Eu seria %s! E você, qual pro player de Fortnite você seria?
+    share: Eu seria %s! E você, qual jogador profissional de Fortnite seria?
 
   items:
     -

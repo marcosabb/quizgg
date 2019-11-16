@@ -116,6 +116,6 @@ result:
         src: ../static/assets/images/matheus-rossini.jpg
   statement:
     final: Você seria
-    share: 'Eu seria %s! E você, qual pro player de LoL você seria?'
+    share: Eu seria %s! E você, qual jogador profissional de League of Legends seria?
 ---
 
