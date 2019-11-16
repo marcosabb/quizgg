@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable*/
+import React, { memo } from 'react'
 import t from 'prop-types'
 import Img from 'gatsby-image'
 import v4 from 'uuid/v4'
@@ -13,7 +14,7 @@ import {
   Option
 } from './styles'
 
-const Question = ({
+const Question = memo(({
   question,
   counterQuestion,
   totalQuestions,
@@ -45,7 +46,7 @@ const Question = ({
       ))}
     </Options>
   </Box>
-)
+))
 
 Question.propTypes = {
   question: t.shape({

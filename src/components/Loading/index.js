@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 import { Container } from './styles'
 
-const Loading = () => <Container />
+const Loading = memo(() => <Container />)
 
 export default Loading

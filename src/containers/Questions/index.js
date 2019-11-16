@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import t from 'prop-types'
 import { debounce } from 'lodash'
 
@@ -7,7 +7,7 @@ import Result from '../../components/Result'
 
 import { Container } from './styles'
 
-const Questions = ({ type, image, questions: q, result, url }) => {
+const Questions = memo(({ type, image, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answeredQuestion, setAnsweredQuestion] = useState(false)
@@ -170,7 +170,7 @@ const Questions = ({ type, image, questions: q, result, url }) => {
       {!showFinish && renderQuestions()}
     </Container>
   )
-}
+})
 
 Questions.propTypes = {
   type: t.string.isRequired,

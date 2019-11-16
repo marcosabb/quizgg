@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import t from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
@@ -8,7 +8,7 @@ import Footer from '../Footer'
 import Global from '../../styles/global'
 import { Container, Wrapper } from './styles'
 
-const Layout = ({ children }) => {
+const Layout = memo(({ children }) => {
   const { site: { siteMetadata: { title, year } } } = useStaticQuery(
     graphql`
       query {
@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
       <Footer title={title} year={year} />
     </Container>
   )
-}
+})
 
 Layout.propTypes = {
   children: t.node.isRequired

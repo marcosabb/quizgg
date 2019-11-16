@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { memo, useEffect } from 'react'
 import t from 'prop-types'
 import { graphql, navigate } from 'gatsby'
 
@@ -6,7 +6,7 @@ import { replace } from '../utils'
 
 import Seo from '../components/Seo'
 
-const Result = ({
+const Result = memo(({
   data: {
     markdownRemark: {
       frontmatter: {
@@ -34,7 +34,7 @@ const Result = ({
       ]}
     />
   )
-}
+})
 
 Result.propTypes = {
   data: t.shape({

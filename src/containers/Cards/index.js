@@ -1,5 +1,4 @@
-/* eslint-disable */
-import React, { useState, useRef } from 'react'
+import React, { memo, useState, useRef } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import v4 from 'uuid/v4'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -10,7 +9,7 @@ import Loading from '../../components/Loading'
 
 import { Container, Featured, Content, LoadingWrapper } from './styles'
 
-const Cards = () => {
+const Cards = memo(() => {
   const {
     allMarkdownRemark: {
       edges: documents
@@ -60,7 +59,7 @@ const Cards = () => {
   function fetchData () {
     if (items.length >= normal.length) {
       setHasMore(false)
-      return;
+      return
     }
 
     push()
@@ -82,7 +81,7 @@ const Cards = () => {
               }
             }
           },
-          fields: { slug },
+          fields: { slug }
         }
       }
     ) => (
@@ -119,6 +118,6 @@ const Cards = () => {
       </InfiniteScroll>
     </Container>
   )
-}
+})
 
 export default Cards

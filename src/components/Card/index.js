@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import t from 'prop-types'
 import Link from 'gatsby-link'
 
@@ -6,7 +6,7 @@ import { color } from '../../styles/variables'
 
 import { Container, Image, Wrapper, Content, Title, Game } from './styles'
 
-const Card = ({ image, title, slug, game, featured }) => (
+const Card = memo(({ image, title, slug, game, featured }) => (
   <Container featured={featured}>
     <Image
       Tag='div'
@@ -27,7 +27,7 @@ const Card = ({ image, title, slug, game, featured }) => (
       </Wrapper>
     </Link>
   </Container>
-)
+))
 
 Card.propTypes = {
   image: t.object.isRequired,

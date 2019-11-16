@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import t from 'prop-types'
 import { graphql } from 'gatsby'
 
@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import Questions from '../containers/Questions'
 
-const Document = ({
+const Document = memo(({
   data: {
     site: { siteMetadata: { siteUrl: url } },
     markdownRemark: {
@@ -39,7 +39,7 @@ const Document = ({
       />
     </Layout>
   )
-}
+})
 
 Document.propTypes = {
   data: t.shape({

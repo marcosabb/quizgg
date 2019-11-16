@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import t from 'prop-types'
 import Img from 'gatsby-image'
 import {
@@ -22,7 +22,7 @@ import {
   Social
 } from './styles'
 
-const Result = ({
+const Result = memo(({
   result: {
     statement: { final },
     title,
@@ -79,7 +79,7 @@ const Result = ({
       </Social>
     </Share>
   </Box>
-)
+))
 
 Result.propTypes = {
   result: t.shape({
