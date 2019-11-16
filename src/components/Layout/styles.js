@@ -12,6 +12,6 @@ export const Wrapper = styled.div`
   padding: 0 16px;
   
   ${media.lessThan('small')`
-    padding-bottom: 60px;
+    padding-bottom: 80px;
   `}
 `

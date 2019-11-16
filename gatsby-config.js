@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: 'Queasy',
-    year: new Date().getFullYear(),
-    description: 'Lorem ipsum dolor sit amet.',
-    author: '@marcosabb',
-    siteUrl: 'https://queasy.netlify.com'
+    description: 'Se divirta respondendo e compartilhando quizzes e testes sobre seu jogo favorito',
+    author: '@queasy',
+    url: 'https://queasy.netlify.com',
+    year: new Date().getFullYear()
   },
   plugins: [
     'gatsby-plugin-eslint',
@@ -36,7 +36,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Roboto:300,400,700'
+          'Roboto:400,700'
         ]
       }
     },
@@ -45,13 +45,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Queasy',
+        short_name: 'queasy',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#1e1eff',
+        theme_color: '#1e1eff',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
+        icon: 'src/images/gatsby-icon.png'
       }
     },
     'gatsby-plugin-offline',

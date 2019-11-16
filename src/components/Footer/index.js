@@ -1,11 +1,35 @@
 import React, { memo } from 'react'
 import t from 'prop-types'
 
-import { Container, Copyright } from './styles'
+import {
+  Container,
+  Wrapper,
+  Content,
+  Copyright,
+  Nav,
+  List,
+  Item,
+  Link
+} from './styles'
 
 const Footer = memo(({ title, year }) => (
   <Container>
-    <Copyright>Copyright &copy; {year} {title}</Copyright>
+    <Wrapper>
+      <Content>
+        <Copyright>Copyright &copy; {year} {title}</Copyright>
+        <Nav>
+          <List>
+            <Item>
+              <Link to='/'>Política de privacidade</Link>
+            </Item>
+
+            <Item>
+              <Link to='/'>Contato</Link>
+            </Item>
+          </List>
+        </Nav>
+      </Content>
+    </Wrapper>
   </Container>
 ))
 

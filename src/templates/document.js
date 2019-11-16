@@ -10,7 +10,7 @@ import Questions from '../containers/Questions'
 
 const Document = memo(({
   data: {
-    site: { siteMetadata: { siteUrl: url } },
+    site: { siteMetadata: { url } },
     markdownRemark: {
       frontmatter: { type, title, image, questions, result }
     }
@@ -45,7 +45,7 @@ Document.propTypes = {
   data: t.shape({
     site: t.shape({
       siteMetadata: t.shape({
-        siteUrl: t.string
+        url: t.string
       })
     }).isRequired,
     markdownRemark: t.shape({
@@ -67,7 +67,7 @@ export const documentQuery = graphql`
   query($slug: String!) {
     site {
       siteMetadata {
-        siteUrl
+        url
       }
     }
     
