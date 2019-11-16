@@ -17,6 +17,14 @@ questions:
         text: Train
       - key: D
         text: Inferno
+      - key: E
+        text: Mirage
+      - key: F
+        text: Nuke
+      - key: G
+        text: Overpass
+      - key: H
+        text: Vertigo
     title: Qual o seu mapa favorito?
   - id: b9fed308-0e9f-4456-b0c8-666cfada991a
     options:
@@ -116,6 +124,6 @@ result:
         src: ../static/assets/images/yuri-boian.jpg
   statement:
     final: Você seria
-    share: Eu seria %s! E você, qual jogador profissional de Counter Strike seria?
+    share: 'Eu seria %s! E você, qual jogador profissional de Counter Strike seria?'
 ---
 
