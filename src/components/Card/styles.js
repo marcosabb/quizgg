@@ -8,9 +8,9 @@ import { color } from '../../styles/variables'
 
 export const Container = styled.div`
   position: relative;
-  flex: ${ifProp('featured', null, '0 0 calc(50% - 20px)')};
+  flex: ${ifProp('featured', null, '0 0 calc(33.33% - 20px)')};
   width: ${ifProp('featured', 'calc(50% - 20px)', null)};
-  height: ${ifProp('featured', 'calc(50% - 10px)', '250px')};
+  height: ${ifProp('featured', 'calc(50% - 10px)', '400px')};
   margin-bottom: ${ifProp('featured', null, '20px')};
   border-radius: 4px;
   overflow: hidden;
@@ -30,13 +30,13 @@ export const Container = styled.div`
     margin-left: ${ifProp('featured', null, '10px')};
 
     &:nth-child(1) {
-      height: ${ifProp('featured', '100%', '250px')};
+      height: ${ifProp('featured', '100%', null)};
     }
   `}
 
   ${media.lessThan('medium')`
     width: 100%;
-    height: ${ifProp('featured', '350px', '250px')};
+    height: ${ifProp('featured', '450px', '350px')};
 
     &:not(:last-child) {
       margin-bottom: 20px;
