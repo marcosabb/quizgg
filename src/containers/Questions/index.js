@@ -144,6 +144,14 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
     }
   }
 
+  function redo () {
+    setQuestions(q)
+    setAnsweredQuestion(false)
+    setCurrentQuestion(0)
+    setScore(0)
+    setShowFinish(false)
+  }
+
   function renderQuestions () {
     return questions.map((question, index) => {
       const isVisible = currentQuestion + 1 === index + 1
@@ -166,7 +174,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
 
   return (
     <Container>
-      {showFinish && <Result result={generateResult()} url={url} />}
+      {showFinish && <Result result={generateResult()} url={url} redo={redo} />}
       {!showFinish && renderQuestions()}
     </Container>
   )

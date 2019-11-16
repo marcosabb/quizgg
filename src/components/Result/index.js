@@ -34,7 +34,8 @@ const Result = memo(({
     image,
     r
   },
-  url
+  url,
+  redo
 }) => {
   const [loading, setLoading] = useState(true)
 
@@ -117,7 +118,8 @@ Result.propTypes = {
     image: t.object,
     r: t.string
   }).isRequired,
-  url: t.string.isRequired
+  url: t.string.isRequired,
+  redo: t.func.isRequired
 }
 
 export default Result

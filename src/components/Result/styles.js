@@ -50,6 +50,7 @@ export const Title = styled.p`
 `
 
 export const Image = styled.div`
+  position: relative;
   width: 350px;
   margin: 0 auto 30px;
 
@@ -61,6 +62,12 @@ export const Image = styled.div`
     width: 250px;
     margin-bottom: 20px;
   `}
+`
+
+export const ButtonWrapper = styled.div`
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
 `
 
 export const Share = styled.div`
