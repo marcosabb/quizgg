@@ -19,14 +19,14 @@ collections:
     fields:
       - { label: 'Type', name: 'type', widget: 'select', options: ['quiz', 'test'] }
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Game', name: 'game', widget: 'string' }
+      - { label: 'Game', name: 'game', widget: 'select', options: ['Fortnite', 'Counter Strike', 'League of Legends'] }
 
       - label: 'Image'
         name: 'image'
         widget: 'object'
         fields:
           - { label: 'Name', name: 'name', widget: 'string' }
-          - { label: 'Source', name: 'src', widget: 'string' }
+          - { label: 'Source', name: 'src', widget: 'image' }
           
       - { label: 'Featured', name: 'featured', widget: 'boolean', default: false }
 
