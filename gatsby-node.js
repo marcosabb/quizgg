@@ -31,10 +31,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               frontmatter {
                 type
+                image {
+                  name
+                  src {
+                    publicURL
+                  }
+                }
                 result {
+                  statement {
+                    share
+                  }
                   items {
                     title
                     id
+                    image {
+                      name
+                      src {
+                        publicURL
+                      }
+                    }
                   }
                 }
               }
@@ -59,9 +74,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   } = response
 
-  documents.forEach((
-    { node: { frontmatter: { type, result }, fields: { slug } } }
-  ) => {
+  documents.forEach(({
+    node: {
+      frontmatter: {
+        type,
+        result: { statement: { share }, items },
+        image: { src: { publicURL } }
+      },
+      fields: { slug }
+    }
+  }) => {
     createPage({
       path: slug,
       component: path.resolve('src/templates/document.js'),
@@ -71,8 +93,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
 
     if (type === 'quiz') {
-      Array.from(Array(10).keys()).forEach(r => {
-        const url = `${slug}r/${r + 1}`
+      Array.from(Array(10).keys()).forEach(item => {
+        const url = `${slug}r/${item + 1}`
 
         createPage({
           path: url,
@@ -80,14 +102,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           context: {
             slug,
             type: 'quiz',
-            r: String(r + 1)
+            result: {
+              share,
+              title: String(item + 1),
+              image: publicURL
+            }
           }
         })
       })
     }
 
     if (type === 'teste') {
-      result.items.forEach(({ id, title }) => {
+      items.forEach(({ id, title, image: { src: { publicURL } } }) => {
         const url = `${slug}r/${id}`
 
         createPage({
@@ -96,7 +122,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           context: {
             slug,
             type: 'teste',
-            r: String(title)
+            result: {
+              share,
+              text: title,
+              image: publicURL
+            }
           }
         })
       })

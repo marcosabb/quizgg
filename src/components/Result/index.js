@@ -32,7 +32,7 @@ const Result = memo(({
     statement: { final },
     title,
     image,
-    r
+    text
   },
   url,
 }) => {
@@ -72,7 +72,7 @@ const Result = memo(({
 
               <Social>
                 <TwitterShareButton
-                  url={`${url}r/${r}`}
+                  url={`${url}r/${text}`}
                   className='button'
                 >
                   <TwitterIcon
@@ -82,7 +82,7 @@ const Result = memo(({
                 </TwitterShareButton>
 
                 <FacebookShareButton
-                  url={`${url}r/${r}`}
+                  url={`${url}r/${text}`}
                   className='button'
                 >
                   <FacebookIcon
@@ -92,7 +92,7 @@ const Result = memo(({
                 </FacebookShareButton>
 
                 <WhatsappShareButton
-                  url={`${url}r/${r}`}
+                  url={`${url}r/${text}`}
                   className='button'
                 >
                   <WhatsappIcon
@@ -115,7 +115,7 @@ Result.propTypes = {
     }),
     title: t.oneOfType([t.string, t.number]),
     image: t.object,
-    r: t.string
+    text: t.string
   }).isRequired,
   url: t.string.isRequired,
 }

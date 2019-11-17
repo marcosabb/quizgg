@@ -124,7 +124,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
         },
         title: `${score} pergunta${(score <= 0 || score > 1) ? 's' : ''}!`,
         image,
-        r: score
+        text: String(score)
       }
     }
 
@@ -138,7 +138,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
         },
         title: item.title,
         image: item.image,
-        r: item.id
+        text: item.id
       }
     }
   }

@@ -46,10 +46,10 @@ const Cards = memo(() => {
     `
   )
 
-  const limit = useRef(6)
   const featured = documents.filter(document => document.node.frontmatter.featured)
   const normal = documents.filter(document => !document.node.frontmatter.featured)
 
+  const limit = useRef(6)
   const [items, setItems] = useState(normal.slice(0, limit.current))
   const [hasMore, setHasMore] = useState(true)
 
