@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Queasy',
-    description: 'Se divirta respondendo e compartilhando quizzes e testes sobre seu jogo favorito',
+    description: 'Se divirta respondendo e compartilhando com seus amigos quizzes e testes sobre seus jogos favoritos',
     author: '@queasy',
     url: 'https://queasy.netlify.com',
     year: new Date().getFullYear()

@@ -20,7 +20,7 @@ const Document = memo(({
   const q = shuffle(questions).map(item => {
     return {
       ...item,
-      options: type === 'teste' ? item.options : shuffle(item.options)
+      options: shuffle(item.options)
     }
   })
 
