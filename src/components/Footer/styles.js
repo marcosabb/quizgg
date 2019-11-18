@@ -16,6 +16,11 @@ export const Wrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
+
+  ${media.greaterThan('small')`
+    padding-left: 26px;
+    padding-right: 16px;
+  `}
 `
 
 export const Content = styled.div`

@@ -1,5 +1,8 @@
 import React, { memo } from 'react'
 import t from 'prop-types'
+import { v4 } from 'uuid'
+
+import { copyright, menu } from './content'
 
 import {
   Container,
@@ -16,16 +19,14 @@ const Footer = memo(({ title, year }) => (
   <Container>
     <Wrapper>
       <Content>
-        <Copyright>Copyright &copy; {year} {title}</Copyright>
+        <Copyright>{copyright(title, year)}</Copyright>
         <Nav>
           <List>
-            <Item>
-              <Link to='/'>Política de privacidade</Link>
-            </Item>
-
-            <Item>
-              <Link to='/'>Contato</Link>
-            </Item>
+            {menu.map(({ to, label }) => (
+              <Item key={v4()}>
+                <Link to={to}>{label}</Link>
+              </Item>
+            ))}
           </List>
         </Nav>
       </Content>

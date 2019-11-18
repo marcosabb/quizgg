@@ -31,7 +31,7 @@ export default createGlobalStyle`
     color: ${color.text};
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background-color: ${rgba(color.blue, 0.01)};
+    background-color: ${rgba(color.blue, 0.024)};
   }
 
   h1,
