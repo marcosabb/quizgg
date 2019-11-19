@@ -29,13 +29,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: `${__dirname}/src/images`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         name: 'data',
         path: `${__dirname}/data`
       }
@@ -59,7 +52,7 @@ module.exports = {
         background_color: '#1e1eff',
         theme_color: '#1e1eff',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png'
+        icon: 'static/assets/images/icon.png'
       }
     },
     'gatsby-plugin-offline',
