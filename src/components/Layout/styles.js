@@ -8,7 +8,7 @@ export const Container = styled.main`
 
 export const Wrapper = styled.div`
   max-width: 1200px;
-  margin: 60px auto 0;
+  margin: 0 auto;
   padding: 0 16px;
   
   ${media.lessThan('small')`

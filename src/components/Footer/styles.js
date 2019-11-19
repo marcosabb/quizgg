@@ -5,12 +5,7 @@ import { Link as GatsbyLink } from 'gatsby'
 
 import { color } from '../../styles/variables'
 
-export const Container = styled.footer`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-`
+export const Container = styled.footer``
 
 export const Wrapper = styled.div`
   max-width: 1200px;
@@ -25,27 +20,38 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 60px;
+  flex-direction: column;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
-  ${media.lessThan('small')`
-    flex-direction: column;
-    height: 80px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+  ${media.greaterThan('small')`
+    align-items: center;
+    text-align: center;
   `}
 `
 
 export const Copyright = styled.p`
+  margin-bottom: 12px;
+
   font-size: ${rem(10)};
-  font-weight: 700;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: ${rgba(color.text, 0.8)};
+`
+
+export const Marks = styled.div`
+  margin-bottom: 12px;
+`
+
+export const Mark = styled.p`
+  font-size: ${rem(10)};
+  font-weight: 400;
   text-transform: uppercase;
   color: ${rgba(color.text, 0.4)};
   
-  ${media.lessThan('small')`
-    margin-bottom: 16px;
-  `}
+  &:not(:last-child) {
+    margin-bottom: 6px;
+  }
 `
 
 export const Nav = styled.nav``
@@ -62,7 +68,7 @@ export const Item = styled.li`
 
 export const Link = styled(GatsbyLink)`
   font-size: ${rem(10)};
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   color: ${rgba(color.blue, 0.6)};
   transition: all .2s linear;

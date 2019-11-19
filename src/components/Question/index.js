@@ -2,7 +2,7 @@
 import React, { memo } from 'react'
 import t from 'prop-types'
 import Img from 'gatsby-image'
-import v4 from 'uuid/v4'
+import { v4 } from 'uuid'
 
 import Box from '../Box'
 

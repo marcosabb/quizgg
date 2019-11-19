@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 export const Container = styled.section`
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 120px;
+  padding-bottom: 60px;
 `
 
 export const Featured = styled.div`

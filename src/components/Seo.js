@@ -66,7 +66,7 @@ const Seo = memo(({ description, lang, meta, title }) => {
 })
 
 Seo.defaultProps = {
-  lang: 'en',
+  lang: 'pt-br',
   meta: [],
   description: ''
 }

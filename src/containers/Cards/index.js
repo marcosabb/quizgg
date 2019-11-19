@@ -1,6 +1,6 @@
 import React, { memo, useState, useRef } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
-import v4 from 'uuid/v4'
+import { v4 } from 'uuid'
 import { useStaticQuery, graphql } from 'gatsby'
 import { debounce } from 'lodash'
 

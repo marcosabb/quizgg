@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import t from 'prop-types'
 import { v4 } from 'uuid'
 
-import { copyright, menu } from './content'
+import { copyright, menu, trademarks } from './content'
 
 import {
   Container,
@@ -12,7 +12,9 @@ import {
   Nav,
   List,
   Item,
-  Link
+  Link,
+  Marks,
+  Mark
 } from './styles'
 
 const Footer = memo(({ title, year }) => (
@@ -20,6 +22,13 @@ const Footer = memo(({ title, year }) => (
     <Wrapper>
       <Content>
         <Copyright>{copyright(title, year)}</Copyright>
+
+        <Marks>
+          {trademarks.map(item => (
+            <Mark key={v4}>{item}</Mark>
+          ))}
+        </Marks>
+
         <Nav>
           <List>
             {menu.map(({ to, label }) => (
