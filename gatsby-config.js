@@ -61,6 +61,14 @@ module.exports = {
       options: {
         exclude: ['/*/r/*']
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackinId: 'UA-152890348-1',
+        head: false,
+        exclude: ['/*/r/*']
+      }
     }
   ]
 }
