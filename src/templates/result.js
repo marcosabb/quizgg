@@ -20,6 +20,7 @@ const Result = memo(({
 
   return (
     <Seo
+      title={og.title}
       meta={[
         { property: 'og:title', content: og.title },
         { property: 'og:image', content: og.image },

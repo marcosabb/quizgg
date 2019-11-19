@@ -25,7 +25,7 @@ const Footer = memo(({ url, year }) => (
 
         <Marks>
           {trademarks.map(item => (
-            <Mark key={v4}>{item}</Mark>
+            <Mark key={v4()}>{item}</Mark>
           ))}
         </Marks>
 
