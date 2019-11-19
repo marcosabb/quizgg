@@ -12,7 +12,7 @@ const Seo = memo(({ description, lang, meta, title, image }) => {
             title
             description
             author
-            url
+            siteUrl
           }
         }
       }
@@ -20,6 +20,7 @@ const Seo = memo(({ description, lang, meta, title, image }) => {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = `${site.siteMetadata.siteUrl}${image}`
 
   return (
     <Helmet
@@ -43,7 +44,7 @@ const Seo = memo(({ description, lang, meta, title, image }) => {
         },
         {
           property: 'og:image',
-          content: image
+          content: metaImage
         },
         {
           property: 'og:type',
@@ -55,7 +56,7 @@ const Seo = memo(({ description, lang, meta, title, image }) => {
         },
         {
           name: 'twitter:image:src',
-          content: image
+          content: metaImage
         },
         {
           name: 'twitter:creator',

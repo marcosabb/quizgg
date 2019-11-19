@@ -3,7 +3,7 @@ module.exports = {
     title: 'Queasy',
     description: 'Se divirta respondendo e compartilhando com seus amigos quizzes e testes sobre seus jogos favoritos',
     author: '@queasy',
-    url: 'https://queasy.netlify.com',
+    siteUrl: 'https://queasy.netlify.com',
     year: new Date().getFullYear()
   },
   plugins: [
@@ -55,6 +55,12 @@ module.exports = {
       }
     },
     'gatsby-plugin-offline',
-    'gatsby-plugin-netlify-cms'
+    'gatsby-plugin-netlify-cms',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/*/r/*']
+      }
+    }
   ]
 }
