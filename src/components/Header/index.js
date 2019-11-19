@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 import { Container, Wrapper, Title, Button } from './styles'
 
-const Header = memo(({ title, isHome }) => (
+const Header = memo(({ title }) => (
   <Container>
     <Wrapper>
       <Title>
@@ -17,8 +17,7 @@ const Header = memo(({ title, isHome }) => (
 ))
 
 Header.propTypes = {
-  title: t.string.isRequired,
-  isHome: t.bool.isRequired
+  title: t.string.isRequired
 }
 
 export default Header
