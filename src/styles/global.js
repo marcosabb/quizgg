@@ -27,7 +27,7 @@ export default createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    letter-spacing: ${rem(2)};
+    letter-spacing: ${rem(1)};
     color: ${color.text};
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;

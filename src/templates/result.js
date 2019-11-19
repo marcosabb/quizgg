@@ -22,7 +22,8 @@ const Result = memo(({
     <Seo
       meta={[
         { property: 'og:title', content: og.title },
-        { property: 'og:image', content: og.image }
+        { property: 'og:image', content: og.image },
+        { name: 'robots', content: 'noindex' }
       ]}
     />
   )
