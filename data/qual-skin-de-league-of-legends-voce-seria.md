@@ -1,6 +1,6 @@
 ---
 type: teste
-title: Qual skin do League of Legends você seria?
+title: Qual skin de League of Legends você seria?
 game: League of Legends
 image:
   name: League of Legends
@@ -38,7 +38,7 @@ result:
       title: Evenlyn Infiltradora
       image:
         name: Evenlyn Infiltradora
-        src: ../static/assets/images/evelyn-infiltradora.jpg
+        src: ../static/assets/images/evelynn-infiltradora.jpg
     - id: f48be4b2-5e7d-4b17-b54b-66c4e08a8eb5
       title: Diana Infernal
       image:
@@ -66,6 +66,6 @@ result:
         src: ../static/assets/images/fiddlesticks-praetoriano.jpg
   statement:
     final: Você seria
-    share: 'Eu seria %s! E você, qual skin do League of Legends seria?'
+    share: 'Eu seria %s! E você, qual skin de League of Legends seria?'
 ---
 

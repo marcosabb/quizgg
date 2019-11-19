@@ -77,7 +77,7 @@ export const Counter = styled.p`
 `
 
 export const Image = styled.div`
-  width: 300px;
+  width: 400px;
   margin: 0 auto 30px;
 
   img {

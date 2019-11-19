@@ -1,11 +1,10 @@
 ---
 type: teste
-title: Qual skin do Fortnite você seria?
+title: Qual skin de Fortnite você seria?
 game: Fortnite
 image:
   name: Fortnite
   src: ../static/assets/images/fortnite-run.jpg
-featured: true
 questions:
   - id: 603a91c1-3a62-4491-8270-763824fc8cf9
     options:
@@ -86,6 +85,6 @@ result:
         src: ../static/assets/images/operacoes-snorkel.png
   statement:
     final: Você seria
-    share: 'Eu seria %s! E você, qual skin do Fortnite seria?'
+    share: 'Eu seria %s! E você, qual skin de Fortnite seria?'
 ---
 

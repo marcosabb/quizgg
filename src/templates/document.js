@@ -79,7 +79,7 @@ export const documentQuery = graphql`
           name
           src {
             childImageSharp {
-              fluid(maxWidth: 250) {
+              fluid {
                 ...GatsbyImageSharpFluid
               }
             }
@@ -92,7 +92,7 @@ export const documentQuery = graphql`
             name
             src {
               childImageSharp {
-                fluid(maxWidth: 250) {
+                fluid {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -116,7 +116,7 @@ export const documentQuery = graphql`
               name
               src {
                 childImageSharp {
-                  fluid(maxWidth: 250) {
+                  fluid {
                     ...GatsbyImageSharpFluid
                   }
                 }

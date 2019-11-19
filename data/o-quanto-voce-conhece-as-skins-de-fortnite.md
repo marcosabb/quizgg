@@ -1,6 +1,6 @@
 ---
 type: quiz
-title: O quanto você conhece as skins do Fortnite?
+title: O quanto você conhece as skins de Fortnite?
 game: Fortnite
 image:
   name: Fortnite
@@ -203,5 +203,5 @@ questions:
 result:
   statement:
     final: Você acertou
-    share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins do Fortnite?
+    share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins de Fortnite?
 ---
