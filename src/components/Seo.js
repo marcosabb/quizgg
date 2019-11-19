@@ -59,7 +59,7 @@ const Seo = memo(({ description, lang, meta, title, image }) => {
           content: metaImage
         },
         {
-          name: 'twitter:creator',
+          name: 'twitter:site',
           content: site.siteMetadata.author
         },
         {
