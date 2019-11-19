@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import t from 'prop-types'
 import Link from 'gatsby-link'
 
-import { color } from '../../styles/variables'
+// import { color } from '../../styles/variables'
 
 import {
   Container,
@@ -20,7 +20,10 @@ const Card = memo(({ image, title, slug, type, game, featured }) => (
       Tag='div'
       fluid={image}
       className='background'
-      backgroundColor={color.blue}
+      backgroundColor='rgba(0, 0, 0, .4)'
+      style={{
+        backgroundBlendMode: 'multiply'
+      }}
     />
 
     <Link
