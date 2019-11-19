@@ -104,7 +104,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             type: 'quiz',
             result: {
               share,
-              title: String(item + 1),
+              text: String(item + 1),
               image: publicURL
             }
           }
