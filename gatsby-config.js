@@ -7,6 +7,14 @@ module.exports = {
     year: new Date().getFullYear()
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-152890348-1',
+        head: false,
+        exclude: ['/*/r/*']
+      }
+    },
     'gatsby-plugin-eslint',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
@@ -59,14 +67,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        exclude: ['/*/r/*']
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackinId: 'UA-152890348-1',
-        head: false,
         exclude: ['/*/r/*']
       }
     }
