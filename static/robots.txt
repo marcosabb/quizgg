@@ -1,2 +1,8 @@
 User-agent: *
 Disallow: /*/r/*
+
+User-agent: Twitterbot
+Allow: /*/r/*
+
+User-agent: facebookexternalhit
+Allow: /*/r/*
