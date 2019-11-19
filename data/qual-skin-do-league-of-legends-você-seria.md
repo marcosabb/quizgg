@@ -35,20 +35,20 @@ result:
         name: Fizz do Vazio
         src: ../static/assets/images/fizz-do-vazio.jpg
     - id: f6e16169-bff0-4ada-84b2-a4ca97a8588f
-      title: Kalista Lua Sangrenta
+      title: Evenlyn Infiltradora
       image:
-        name: Kalista Lua Sangrenta
-        src: ../static/assets/images/kalista-lua-sangrenta.jpg
+        name: Evenlyn Infiltradora
+        src: ../static/assets/images/evelyn-infiltradora.jpg
     - id: f48be4b2-5e7d-4b17-b54b-66c4e08a8eb5
       title: Diana Infernal
       image:
         name: Diana Infernal
         src: ../static/assets/images/diana-infernal.jpg
     - id: abd4183b-7c56-49db-86ed-653771f00d39
-      title: Kayn Caçador de Almas
+      title: Tryndamere Terror Noturno
       image:
-        name: Kayn Caçador de Almas
-        src: ../static/assets/images/kayn-cacador-de-almas.jpg
+        name: Tryndamere Terror Noturno
+        src: ../static/assets/images/tryndamere-terror-noturno.jpg
     - id: b7de1913-1144-4415-8648-448e845563b0
       title: 'PROJETO: Lucian'
       image:
