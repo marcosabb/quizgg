@@ -21,13 +21,10 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding-top: 16px;
   padding-bottom: 16px;
-
-  ${media.greaterThan('small')`
-    align-items: center;
-    text-align: center;
-  `}
 `
 
 export const Copyright = styled.p`
