@@ -2,7 +2,7 @@ User-agent: *
 Disallow: /*/r/*
 
 User-agent: Twitterbot
-Allow: /*/r/*
+Allow: /
 
 User-agent: facebookexternalhit
-Allow: /*/r/*
+Allow: /
