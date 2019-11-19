@@ -26,9 +26,8 @@ export const Wrapper = styled.div`
 
 export const Statement = styled.p`
   margin-bottom: 12px;
-  font-size: ${rem(18)};
-  font-weight: 400;
-  text-transform: uppercase;
+  font-size: ${rem(20)};
+  font-weight: 700;
   text-align: center;
   color: ${color.blue};
 

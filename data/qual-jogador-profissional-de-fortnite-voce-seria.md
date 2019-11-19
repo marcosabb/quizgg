@@ -46,7 +46,7 @@ questions:
     options:
       -
         key: A
-        text: Cloud 9
+        text: Cloud9
       -
         key: B
         text: The Boys
