@@ -7,7 +7,7 @@ import Cards from '../containers/Cards'
 
 const Index = () => (
   <Layout>
-    <Seo title='Home' />
+    <Seo title='Página inicial' />
 
     <Cards />
   </Layout>

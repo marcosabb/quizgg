@@ -13,17 +13,11 @@ const Result = memo(({
     navigate(slug)
   }, [])
 
-  const og = {
-    title: replace(share, text),
-    image
-  }
-
   return (
     <Seo
-      title={og.title}
+      title={replace(share, text)}
+      image={image}
       meta={[
-        { property: 'og:title', content: og.title },
-        { property: 'og:image', content: og.image },
         { name: 'robots', content: 'noindex' }
       ]}
     />
