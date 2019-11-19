@@ -2,4 +2,6 @@ User-agent: *
 Disallow: /*/r/*
 
 User-agent: Twitterbot
-Disallow:
+Disallow: *
+
+Allow: /assets/images
