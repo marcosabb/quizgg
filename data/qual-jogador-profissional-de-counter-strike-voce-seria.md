@@ -18,7 +18,7 @@ questions:
       - key: D
         text: Inferno
       - key: E
-        text: Mirage
+        text: Cache
       - key: F
         text: Nuke
       - key: G
@@ -47,7 +47,21 @@ questions:
         text: AWP
       - key: D
         text: AUG
-    title: Qual a sua arma favorita?
+      - key: E
+        text: Galil AR
+      - key: F
+        text: M4A1-S
+      - key: G
+        text: SSG 08
+      - key: H
+        text: SSG 53
+      - key: I
+        text: SCAR-20 
+      - key: J
+        text: G3SG1
+      - key: K
+        text: Famas
+    title: Qual o seu rifle favorito?
   - id: 8c12c69c-e09f-476a-ae2e-ae484d18120e
     options:
       - key: A
@@ -57,7 +71,9 @@ questions:
       - key: C
         text: Awper
       - key: D
-        text: Leader
+        text: IGL
+      - key: E
+        text: Suporte
     title: Qual a sua função favorita?
   - id: e7f3a18b-b5b4-419b-9107-977868cd228b
     options:
@@ -69,6 +85,10 @@ questions:
         text: Casual
       - key: D
         text: Mata-Mata
+      - key: E
+        text: Jogos de Guerra
+      - key: F
+        text: Zona de Perigo
     title: Qual o seu modo de jogo favorito?
 result:
   items:

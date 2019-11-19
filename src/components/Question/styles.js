@@ -128,11 +128,7 @@ export const Option = styled.p`
   })};
 
   &:not(:last-child) {
-    margin-bottom: 16px;
-
-    ${media.lessThan('small')` 
-      margin-bottom: 12px;
-    `}
+    margin-bottom: 12px;
   }
 
   background-color: ${switchProp('state', {
@@ -149,22 +145,14 @@ export const Option = styled.p`
 
   ${media.lessThan('small')`
     font-size: ${rem(12)};
-    padding: 12px 16px;
+    padding: 10px 14px;
   `}
 
   ${ifProp('inline', css`
-    width: calc(50% - 10px);
+    width: calc(50% - 6px);
 
-   &:nth-last-child(2) {
+    &:nth-last-child(2) {
       margin-bottom: 0;
-
-      ${media.lessThan('small')` 
-        margin-bottom: 12px;
-      `}
     }
-
-    ${media.lessThan('small')`
-      width: calc(50% - 6px);
-    `}
   `, null)}
 `

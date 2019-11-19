@@ -30,7 +30,7 @@ questions:
     options:
       -
         key: A
-        text: Temporada 1, 2 ou 3
+        text: Temporada 1, 2, 3
       -
         key: B
         text: Temporada 4, 5 ou 6
@@ -39,7 +39,7 @@ questions:
         text: Temporada 7, 8 ou 9
       -
         key: D
-        text:  'Capítulo 2: Temporada 1'
+        text: 'Temporada X ou Capítulo 2: Temporada 1'
   -
     id: 40b52bc1-efb8-4d41-a47b-969b4378ff04
     title: Qual o seu time brasileiro preferido?
@@ -56,9 +56,15 @@ questions:
       -
         key: D
         text: DC Team
+      -
+        key: E
+        text: W7M Gaming
+      -
+        key: F
+        text: Team Singularity
   -
     id: 9d1ae521-5004-4ea8-a1b6-ca26e781a820
-    title: Qual o seu spot favorito?
+    title: Qual o seu drop favorito?
     options:
       -
         key: A
@@ -72,6 +78,33 @@ questions:
       -
         key: D
         text: Pântano Glup
+      -
+        key: E
+        text: Penhasco Praiano
+      -
+        key: F
+        text: Chaminés Chamuscantes
+      -
+        key: G
+        text: Doca Desleixada
+      -
+        key: H
+        text: Bosque Choroso
+      -
+        key: I
+        text: Cidade da Cordilheira
+      -
+        key: J
+        text: Lago da Preguiça
+      -
+        key: K
+        text: Alameda Arborizada
+      -
+        key: L
+        text: Litoral Límpido
+      -
+        key: M
+        text: Fazenda Frenética
   -
     id: cc09d8a9-5c9c-450b-83d3-0908a02329d4
     title: Qual seu modo de jogo preferido?

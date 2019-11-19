@@ -28,6 +28,14 @@ questions:
         text: paiN Gaming
       - key: D
         text: Team oNe e-Sports
+      - key: E
+        text: CNB e-Sports Club
+      - key: F
+        text: Redemption W7M
+      - key: G
+        text: Uppercut Esports
+      - key: H
+        text: KaBuM! e-Sports
     title: Qual o seu time favorito?
   - id: f717eaea-8674-4c67-b890-20acd8d63315
     options:
@@ -39,7 +47,11 @@ questions:
         text: Atiradores
       - key: D
         text: Magos
-    title: Qual a sua classe preferida?
+      - key: E
+        text: Controladores
+      - key: F
+        text: Retalhadores
+    title: Qual a sua classe favorita?
   - id: e2a0dbe3-76d1-4dfa-af4b-17285644d7df
     options:
       - key: A
