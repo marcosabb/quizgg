@@ -115,6 +115,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
     if (option.wrong) return 'wrong'
     if (option.select) return 'select'
   }
+
   function generateResult () {
     if (type === 'quiz') {
       return {
@@ -130,7 +131,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
 
     if (type === 'teste') {
       const item = result.items[Math.floor(Math.random() * result.items.length)]
-
+      console.log(item.quote)
       return {
         statement: {
           final: result.statement.final,
@@ -138,7 +139,8 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
         },
         title: item.title,
         image: item.image,
-        text: item.id
+        text: item.id,
+        quote: item.quote
       }
     }
   }
@@ -193,7 +195,8 @@ Questions.propTypes = {
     items: t.arrayOf(t.shape({
       id: t.string,
       title: t.string,
-      image: t.object
+      image: t.object,
+      quote: t.string
     }))
   }).isRequired,
   url: t.string.isRequired

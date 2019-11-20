@@ -32,7 +32,8 @@ const Result = memo(({
     statement: { final },
     title,
     image,
-    text
+    text,
+    quote,
   },
   url,
 }) => {
@@ -72,6 +73,7 @@ const Result = memo(({
 
               <Social>
                 <TwitterShareButton
+                  title={quote}
                   url={`${url}r/${text}`}
                   className='button'
                 >
@@ -115,7 +117,8 @@ Result.propTypes = {
     }),
     title: t.oneOfType([t.string, t.number]),
     image: t.object,
-    text: t.string
+    text: t.string,
+    quote: t.string,
   }).isRequired,
   url: t.string.isRequired,
 }

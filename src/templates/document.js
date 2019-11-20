@@ -112,6 +112,7 @@ export const documentQuery = graphql`
           items {
             id
             title
+            quote
             image {
               name
               src {
