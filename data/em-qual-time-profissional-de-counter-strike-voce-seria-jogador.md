@@ -66,7 +66,7 @@ result:
       title: Team oNe eSports
       image:
         name: Team oNe eSports
-        src: ../static/assets/images/team-one-esports.png
+        src: ../static/assets/images/team-one-esports.jpg
     -
       id: 887c8ce9-a7e1-473a-b2dc-afc401bda6ea
       title: FURIA eSports
