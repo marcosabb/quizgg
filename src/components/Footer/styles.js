@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { rem, rgba } from 'polished'
 import media from 'styled-media-query'
-import { Link as GatsbyLink } from 'gatsby'
 
 import { color } from '../../styles/variables'
 
@@ -61,16 +60,16 @@ export const Item = styled.li`
   &:not(:last-child) {
     margin-right: 16px;
   }
-`
 
-export const Link = styled(GatsbyLink)`
-  font-size: ${rem(10)};
-  font-weight: 400;
-  text-transform: uppercase;
-  color: ${rgba(color.blue, 0.6)};
-  transition: all .2s linear;
+  a {
+    font-size: ${rem(10)};
+    font-weight: 400;
+    text-transform: uppercase;
+    color: ${rgba(color.blue, 0.6)};
+    transition: all .2s linear;
 
-  &:hover {
-    color: ${rgba(color.blue, 0.8)};
+    &:hover {
+      color: ${rgba(color.blue, 0.8)};
+    }
   }
 `

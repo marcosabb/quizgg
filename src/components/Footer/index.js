@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import t from 'prop-types'
+import { Link } from 'gatsby'
 import { v4 } from 'uuid'
 
 import { copyright, menu, trademarks } from './content'
@@ -12,7 +13,6 @@ import {
   Nav,
   List,
   Item,
-  Link,
   Marks,
   Mark
 } from './styles'
@@ -31,7 +31,11 @@ const Footer = memo(({ url, year }) => (
 
         <Nav>
           <List>
-            {menu.map(({ to, label }) => (
+            {menu.map(({ to, label, normal }) => normal ? (
+              <Item key={v4()}>
+                <a href={to}>{label}</a>
+              </Item>
+            ) : (
               <Item key={v4()}>
                 <Link to={to}>{label}</Link>
               </Item>
