@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Queasy',
+    title: 'QuizGG',
     description: 'Se divirta respondendo e compartilhando com seus amigos quizzes e testes sobre seus jogos favoritos',
-    author: '@queasy',
-    siteUrl: 'https://queasy.netlify.com',
+    author: '@quizgg',
+    siteUrl: 'https://quizgg.com',
     year: new Date().getFullYear()
   },
   plugins: [
@@ -46,8 +46,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Queasy',
-        short_name: 'queasy',
+        name: 'QuizGG',
+        short_name: 'quizgg',
         start_url: '/',
         background_color: '#1e1eff',
         theme_color: '#1e1eff',

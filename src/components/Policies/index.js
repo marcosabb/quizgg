@@ -5,17 +5,17 @@ import { Container, Wrapper } from './styles'
 const Policies = () => (
   <Container>
     <Wrapper>
-      <h2>Política de privacidade para <strong>queasyapp.com</strong></h2>
+      <h2>Política de privacidade para <strong>quizgg.com</strong></h2>
 
       <p>Todas as suas informações pessoais recolhidas, serão usadas para o ajudar a tornar a sua visita nesse site o mais produtiva e agradável possível.</p>
 
-      <p>A garantia da confidencialidade dos dados pessoais dos usuários desse site é importante para o <strong>queasyapp.com</strong>.</p>
+      <p>A garantia da confidencialidade dos dados pessoais dos usuários desse site é importante para o <strong>quizgg.com</strong>.</p>
 
-      <p>Todas as informações pessoais que usem o <strong>queasyapp.com</strong> serão tratadas em concordância com a Lei Nº 13.709, de 14 de Agosto de 2018.</p>
+      <p>Todas as informações pessoais que usem o <strong>quizgg.com</strong> serão tratadas em concordância com a Lei Nº 13.709, de 14 de Agosto de 2018.</p>
 
       <p>A informação pessoal recolhida pode incluir o seu nome, e-mail, número de telefone e/ou telemóvel, morada, data de nascimento e/ou outros.</p>
 
-      <p>O uso do <strong>queasyapp.com</strong> pressupõe a aceitação deste acordo de privacidade. O site <strong>queasyapp.com</strong> reserva-se ao direito de alterar este acordo sem aviso prévio. Deste modo, recomendamos que consulte a nossa política de privacidade com regularidade de forma a estar sempre atualizado.</p>
+      <p>O uso do <strong>quizgg.com</strong> pressupõe a aceitação deste acordo de privacidade. O site <strong>quizgg.com</strong> reserva-se ao direito de alterar este acordo sem aviso prévio. Deste modo, recomendamos que consulte a nossa política de privacidade com regularidade de forma a estar sempre atualizado.</p>
 
       <h2>Os anúncios</h2>
 
@@ -41,7 +41,7 @@ const Policies = () => (
 
       <h2>Conexões para sites de terceiros</h2>
 
-      <p>O <strong>queasyapp.com</strong> possui conexões para outros sites, que podem conter informações úteis. A nossa política de privacidade não é aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverá ler a politica de privacidade do mesmo.</p>
+      <p>O <strong>quizgg.com</strong> possui conexões para outros sites, que podem conter informações úteis. A nossa política de privacidade não é aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverá ler a politica de privacidade do mesmo.</p>
 
       <p>Não nos responsabilizamos pela política de privacidade ou conteúdo presente nesses mesmos sites.</p>
     </Wrapper>

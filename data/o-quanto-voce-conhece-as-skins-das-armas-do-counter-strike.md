@@ -10,18 +10,18 @@ questions:
   -
     id: 5f80e8da-5a2d-4333-9f18-cd5d8973118f
     image: 
-      name: AK-47 (StatTrak™) | Asiimov
+      name: AK-47 | Asiimov
       src: ../static/assets/images/ak-47-asiimov.png
     options:
       -
         key: A
-        text: AK-47 (StatTrak™) | Jaguar
+        text: AK-47 | Jaguar
       -
         key: B
         text: AK-47 | Viajante
       -
         key: C
-        text: AK-47 (StatTrak™) | Asiimov
+        text: AK-47 | Asiimov
         correct: true
       -
         key: D
@@ -29,27 +29,27 @@ questions:
   -
     id: 484f323c-adb1-484b-91fd-422743a907c7
     image: 
-      name: AK-47 (StatTrak™) | Rebelde das Terras Devastadas
+      name: AK-47 | Rebelde das Terras Devastadas
       src: ../static/assets/images/ak-47-rebelde-das-terras-devastadas.png
     options:
       -
         key: A
-        text: AK-47 (StatTrak™) | Rebelde das Terras Devastadas
+        text: AK-47 | Rebelde das Terras Devastadas
         correct: true
       -
         key: B
-        text: AK-47 (StatTrak™) | Aquecimento de Aço
+        text: AK-47 | Aquecimento de Aço
       -
         key: C
-        text: AK-47 (StatTrak™) | Imperatriz
+        text: AK-47 | Imperatriz
       -
         id: 9dd3e10f-f203-4bef-baa1-0cf2b87235c5
         key: D
-        text: AK-47 (StatTrak™) | Bomba de Combustível
+        text: AK-47 | Bomba de Combustível
   -
     id: 0011bab1-7ac8-4dbb-a8c0-b080b54187a2
     image: 
-      name: AK-47 (StatTrak™) | Vulcan
+      name: AK-47 | Vulcan
       src: ../static/assets/images/ak-47-vulkan.png
     options:
       -
@@ -57,27 +57,27 @@ questions:
         text: AK-47 | Lótus Selvagem
       -
         key: B
-        text: AK-47 (StatTrak™) | Vulcan
+        text: AK-47 | Vulcan
         correct: true
       -
         key: C
-        text: AK-47 (StatTrak™) | Serpente de Fogo
+        text: AK-47 | Serpente de Fogo
       -
         key: D
-        text: AK-47 (StatTrak™) | Vermelho Laminado
+        text: AK-47 | Vermelho Laminado
   -
     id: a312b278-9988-49a5-85f5-3199aaf3b68c
     image: 
-      name: AWP (Lembrança) | Víbora do Pântano
+      name: AWP | Víbora do Pântano
       src: ../static/assets/images/awp-vibora-do-pantano.png
     options:
       -
         key: A
-        text: AWP (Lembrança) | Víbora do Pântano
+        text: AWP | Víbora do Pântano
         correct: true
       -
         key: B
-        text: AWP (StatTrak™) | Falha de Contenção
+        text: AWP | Falha de Contenção
       -
         key: C
         text: AWP | Príncipe
@@ -87,7 +87,7 @@ questions:
   -
     id: 26c95c82-a903-4de7-8260-72df4296e124
     image: 
-      name: AWP (StatTrak™) | Falha de Contenção
+      name: AWP | Falha de Contenção
       src: ../static/assets/images/awp-falha-de-contencao.png
     options:
       -
@@ -95,14 +95,14 @@ questions:
         text: AWP | Gungnir
       -
         key: B
-        text: AWP (StatTrak™) | Wildfire
+        text: AWP | Fogo Selvagem
       -
         key: C
-        text: AWP (StatTrak™) | Falha de Contenção
+        text: AWP | Falha de Contenção
         correct: true
       -
         key: D
-        text: AWP (StatTrak™) | Oni Taiji
+        text: AWP | Oni Taiji
   -
     id: 6ed61706-5348-4a8a-b431-af449ea43635
     image: 
@@ -111,13 +111,13 @@ questions:
     options:
       -
         key: A
-        text: AWP (StatTrak™) | Descarga Elétrica
+        text: AWP | Descarga Elétrica
       -
         key: B
-        text: AWP (StatTrak™) | BUM
+        text: AWP | BUM
       -
         key: C
-        text: AWP (StatTrak™) | Grafite
+        text: AWP | Grafite
       -
         key: D
         text: AWP | Medusa
@@ -130,17 +130,17 @@ questions:
     options:
       -
         key: A
-        text: M4A4 (StatTrak™) | Zirka
+        text: M4A4 | Zirka
       -
         key: B
         text: M4A4 | Howl
         correct: true
       -
         key: C
-        text: M4A4 (StatTrak™) | Fogo Infernal
+        text: M4A4 | Fogo Infernal
       -
         key: D
-        text: M4A4 (StatTrak™) | Desolação Espacial
+        text: M4A4 | Desolação Espacial
   -
     id: f12e39ef-05c6-4502-99c0-58c8fbe6cafd
     image: 
@@ -153,13 +153,13 @@ questions:
         correct: true
       -
         key: B
-        text: M4A4 (StatTrak™) | Paladino Real
+        text: M4A4 | Paladino Real
       -
         key: C
-        text: M4A4 (StatTrak™) | Asiimov
+        text: M4A4 | Asiimov
       -
         key: D
-        text: M4A4 (StatTrak™) | O Imperador
+        text: M4A4 | O Imperador
   -
     id: 58529108-3926-4ae5-9d5a-4fdc1e8a1837
     image: 
@@ -168,13 +168,13 @@ questions:
     options:
       -
         key: A
-        text: M4A4 (StatTrak™) | Neo-Noir
+        text: M4A4 | Neo-Noir
       -
         key: B
-        text: M4A4 (Lembrança) | Perigo de Radiação
+        text: M4A4 | Perigo de Radiação
       -
         key: C
-        text: M4A4 (StatTrak™) | O Imperador
+        text: M4A4 | O Imperador
       -
         key: D
         text: M4A4 | Caçador Moderno
@@ -182,22 +182,22 @@ questions:
   -
     id: fef6b4a1-d0fe-4134-bd7e-159aa8c46644
     image: 
-      name: Baioneta (★) | Sabedoria
+      name: Baioneta | Sabedoria
       src: ../static/assets/images/baioneta-sabedoria.png
     options:
       -
         key: A
-        text: Baioneta (★) | Sabedoria
+        text: Baioneta | Sabedoria
         correct: true
       -
         key: B
-        text: Baioneta (★ StatTrak™) | Aquecimento de Aço
+        text: Baioneta | Aquecimento de Aço
       -
         key: C
-        text: Baioneta (★) | Degradê
+        text: Baioneta | Degradê
       -
         key: D
-        text: Baioneta (★ StatTrak™) | Autotrônica
+        text: Baioneta | Autotrônica
         
 result:
   statement:

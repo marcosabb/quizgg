@@ -2,7 +2,7 @@ export const copyright = (year, title) => `Copyright © ${year} ${title}`
 
 export const menu = [
   { to: '/privacy', label: 'Política de privacidade' },
-  { to: 'mailto:queasyapp@gmail.com', label: 'Contato', normal: true }
+  { to: 'mailto:quizgg@gmail.com', label: 'Contato', normal: true }
 ]
 
 export const trademarks = [
