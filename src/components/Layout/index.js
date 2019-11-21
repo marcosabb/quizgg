@@ -9,13 +9,12 @@ import Global from '../../styles/global'
 import { Container, Wrapper } from './styles'
 
 const Layout = memo(({ children }) => {
-  const { site: { siteMetadata: { title, siteUrl, year } } } = useStaticQuery(
+  const { site: { siteMetadata: { title, year } } } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            siteUrl
             year
           }
         }
@@ -30,7 +29,7 @@ const Layout = memo(({ children }) => {
       <Wrapper>
         {children}
       </Wrapper>
-      <Footer url={siteUrl} year={year} />
+      <Footer title={title} year={year} />
     </Container>
   )
 })

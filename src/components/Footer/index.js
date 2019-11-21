@@ -17,11 +17,11 @@ import {
   Mark
 } from './styles'
 
-const Footer = memo(({ url, year }) => (
+const Footer = memo(({ title, year }) => (
   <Container>
     <Wrapper>
       <Content>
-        <Copyright>{copyright(url.replace('https://', ''), year)}</Copyright>
+        <Copyright>{copyright(title, year)}</Copyright>
 
         <Marks>
           {trademarks.map(item => (
@@ -48,7 +48,7 @@ const Footer = memo(({ url, year }) => (
 ))
 
 Footer.propTypes = {
-  url: t.string.isRequired,
+  title: t.string.isRequired,
   year: t.number.isRequired
 }
 
