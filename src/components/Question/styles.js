@@ -113,10 +113,12 @@ export const Options = styled.div`
 export const Option = styled.p`
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 16px 20px;
   width: 100%;
   height: 50px;
   font-size: ${rem(14)};
+  text-align: center;
   background-color: ${rgba(color.blue, 0.008)};
   border: 1px solid ${rgba(color.blue, 0.1)};
   border-radius: 4px;

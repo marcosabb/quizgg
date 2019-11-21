@@ -10,14 +10,20 @@ questions:
   - id: c1fc0899-ddf2-4e2d-9174-186ec6b53d95
     options:
       - key: A
-        text: Top
+        text: PVP (Escolha às Cegas)
       - key: B
-        text: Mid
+        text: PVP (Escolha Alternada)
       - key: C
-        text: Bot
+        text: PVP (Ranqueada Solo/Duo)
       - key: D
-        text: Jungle
-    title: Qual a sua lane favorita?
+        text: PVP (Ranqueada Flexível)
+      - key: E
+        text: PVP (ARAM)
+      - key: F
+        text: PVP (TFT)
+      - key: G
+        text: COOP. VS. IA
+    title: Qual o seu modo de jogo favorito?
   - id: 5263c51c-9f1a-4b03-a787-65b672a167fb
     options:
       - key: A
@@ -66,14 +72,12 @@ questions:
   - id: e430c7d2-5dc5-4439-9b94-1f2e998148e0
     options:
       - key: A
-        text: Top
+        text: Temporada 1, 2 ou 3
       - key: B
-        text: Mid
+        text: Temporada 4, 5 ou 6
       - key: C
-        text: Bot
-      - key: D
-        text: Jungle
-    title: Qual a sua lane favorita?
+        text: Temporada 7, 8 ou 9
+    title: Em qual temporada você começou a jogar?
 result:
   items:
     - id: 906b1844-ebe0-43b1-8c61-ac7ff4d2fe9f

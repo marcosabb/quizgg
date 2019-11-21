@@ -7,11 +7,77 @@ image:
   src: ../static/assets/images/league-of-legends-skins.jpg
 featured: false
 questions:
-  - id: wololo
+  - id: c1fc0899-ddf2-4e2d-9174-186ec6b53d95
     options:
       - key: A
-        text: wololo
-    title: wololo
+        text: PVP (Escolha às Cegas)
+      - key: B
+        text: PVP (Escolha Alternada)
+      - key: C
+        text: PVP (Ranqueada Solo/Duo)
+      - key: D
+        text: PVP (Ranqueada Flexível)
+      - key: E
+        text: PVP (ARAM)
+      - key: F
+        text: PVP (TFT)
+      - key: G
+        text: COOP. VS. IA
+    title: Qual o seu modo de jogo favorito?
+  - id: 5263c51c-9f1a-4b03-a787-65b672a167fb
+    options:
+      - key: A
+        text: Flamengo eSports
+      - key: B
+        text: INTZ e-Sports Club
+      - key: C
+        text: paiN Gaming
+      - key: D
+        text: Team oNe e-Sports
+      - key: E
+        text: CNB e-Sports Club
+      - key: F
+        text: Redemption W7M
+      - key: G
+        text: Uppercut Esports
+      - key: H
+        text: KaBuM! e-Sports
+    title: Qual o seu time brasileiro favorito?
+  - id: f717eaea-8674-4c67-b890-20acd8d63315
+    options:
+      - key: A
+        text: Tanques
+      - key: B
+        text: Lutadores
+      - key: C
+        text: Atiradores
+      - key: D
+        text: Magos
+      - key: E
+        text: Controladores
+      - key: F
+        text: Retalhadores
+    title: Qual a sua classe favorita?
+  - id: e2a0dbe3-76d1-4dfa-af4b-17285644d7df
+    options:
+      - key: A
+        text: Top
+      - key: B
+        text: Mid
+      - key: C
+        text: Bot
+      - key: D
+        text: Jungle
+    title: Qual a sua lane favorita?
+  - id: e430c7d2-5dc5-4439-9b94-1f2e998148e0
+    options:
+      - key: A
+        text: Temporada 1, 2 ou 3
+      - key: B
+        text: Temporada 4, 5 ou 6
+      - key: C
+        text: Temporada 7, 8 ou 9
+    title: Em qual temporada você começou a jogar?
 result:
   items:
     - id: e289795d-ed69-449b-a986-53c5ef45550c
