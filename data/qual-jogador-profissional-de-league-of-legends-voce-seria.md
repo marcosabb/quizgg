@@ -36,7 +36,7 @@ questions:
         text: Uppercut Esports
       - key: H
         text: KaBuM! e-Sports
-    title: Qual o seu time favorito?
+    title: Qual o seu time brasileiro favorito?
   - id: f717eaea-8674-4c67-b890-20acd8d63315
     options:
       - key: A

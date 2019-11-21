@@ -36,7 +36,7 @@ questions:
         text: FURIA eSports
       - key: D
         text: INTZ
-    title: Qual o  seu time favorito?
+    title: Qual o  seu time brasileiro favorito?
   - id: 5740951b-6ccf-459f-a3b9-3164943ba8c4
     options:
       - key: A
@@ -90,6 +90,17 @@ questions:
       - key: F
         text: Zona de Perigo
     title: Qual o seu modo de jogo favorito?
+  - id: 39308237-d5e0-4763-9a85-722ba7411cf3
+    options:
+      - key: A
+        text: Counter-Strike
+      - key: B
+        text: 'Counter-Strike: Condition Zero'
+      - key: C
+        text: 'Counter-Strike: Source'
+      - key: D
+        text: 'Counter-Strike: Global Offensive'
+    title: Qual foi o primeiro Counter Strike que você jogou?
 result:
   items:
     - id: 26905dff-f337-4610-a84e-81e70e43ec24

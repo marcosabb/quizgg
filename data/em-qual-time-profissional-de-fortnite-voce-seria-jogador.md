@@ -5,26 +5,116 @@ game: Fortnite
 image:
   name: Fortnite
   src:  ../static/assets/images/fortnite-teams.jpg
-
 questions:
   -
-    id: 173c8337-549c-4d20-a5b4-466e41b381df
-    title: Qual o seu rifle favorito?
+    id: 7d69e2d6-dded-4d73-8ee4-77f598218866
+    title: Qual a sua escopeta favorita?
     options:
       -
         key: A
-        text: M4
+        text: Pump
       -
         key: B
-        text: Scar
+        text: Tática
+  -
+    id: de53b91e-fb9b-4885-9fce-f825ebbf1e6d
+    title: Em qual temporada você começou a jogar?
+    options:
+      -
+        key: A
+        text: Temporada 1, 2 ou 3
+      -
+        key: B
+        text: Temporada 4, 5 ou 6
       -
         key: C
-        text: Famas
+        text: Temporada 7, 8 ou 9
       -
         key: D
-        text: AUG
+        text: 'Temporada X ou Capítulo 2: Temporada 1'
   -
-    id: 6d04d7f2-921a-42ed-b84f-d31cf307ae01
+    id: 40b52bc1-efb8-4d41-a47b-969b4378ff04
+    title: Qual o seu time brasileiro favorito?
+    options:
+      -
+        key: A
+        text: Cloud9
+      -
+        key: B
+        text: The Boys
+      -
+        key: C
+        text: RED Canids
+      -
+        key: D
+        text: DC Team
+      -
+        key: E
+        text: W7M Gaming
+      -
+        key: F
+        text: Team Singularity
+  -
+    id: 9d1ae521-5004-4ea8-a1b6-ca26e781a820
+    title: Qual o seu drop favorito?
+    options:
+      -
+        key: A
+        text: Fontes Salgadas
+      -
+        key: B
+        text: Parque Agradável
+      -
+        key: C
+        text: Via do Varejo
+      -
+        key: D
+        text: Pântano Glup
+      -
+        key: E
+        text: Penhasco Praiano
+      -
+        key: F
+        text: Chaminés Chamuscantes
+      -
+        key: G
+        text: Doca Desleixada
+      -
+        key: H
+        text: Bosque Choroso
+      -
+        key: I
+        text: Cidade da Cordilheira
+      -
+        key: J
+        text: Lago da Preguiça
+      -
+        key: K
+        text: Alameda Arborizada
+      -
+        key: L
+        text: Litoral Límpido
+      -
+        key: M
+        text: Fazenda Frenética
+  -
+    id: cc09d8a9-5c9c-450b-83d3-0908a02329d4
+    title: Qual seu modo de jogo preferido?
+    options:
+      -
+        key: A
+        text: Solo
+      -
+        key: B
+        text: Duo
+      -
+        key: C
+        text: Trio
+      -
+        key: D
+        text: Squad
+  -
+    id: 5c437d77-eac4-4c8f-9ee2-77f9c4d7c6cc
     title: Qual o seu tipo de jogo favorito?
     options:
       -
@@ -40,6 +130,22 @@ questions:
         key: D
         text: Parquinho
   -
+    id: aaf3c897-12a9-4356-9ff4-91eb56860cc3
+    title: Qual o seu rifle favorito?
+    options:
+      -
+        key: A
+        text: M4
+      -
+        key: B
+        text: Scar
+      -
+        key: C
+        text: Famas
+      -
+        key: D
+        text: AUG
+  -
     id: 8962ce58-75cd-446c-b067-e5d7a1d7f0c7
     title: Você se considera qual tipo de jogador?
     options:
@@ -48,7 +154,7 @@ questions:
         text: Safe
       -
         key: B
-        text: Agressivo
+        text: Agressivo    
 result:
   statement:
     final: Você seria jogador pela equipe

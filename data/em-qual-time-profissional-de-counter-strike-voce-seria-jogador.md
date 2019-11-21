@@ -5,50 +5,101 @@ game: Counter Strike
 image:
   name: Counter Strike
   src:  ../static/assets/images/counter-strike-teams.jpg
-
 questions:
-  -
-    id: 173c8337-549c-4d20-a5b4-466e41b381df
-    title: Qual o seu rifle favorito?
+  - id: 9d95cd5c-c139-4a1f-8ad8-f47906cb463e
     options:
-      -
-        key: A
-        text: M4
-      -
-        key: B
-        text: Scar
-      -
-        key: C
-        text: Famas
-      -
-        key: D
+      - key: A
+        text: Dust II
+      - key: B
+        text: Mirage
+      - key: C
+        text: Train
+      - key: D
+        text: Inferno
+      - key: E
+        text: Cache
+      - key: F
+        text: Nuke
+      - key: G
+        text: Overpass
+      - key: H
+        text: Vertigo
+    title: Qual o seu mapa favorito?
+  - id: b9fed308-0e9f-4456-b0c8-666cfada991a
+    options:
+      - key: A
+        text: mibr
+      - key: B
+        text: Team oNe eSports
+      - key: C
+        text: FURIA eSports
+      - key: D
+        text: INTZ
+    title: Qual o  seu time brasileiro favorito?
+  - id: 5740951b-6ccf-459f-a3b9-3164943ba8c4
+    options:
+      - key: A
+        text: AK-47
+      - key: B
+        text: M4A4
+      - key: C
+        text: AWP
+      - key: D
         text: AUG
-  -
-    id: 6d04d7f2-921a-42ed-b84f-d31cf307ae01
-    title: Qual o seu tipo de jogo favorito?
+      - key: E
+        text: Galil AR
+      - key: F
+        text: M4A1-S
+      - key: G
+        text: SSG 08
+      - key: H
+        text: SSG 53
+      - key: I
+        text: SCAR-20 
+      - key: J
+        text: G3SG1
+      - key: K
+        text: Famas
+    title: Qual o seu rifle favorito?
+  - id: 8c12c69c-e09f-476a-ae2e-ae484d18120e
     options:
-      -
-        key: A
-        text: Normal
-      -
-        key: B
-        text: Arena
-      -
-        key: C
-        text: Criativo
-      -
-        key: D
-        text: Parquinho
-  -
-    id: 8962ce58-75cd-446c-b067-e5d7a1d7f0c7
-    title: Você se considera qual tipo de jogador?
+      - key: A
+        text: Fragger
+      - key: B
+        text: Lurker
+      - key: C
+        text: Awper
+      - key: D
+        text: IGL
+      - key: E
+        text: Suporte
+    title: Qual a sua função favorita?
+  - id: e7f3a18b-b5b4-419b-9107-977868cd228b
     options:
-      -
-        key: A
-        text: Safe
-      -
-        key: B
-        text: Agressivo
+      - key: A
+        text: Competitivo
+      - key: B
+        text: Braço Direito
+      - key: C
+        text: Casual
+      - key: D
+        text: Mata-Mata
+      - key: E
+        text: Jogos de Guerra
+      - key: F
+        text: Zona de Perigo
+    title: Qual o seu modo de jogo favorito?
+  - id: 39308237-d5e0-4763-9a85-722ba7411cf3
+    options:
+      - key: A
+        text: Counter-Strike
+      - key: B
+        text: 'Counter-Strike: Condition Zero'
+      - key: C
+        text: 'Counter-Strike: Source'
+      - key: D
+        text: 'Counter-Strike: Global Offensive'
+    title: Qual foi o primeiro Counter Strike que você jogou?
 result:
   statement:
     final: Você seria jogador pela equipe

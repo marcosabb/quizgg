@@ -18,19 +18,13 @@ questions:
       -
         key: B
         text: Tática
-      -
-        key: C
-        text: Combate
-      -
-        key: D
-        text: Tambor
   -
     id: de53b91e-fb9b-4885-9fce-f825ebbf1e6d
     title: Em qual temporada você começou a jogar?
     options:
       -
         key: A
-        text: Temporada 1, 2, 3
+        text: Temporada 1, 2 ou 3
       -
         key: B
         text: Temporada 4, 5 ou 6
@@ -42,7 +36,7 @@ questions:
         text: 'Temporada X ou Capítulo 2: Temporada 1'
   -
     id: 40b52bc1-efb8-4d41-a47b-969b4378ff04
-    title: Qual o seu time brasileiro preferido?
+    title: Qual o seu time brasileiro favorito?
     options:
       -
         key: A
@@ -121,6 +115,48 @@ questions:
       -
         key: D
         text: Squad
+  -
+    id: 5c437d77-eac4-4c8f-9ee2-77f9c4d7c6cc
+    title: Qual o seu tipo de jogo favorito?
+    options:
+      -
+        key: A
+        text: Normal
+      -
+        key: B
+        text: Arena
+      -
+        key: C
+        text: Criativo
+      -
+        key: D
+        text: Parquinho
+  -
+    id: aaf3c897-12a9-4356-9ff4-91eb56860cc3
+    title: Qual o seu rifle favorito?
+    options:
+      -
+        key: A
+        text: M4
+      -
+        key: B
+        text: Scar
+      -
+        key: C
+        text: Famas
+      -
+        key: D
+        text: AUG
+  -
+    id: 8962ce58-75cd-446c-b067-e5d7a1d7f0c7
+    title: Você se considera qual tipo de jogador?
+    options:
+      -
+        key: A
+        text: Safe
+      -
+        key: B
+        text: Agressivo
         
 result:
   statement:

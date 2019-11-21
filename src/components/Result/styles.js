@@ -9,14 +9,14 @@ export const LoaderWrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 250px;
+  height: 300px;
 `
 
 export const Loader = styled.p`
   margin-top: 30px;
   font-size: ${rem(14)};
   text-transform: uppercase;
-  color: ${rgba(color.text, 0.8)};
+  color: ${color.blue};
 `
 
 export const Wrapper = styled.div`
@@ -77,7 +77,7 @@ export const Share = styled.div`
 
 export const Call = styled.p`
   margin-bottom: 20px;
-  font-size: ${rem(10)};
+  font-size: ${rem(12)};
   text-transform: uppercase;
   color: ${rgba(color.text, 0.8)}
 `

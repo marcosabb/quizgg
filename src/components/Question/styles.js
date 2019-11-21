@@ -114,6 +114,7 @@ export const Option = styled.p`
   display: flex;
   align-items: center;
   padding: 16px 20px;
+  width: 100%;
   height: 50px;
   font-size: ${rem(14)};
   background-color: ${rgba(color.blue, 0.008)};
@@ -148,11 +149,13 @@ export const Option = styled.p`
     padding: 10px 14px;
   `}
 
-  ${ifProp('inline', css`
-    width: calc(50% - 6px);
+  ${media.greaterThan('small')`
+    ${ifProp('inline', css`
+      width: calc(50% - 6px);
 
-    &:nth-last-child(2) {
-      margin-bottom: 0;
-    }
-  `, null)}
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    `, null)}
+  `}
 `
