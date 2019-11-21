@@ -51,4 +51,10 @@ export default createGlobalStyle`
   ul {
     list-style: none;
   }
+
+  button,
+  input {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: ${rem(1)};
+  }
 `

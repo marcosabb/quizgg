@@ -58,7 +58,7 @@ export const Image = styled.div`
   }
 
   ${media.lessThan('small')`
-    width: 250px;
+    width: 100%;
     margin-bottom: 20px;
   `}
 `
@@ -79,7 +79,7 @@ export const Call = styled.p`
   margin-bottom: 20px;
   font-size: ${rem(12)};
   text-transform: uppercase;
-  color: ${rgba(color.text, 0.8)}
+  color: ${rgba(color.text, 0.8)};
 `
 
 export const Social = styled.div`
@@ -87,11 +87,33 @@ export const Social = styled.div`
   align-items: center;
   justify-content: center;
 
-  .button {
+  .social-button {
     cursor: pointer;
     
     &:not(:last-child) {
       margin-right: 16px;
     }
   }
+`
+
+export const Url = styled.div`
+  display: flex;
+  width: 350px;
+  margin-bottom: 20px;
+
+  ${media.lessThan('small')`
+    width: 100%;
+  `}
+`
+
+export const Input = styled.input`
+  flex: 1;
+  margin-right: 4px;
+  padding: 10px 8px;
+  height: 34px;
+  font-size: ${rem(12)};
+  color: ${color.text};
+  background-color: ${color.white};
+  border: 1px solid ${rgba(color.blue, 0.1)};
+  border-radius: 3px;
 `

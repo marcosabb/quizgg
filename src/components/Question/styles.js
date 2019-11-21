@@ -77,7 +77,7 @@ export const Counter = styled.p`
 `
 
 export const Image = styled.div`
-  width: 400px;
+  max-width: 350px;
   margin: 0 auto 30px;
 
   img {
@@ -85,7 +85,7 @@ export const Image = styled.div`
   }
 
   ${media.lessThan('small')`
-    width: 250px;
+    max-width: 100%;
     margin-bottom: 20px;
   `}
 `

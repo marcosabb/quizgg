@@ -22,6 +22,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   height: 100%;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 16px;
 
@@ -39,15 +40,21 @@ export const Title = styled.h1`
 `
 
 export const Button = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
   padding: 10px 16px;
   font-size: ${rem(12)};
   text-transform: uppercase;
   color: ${color.white};
   background-color: ${color.blue};
+  border: 1px solid ${color.blue};
   border-radius: 3px;
   transition: all .2s linear;
 
   &:hover {
-    background-color: ${darken(0.2, color.blue)}
+    background-color: ${darken(0.2, color.blue)};
+    border-color: ${darken(0.2, color.blue)}
   }
 `

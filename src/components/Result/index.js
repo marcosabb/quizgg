@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { memo, useState, useEffect } from 'react'
 import t from 'prop-types'
 import Img from 'gatsby-image'
@@ -14,6 +13,7 @@ import { debounce } from 'lodash'
 
 import Box from '../Box'
 import Loading from '../Loading'
+import Button from '../Button'
 
 import {
   LoaderWrapper,
@@ -24,8 +24,16 @@ import {
   Image,
   Share,
   Call,
-  Social
+  Social,
+  Url,
+  Input
 } from './styles'
+
+if (typeof document !== 'undefined') {
+  const Clipboard = require('clipboard')
+
+  new Clipboard('.clipboard-button')
+}
 
 const Result = memo(({
   result: {
@@ -33,11 +41,11 @@ const Result = memo(({
     title,
     image,
     text,
-    quote,
+    quote
   },
-  url,
+  url
 }) => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
 
   const finishLoading = debounce(() => {
     setLoading(false)
@@ -46,6 +54,8 @@ const Result = memo(({
   useEffect(() => {
     finishLoading()
   }, [])
+
+  const link = `${url}r/${text}`
 
   return (
     <Box>
@@ -71,11 +81,22 @@ const Result = memo(({
             <Share>
               <Call>Compartilhe seu resultado</Call>
 
+              <Url>
+                <Input type='text' value={link} readOnly />
+                <Button
+                  className='clipboard-button'
+                  tooltip='Copiado!'
+                  data-clipboard-text={link}
+                >
+                  Copiar
+                </Button>
+              </Url>
+
               <Social>
                 <TwitterShareButton
                   title={quote}
-                  url={`${url}r/${text}`}
-                  className='button'
+                  url={link}
+                  className='social-button'
                 >
                   <TwitterIcon
                     size={38}
@@ -84,8 +105,8 @@ const Result = memo(({
                 </TwitterShareButton>
 
                 <FacebookShareButton
-                  url={`${url}r/${text}`}
-                  className='button'
+                  url={link}
+                  className='social-button'
                 >
                   <FacebookIcon
                     size={38}
@@ -94,8 +115,8 @@ const Result = memo(({
                 </FacebookShareButton>
 
                 <WhatsappShareButton
-                  url={`${url}r/${text}`}
-                  className='button'
+                  url={link}
+                  className='social-button'
                 >
                   <WhatsappIcon
                     size={38}
@@ -118,9 +139,9 @@ Result.propTypes = {
     title: t.oneOfType([t.string, t.number]),
     image: t.object,
     text: t.string,
-    quote: t.string,
+    quote: t.string
   }).isRequired,
-  url: t.string.isRequired,
+  url: t.string.isRequired
 }
 
 export default Result
