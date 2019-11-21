@@ -25,17 +25,6 @@ questions:
       - key: H
         text: Vertigo
     title: Qual o seu mapa favorito?
-  - id: b9fed308-0e9f-4456-b0c8-666cfada991a
-    options:
-      - key: A
-        text: mibr
-      - key: B
-        text: Team oNe eSports
-      - key: C
-        text: FURIA eSports
-      - key: D
-        text: INTZ
-    title: Qual o  seu time brasileiro favorito?
   - id: 5740951b-6ccf-459f-a3b9-3164943ba8c4
     options:
       - key: A

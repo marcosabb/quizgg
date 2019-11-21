@@ -33,28 +33,6 @@ questions:
         key: D
         text: 'Temporada X ou Capítulo 2: Temporada 1'
   -
-    id: 40b52bc1-efb8-4d41-a47b-969b4378ff04
-    title: Qual o seu time brasileiro favorito?
-    options:
-      -
-        key: A
-        text: Cloud9
-      -
-        key: B
-        text: The Boys
-      -
-        key: C
-        text: RED Canids
-      -
-        key: D
-        text: DC Team
-      -
-        key: E
-        text: W7M Gaming
-      -
-        key: F
-        text: Team Singularity
-  -
     id: 9d1ae521-5004-4ea8-a1b6-ca26e781a820
     title: Qual o seu drop favorito?
     options:

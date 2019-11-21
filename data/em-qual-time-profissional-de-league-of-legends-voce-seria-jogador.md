@@ -23,25 +23,6 @@ questions:
       - key: G
         text: COOP. VS. IA
     title: Qual o seu modo de jogo favorito?
-  - id: 5263c51c-9f1a-4b03-a787-65b672a167fb
-    options:
-      - key: A
-        text: Flamengo eSports
-      - key: B
-        text: INTZ e-Sports Club
-      - key: C
-        text: paiN Gaming
-      - key: D
-        text: Team oNe e-Sports
-      - key: E
-        text: CNB e-Sports Club
-      - key: F
-        text: Redemption W7M
-      - key: G
-        text: Uppercut Esports
-      - key: H
-        text: KaBuM! e-Sports
-    title: Qual o seu time brasileiro favorito?
   - id: f717eaea-8674-4c67-b890-20acd8d63315
     options:
       - key: A
