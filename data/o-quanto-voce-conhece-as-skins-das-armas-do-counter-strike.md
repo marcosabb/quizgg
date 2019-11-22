@@ -5,7 +5,6 @@ game: Counter Strike
 image:
   name: Counter Strike
   src: ../static/assets/images/counter-strike-ak-47-vulkan.png
-
 questions:
   -
     id: 5f80e8da-5a2d-4333-9f18-cd5d8973118f
@@ -203,4 +202,35 @@ result:
   statement:
     final: Você acertou
     share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins das armas do Counter Strike?
+  items:
+    -
+      id: 66332164-1b5d-4f21-9876-93c8be40d0a7
+      title: '1'
+    -
+      id: ec03d798-02d3-4fcd-8070-a773e65bd906
+      title: '2'
+    -
+      id: 094c8e43-2699-49f3-a7ca-46e650fdc993
+      title: '3'
+    -
+      id: 173a8b9c-4cec-45d1-b768-f9032addd1e7
+      title: '4'
+    -
+      id: 6b58c062-d40b-48e9-9712-e5e655bdd15e
+      title: '5'
+    -
+      id: 8cca3666-df15-4ffc-b485-a143939bb6c2
+      title: '6'
+    -
+      id: 586ad3f0-ab96-4e42-9176-b71936dbbf2a
+      title: '7'
+    -
+      id: 30c22a5b-45b6-48d6-be56-c3f3ae30c1c6
+      title: '8'
+    -
+      id: 5c8ced3f-4942-4da5-b514-f82eab2fbfd0
+      title: '9'
+    -
+      id: af83b761-ce34-4f73-88f2-6f8741999774
+      title: '10'
 ---

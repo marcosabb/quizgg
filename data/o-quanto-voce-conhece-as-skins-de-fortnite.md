@@ -204,4 +204,35 @@ result:
   statement:
     final: Você acertou
     share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins de Fortnite?
+  items:
+    -
+      id: ef80302d-c380-416f-99d7-bbef65da477e
+      title: '1'
+    -
+      id: 9879813a-3acd-4eec-bccb-77ccf9f5d254
+      title: '2'
+    -
+      id: 22c62d72-6be3-4a2b-a7dc-35352e632b19
+      title: '3'
+    -
+      id: aba9e404-8a60-44ed-ade4-0b28395b3706
+      title: '4'
+    -
+      id: 8733cacd-83e8-4abc-9ebe-ad0c9b883b61
+      title: '5'
+    -
+      id: 10020d4c-fa5c-43c1-ba64-cda8247e7012
+      title: '6'
+    -
+      id: 9c18ba98-62d1-4ff7-9f70-41162969ac5b
+      title: '7'
+    -
+      id: 7052557b-01ed-4d3f-beed-bcd080f2ea4b
+      title: '8'
+    -
+      id: cc2bb89a-cdea-4628-9d85-2d7d67b51400
+      title: '9'
+    -
+      id: 30bf5525-4cc1-4264-b21e-2d488b44a2d4
+      title: '10'
 ---

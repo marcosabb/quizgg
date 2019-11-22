@@ -200,5 +200,36 @@ result:
   statement:
     final: Você acertou
     share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins de League of Legends?
+  items:
+    -
+      id: 64ea9617-51e4-4c57-a65a-f9d6c8d63d82
+      title: '1'
+    -
+      id: 5f763856-ecd7-4573-8029-b555a65bf629
+      title: '2'
+    -
+      id: 61d2e58f-918c-42b8-9c0b-ce77f666e2e4
+      title: '3'
+    -
+      id: 1a475916-71b7-487c-aa4e-6a98413e7936
+      title: '4'
+    -
+      id: 94611eae-cb27-4077-83ea-9fd26c63b337
+      title: '5'
+    -
+      id: c84c5131-51d7-4e12-a99c-98756abd0d26
+      title: '6'
+    -
+      id: f3949cca-fac4-4291-9d4c-b2c3e50d6ee5
+      title: '7'
+    -
+      id: 1a015c71-47bf-4193-a53d-fbb0599bb61b
+      title: '8'
+    -
+      id: 4870e276-2b2b-406b-aec7-0ff419bae050
+      title: '9'
+    -
+      id: 37d85a10-dacb-4667-88ac-1b086ea011a0
+      title: '10'
 ---
 

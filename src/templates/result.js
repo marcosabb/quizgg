@@ -1,6 +1,6 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo } from 'react'
 import t from 'prop-types'
-import { navigate } from 'gatsby'
+// import { navigate } from 'gatsby'
 
 import { replace } from '../utils'
 
@@ -9,9 +9,9 @@ import Seo from '../components/Seo'
 const Result = memo(({
   pageContext: { result: { share, text, image }, slug }
 }) => {
-  useEffect(() => {
-    navigate(slug)
-  }, [])
+  // useEffect(() => {
+  //   navigate(slug)
+  // }, [])
 
   return (
     <Seo
