@@ -117,31 +117,23 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
   }
 
   function generateResult () {
-    if (type === 'quiz') {
-      return {
-        statement: {
-          final: result.statement.final,
-          share: result.statement.share
-        },
-        title: `${score} pergunta${(score <= 0 || score > 1) ? 's' : ''}!`,
-        image,
-        text: String(score)
-      }
-    }
+    const item = type === 'teste'
+      ? result.items[Math.floor(Math.random() * result.items.length)]
+      : result.items.find(item => item.title === String(score))
 
-    if (type === 'teste') {
-      const item = result.items[Math.floor(Math.random() * result.items.length)]
-      console.log(item.quote)
-      return {
-        statement: {
-          final: result.statement.final,
-          share: result.statement.share
-        },
-        title: item.title,
-        image: item.image,
-        text: item.id,
-        quote: item.quote
-      }
+    const title = type === 'teste'
+      ? item.title
+      : `${score} pergunta${(score <= 0 || score > 1) ? 's' : ''}!`
+
+    return {
+      statement: {
+        final: result.statement.final,
+        share: result.statement.share
+      },
+      title,
+      id: item.id,
+      image: type === 'teste' ? item.image : image,
+      quote: type === 'teste' && item.quote
     }
   }
 

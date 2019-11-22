@@ -103,7 +103,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           type,
           result: {
             share,
-            text: String(title),
+            text: title,
             image: resultCover && type === 'teste'
               ? resultCover.src.publicURL
               : quizCover.src.publicURL
@@ -111,45 +111,5 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       })
     })
-
-    // if (type === 'quiz') {
-    //   Array.from(Array(10).keys()).forEach(item => {
-    //     const url = `${slug}r/${item + 1}`
-
-    //     createPage({
-    //       path: url,
-    //       component: path.resolve('src/templates/result.js'),
-    //       context: {
-    //         slug,
-    //         type: 'quiz',
-    //         result: {
-    //           share,
-    //           text: String(item + 1),
-    //           image: publicURL
-    //         }
-    //       }
-    //     })
-    //   })
-    // }
-
-    // if (type === 'teste') {
-    //   items.forEach(({ id, title, image: { src: { publicURL } } }) => {
-    //     const url = `${slug}r/${id}`
-
-    //     createPage({
-    //       path: url,
-    //       component: path.resolve('src/templates/result.js'),
-    //       context: {
-    //         slug,
-    //         type: 'teste',
-    //         result: {
-    //           share,
-    //           text: title,
-    //           image: publicURL
-    //         }
-    //       }
-    //     })
-    //   })
-    // }
   })
 }

@@ -40,7 +40,7 @@ const Result = memo(({
     statement: { final },
     title,
     image,
-    text,
+    id,
     quote
   },
   url
@@ -55,7 +55,7 @@ const Result = memo(({
     finishLoading()
   }, [])
 
-  const link = `${url}r/${text}`
+  const link = `${url}r/${id}`
 
   return (
     <Box>
@@ -138,7 +138,7 @@ Result.propTypes = {
     }),
     title: t.oneOfType([t.string, t.number]),
     image: t.object,
-    text: t.string,
+    id: t.string,
     quote: t.string
   }).isRequired,
   url: t.string.isRequired
