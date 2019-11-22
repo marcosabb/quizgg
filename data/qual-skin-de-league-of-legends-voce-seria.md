@@ -133,5 +133,6 @@ result:
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual skin de League of Legends seria?'
+    tags: ['leagueoflegends', 'leagueoflegendsbrasil']
 ---
 

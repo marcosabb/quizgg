@@ -200,6 +200,7 @@ result:
   statement:
     final: Você acertou
     share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins de League of Legends?
+    tags: ['leagueoflegends', 'leagueoflegendsbrasil']
   items:
     -
       id: 64ea9617-51e4-4c57-a65a-f9d6c8d63d82

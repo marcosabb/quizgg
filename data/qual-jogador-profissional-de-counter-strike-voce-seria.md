@@ -166,5 +166,6 @@ result:
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual jogador profissional de Counter Strike seria?'
+    tags: ['counterstrike', 'counterstrikebrasil']
 ---
 

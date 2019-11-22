@@ -108,6 +108,7 @@ export const documentQuery = graphql`
           statement {
             final
             share
+            tags
           }
           items {
             id

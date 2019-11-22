@@ -210,5 +210,6 @@ result:
   statement:
     final: Você seria
     share: 'Eu seria %s! E você, qual skin de Fortnite seria?'
+    tags: ['fortnite', 'fortnitebrasil']
 ---
 

@@ -1,4 +1,3 @@
-/* eslint-disable*/
 import React, { memo } from 'react'
 import t from 'prop-types'
 import Img from 'gatsby-image'
@@ -66,7 +65,7 @@ Question.propTypes = {
   answeredQuestion: t.bool.isRequired,
   handleCheck: t.func.isRequired,
   handleState: t.func.isRequired,
-  inline: t.bool,
+  inline: t.bool
 }
 
 export default Question

@@ -133,7 +133,8 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
       title,
       id: item.id,
       image: type === 'teste' ? item.image : image,
-      quote: type === 'teste' && item.quote
+      quote: type === 'teste' && item.quote,
+      tags: result.statement.tags
     }
   }
 
@@ -182,7 +183,8 @@ Questions.propTypes = {
   result: t.shape({
     statement: t.shape({
       final: t.string,
-      share: t.string
+      share: t.string,
+      tags: t.shape(t.string)
     }),
     items: t.arrayOf(t.shape({
       id: t.string,

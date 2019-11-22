@@ -162,6 +162,7 @@ result:
   statement:
     final: Você seria
     share: Eu seria %s! E você, qual jogador profissional de Fortnite seria?
+    tags: ['fortnite', 'fortnitebrasil']
 
   items:
     -

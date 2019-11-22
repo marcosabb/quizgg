@@ -143,5 +143,6 @@ result:
   statement:
     final: Você seria
     share: Eu seria %s! E você, qual jogador profissional de League of Legends seria?
+    tags: ['leagueoflegends', 'leagueoflegendsbrasil']
 ---
 

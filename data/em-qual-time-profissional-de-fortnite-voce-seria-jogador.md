@@ -137,6 +137,7 @@ result:
   statement:
     final: Você seria jogador pela equipe
     share: Eu seria jogador pela equipe %s! E você, em qual time profissional de Fortnite seria jogador?
+    tags: ['fortnite', 'fortnitebrasil']
 
   items:
     -

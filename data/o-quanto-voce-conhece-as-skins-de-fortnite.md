@@ -204,6 +204,7 @@ result:
   statement:
     final: Você acertou
     share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins de Fortnite?
+    tags: ['fortnite', 'fortnitebrasil']
   items:
     -
       id: ef80302d-c380-416f-99d7-bbef65da477e

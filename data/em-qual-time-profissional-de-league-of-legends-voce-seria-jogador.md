@@ -62,6 +62,7 @@ result:
   statement:
     final: Você seria jogador pela equipe
     share: Eu seria jogador pela equipe %s! E você, em qual time profissional de League of Legends seria jogador?
+    tags: ['leagueoflegends', 'leagueoflegendsbrasil']
 
   items:
     -

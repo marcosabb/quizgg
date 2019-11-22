@@ -202,6 +202,7 @@ result:
   statement:
     final: Você acertou
     share: Eu acertei %s pergunta(s)! E você, o quanto conhece as skins das armas do Counter Strike?
+    tags: ['counterstrike', 'counterstrikebrasil']
   items:
     -
       id: 66332164-1b5d-4f21-9876-93c8be40d0a7
