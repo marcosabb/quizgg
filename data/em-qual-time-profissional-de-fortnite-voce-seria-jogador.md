@@ -123,16 +123,6 @@ questions:
       -
         key: D
         text: AUG
-  -
-    id: 8962ce58-75cd-446c-b067-e5d7a1d7f0c7
-    title: Você se considera qual tipo de jogador?
-    options:
-      -
-        key: A
-        text: Safe
-      -
-        key: B
-        text: Agressivo    
 result:
   statement:
     final: Você seria jogador pela equipe
@@ -146,6 +136,12 @@ result:
       image:
         name: Cloud9
         src: ../static/assets/images/cloud9.jpg
+    -
+      id: a9058f08-9f9c-4571-969a-41f5ae77b02f
+      title: OnLy e-Sports
+      image:
+        name: OnLy e-Sports
+        src: ../static/assets/images/onlyesports.jpg
     -
       id: b296a521-a6b6-4494-98b9-5b30824758fb
       title: The Boys

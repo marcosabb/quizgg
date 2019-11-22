@@ -5,8 +5,6 @@ game: Fortnite
 image:
   name: Fortnite
   src: ../static/assets/images/temporada-x.jpg
-featured: true
-
 questions:
   -
     id: 9cd51776-2c66-48e9-90ff-feba1fd1a88c

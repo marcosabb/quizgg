@@ -54,6 +54,9 @@ questions:
       -
         key: F
         text: Team Singularity
+      -
+        key: G
+        text: OnLy e-Sports
   -
     id: 9d1ae521-5004-4ea8-a1b6-ca26e781a820
     title: Qual o seu drop favorito?
@@ -145,16 +148,6 @@ questions:
       -
         key: D
         text: AUG
-  -
-    id: 8962ce58-75cd-446c-b067-e5d7a1d7f0c7
-    title: Você se considera qual tipo de jogador?
-    options:
-      -
-        key: A
-        text: Safe
-      -
-        key: B
-        text: Agressivo
 result:
   items:
     - id: e563e357-a1dd-4ab8-a8a9-58269a2dc827

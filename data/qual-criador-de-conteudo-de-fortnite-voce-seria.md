@@ -1,12 +1,11 @@
 ---
 type: teste
-title: Qual jogador profissional de Fortnite você seria?
+title: Qual criador de conteúdo de Fortnite você seria?
 game: Fortnite
 image:
   name: Fortnite
-  src: ../static/assets/images/fortnite-competitivo.jpeg
+  src: ../static/assets/images/fortnite-streamers.jpg
 featured: true
-
 questions:
   -
     id: 7d69e2d6-dded-4d73-8ee4-77f598218866
@@ -149,89 +148,117 @@ questions:
         text: Famas
       -
         key: D
-        text: AUG 
+        text: AUG
 result:
   statement:
     final: Você seria
-    share: Eu seria %s! E você, qual jogador profissional de Fortnite seria?
+    share: Eu seria %s! E você, qual criador de conteúdo de Fortnite seria?
     tags: ['fortnite', 'fortnitebrasil']
 
   items:
     -
-      id: b8d723ec-c8dd-4ca1-ad81-a634067bda08
-      title: Igor "drakoNz" Fernandes
-      quote: '@drxkoNz'
+      id: c68bea86-429b-4a31-9de2-f2c89194fb79
+      title: Sev7n
+      quote: '@Sev7nHUE'
       image:
-        name: Igor Fernandes
-        src: ../static/assets/images/igor-fernandes.jpg
+        name: Sev7n
+        src: ../static/assets/images/sev7n.jpg
     -
-      id: f7780242-43b0-4324-a33d-850cbb6f5082
-      title: Nicolas "Nicks" Polonio
-      quote: '@Nicksfps'
+      id: 6b2ce0cc-964a-457e-8810-42a02564bca4
+      title: ZeroBadass
+      quote: '@ZeroBadass'
       image:
-        name: Nicolas Polonio
-        src: ../static/assets/images/nicolas-polonio.jpg
+        name: ZeroBadass
+        src: ../static/assets/images/zerobadass.jpg
     -
-      id: 252aa0f8-52c8-4195-8d7c-c0f26079d244
-      title: Gabriel "MasteerXD" Marques
-      quote: '@MaasteerXD'
+      id: 3be417c3-0d52-4bbb-a4e4-f1298a4c16d9
+      title: Sharshock
+      quote: '@sharshock'
       image:
-        name: Gabriel Marques
-        src: ../static/assets/images/gabriel-marques.jpg
+        name: Sharshock
+        src: ../static/assets/images/sharshock.jpg
     -
-      id: af197dcd-64ea-4097-b6e7-b0d4308b869e
-      title: Patrick "blackoutz" Garcia
-      quote: '@blxckoutz'
+      id: f2e47c60-a8a1-4aa4-b666-ac63f82a0452
+      title: FlakesPower
+      quote: '@FlakesPower'
       image:
         name: Patrick Garcia
-        src: ../static/assets/images/patrick-garcia.jpg
+        src: ../static/assets/images/flakespower.jpg
     -
-      id: c97fe387-dba8-4484-8a0b-a6b4a57eee0b
-      title: Leonardo "leleo" Dametto
-      quote: '@leleofps'
+      id: 45003651-ec49-40f3-bb1b-bed3e241a63c
+      title: Calango
+      quote: '@Calango'
       image:
-        name: Leonardo Dametto
-        src: ../static/assets/images/leonardo-dametto.jpg
+        name: Calango
+        src: ../static/assets/images/calango.jpg
     -
-      id: d80019c7-e6d8-4237-ba01-f71a6dce9617
-      title: Thales "Pulgaboy" Henrique
-      quote: '@pulgaboy_'
+      id: fe56b6b6-31a8-4a0a-b0ea-c3d813f8a8ba
+      title: Zugorow
+      quote: '@zugorow'
       image:
-        name: Thales Henrique
-        src: ../static/assets/images/thales-henrique.jpg
+        name: Zugorow
+        src: ../static/assets/images/zugorow.jpg
     -
-      id: 214a8896-ef64-4677-9bf0-342ba736b618
-      title: Rodrigo "Avlr" Avelar
-      quote: '@Avlrfps'
+      id: 8d725e5b-2b0d-4248-95b2-863152ce7b0f
+      title: SettiOP
+      quote: '@settiope'
       image:
-        name: Rodrigo Avelar
-        src: ../static/assets/images/rodrigo-avelar.jpg
+        name: SettiOP
+        src: ../static/assets/images/settiop.jpg
     -
-      id: fe7bd473-5c02-40e3-a917-3cdb01975b56
-      title: Henrique "kurtz" Kurtz
-      quote: '@kurtzzfn'
+      id: 0882796d-95e2-43c8-89d5-c23e01cee2a1
+      title: Pai Também Joga
+      quote: '@PaiTambemJoga'
       image:
-        name: Henrique Kurtz
-        src: ../static/assets/images/henrique-kurtz.jpg
+        name: Pai Também Joga
+        src: ../static/assets/images/paitambemjoga.jpg
     -
-      id: a2da94ee-83d3-47de-bafb-18ed777d1979
-      title: Fabio "Faah" Henrique
-      quote: '@FaahFPS'
+      id: ae9bd2c1-92f3-40ab-99d8-4bd8438eb860
+      title: GhostUEP
+      quote: '@GhostUEP'
       image:
-        name: Fabio Henrique
-        src: ../static/assets/images/fabio-henrique.jpg
+        name: GhostUEP
+        src: ../static/assets/images/ghostuep.jpg
     -
-      id: e9982abe-f587-4872-84dd-e80743ca1c2a
-      title: Gustavo "technoviking46" Trevisan
-      quote: '@technoviking46'
+      id: e7129fe4-ee42-40b8-ae97-d25810dd6055
+      title: Melany Lo Lee
+      quote: '@melanylolee'
       image:
-        name: Gustavo Trevisan
-        src: ../static/assets/images/gustavo-trevisan.jpg
+        name: Melany Lo Lee
+        src: ../static/assets/images/melanylolee.jpg
     -
-      id: 2ed2d385-7368-42e8-bea1-ff43e718a56b
-      title: Ana "Naxy" Beatriz
-      quote: '@naxysz'
+      id: ba12fdd1-f77e-4c09-9315-b209c93bba26
+      title: Renegada
+      quote: '@RenegadaGamer'
       image:
-        name: Ana Beatriz
-        src: ../static/assets/images/naxy.jpg
+        name: Renegada
+        src: ../static/assets/images/renegada.jpg
+    -
+      id: c6156f4b-4671-45d4-b60d-3ca7983ee51e
+      title: Fall X
+      quote: '@FallOficial'
+      image:
+        name: Fall X
+        src: ../static/assets/images/fallx.jpg
+    -
+      id: 2366a4bf-e626-4eff-a722-c6f2848aacf9
+      title: Abduzido
+      quote: '@abduzidogg'
+      image:
+        name: Abduzido
+        src: ../static/assets/images/abduzido.jpg
+    -
+      id: d931cc58-60c6-4991-b285-170ba94f0689
+      title: Karool
+      quote: '@nowkarool'
+      image:
+        name: Karool
+        src: ../static/assets/images/karool.jpg
+    -
+      id: e38b27d6-0891-4005-bcf4-52f400470253
+      title: The Livia
+      quote: '@TheLivia_YT'
+      image:
+        name: The Livia
+        src: ../static/assets/images/thelivia.jpg
 ---
