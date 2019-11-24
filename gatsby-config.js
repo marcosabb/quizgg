@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'QuizGG',
     description: 'Se divirta respondendo e compartilhando com seus amigos quizzes e testes sobre seus jogos favoritos',
-    author: '@quizgg',
+    author: '@quizggapp',
     siteUrl: 'https://quizgg.com',
     year: new Date().getFullYear()
   },
