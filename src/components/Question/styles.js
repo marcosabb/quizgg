@@ -85,7 +85,7 @@ export const Image = styled.div`
   }
 
   ${media.lessThan('small')`
-    max-width: 100%;
+    width: 100%;
     margin-bottom: 20px;
   `}
 `

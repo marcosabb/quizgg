@@ -11,7 +11,6 @@ import {
 } from 'react-share'
 import { debounce } from 'lodash'
 
-import Box from '../Box'
 import Loading from '../Loading'
 import Button from '../Button'
 
@@ -46,7 +45,7 @@ const Result = memo(({
   },
   url
 }) => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const finishLoading = debounce(() => {
     setLoading(false)
@@ -59,7 +58,7 @@ const Result = memo(({
   const link = `${url}r/${id}`
 
   return (
-    <Box>
+    <>
       {loading
         ? (
           <LoaderWrapper>
@@ -129,7 +128,7 @@ const Result = memo(({
             </Share>
           </>
         )}
-    </Box>
+    </>
   )
 })
 

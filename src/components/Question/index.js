@@ -3,8 +3,6 @@ import t from 'prop-types'
 import Img from 'gatsby-image'
 import { v4 } from 'uuid'
 
-import Box from '../Box'
-
 import {
   Counter,
   Image,
@@ -22,7 +20,7 @@ const Question = memo(({
   handleState,
   inline
 }) => (
-  <Box>
+  <>
     <Counter>{counterQuestion}/{totalQuestions}</Counter>
     {question.image && (
       <Image>
@@ -46,7 +44,7 @@ const Question = memo(({
         </Option>
       ))}
     </Options>
-  </Box>
+  </>
 ))
 
 Question.propTypes = {

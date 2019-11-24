@@ -110,7 +110,7 @@ export const Input = styled.input`
   flex: 1;
   margin-right: 4px;
   padding: 10px 8px;
-  height: 34px;
+  height: 40px;
   font-size: ${rem(12)};
   color: ${color.text};
   background-color: ${color.white};

@@ -9,7 +9,8 @@ export const Container = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 34px;
+  width: ${ifProp('fluid', '100%', null)};
+  height: 40px;
   padding: 10px 16px;
   font-size: ${rem(12)};
   text-transform: uppercase;

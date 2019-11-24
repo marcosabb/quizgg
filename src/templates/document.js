@@ -33,6 +33,7 @@ const Document = memo(({
       <Questions
         type={type}
         image={image}
+        title={title}
         questions={q}
         result={result}
         url={`${siteUrl}${path}`}

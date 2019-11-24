@@ -1,18 +1,21 @@
 import React, { memo, useState } from 'react'
 import t from 'prop-types'
+import Img from 'gatsby-image'
 import { debounce } from 'lodash'
 
 import Question from '../../components/Question'
 import Result from '../../components/Result'
+import Button from '../../components/Button'
 
-import { Container } from './styles'
+import { Container, Wrapper, Start, Image, Title } from './styles'
 
-const Questions = memo(({ type, image, questions: q, result, url }) => {
+const Questions = memo(({ type, image, title, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answeredQuestion, setAnsweredQuestion] = useState(false)
   const [score, setScore] = useState(0)
-  const [showFinish, setShowFinish] = useState(false)
+  const [start, setStart] = useState(false)
+  const [finish, setFinish] = useState(false)
 
   function check (question, option) {
     const correctOption = question.options.find(q => q.correct)
@@ -96,7 +99,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
   }, 1000)
 
   const goToResult = debounce(() => {
-    setShowFinish(true)
+    setFinish(true)
   }, 1000)
 
   function handleCheck (question, option) {
@@ -114,6 +117,10 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
     if (option.right) return 'right'
     if (option.wrong) return 'wrong'
     if (option.select) return 'select'
+  }
+
+  function handleStart () {
+    setStart(true)
   }
 
   function generateResult () {
@@ -161,8 +168,19 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
 
   return (
     <Container>
-      {showFinish && <Result result={generateResult()} url={url} />}
-      {!showFinish && renderQuestions()}
+      <Wrapper>
+        {!start && (
+          <Start>
+            <Title>{title}</Title>
+            <Image>
+              <Img fluid={image.src.childImageSharp.fluid} />
+            </Image>
+            <Button handleClick={handleStart} fluid>Iniciar</Button>
+          </Start>
+        )}
+        {finish && <Result result={generateResult()} url={url} />}
+        {!finish && start && renderQuestions()}
+      </Wrapper>
     </Container>
   )
 })
@@ -170,6 +188,7 @@ const Questions = memo(({ type, image, questions: q, result, url }) => {
 Questions.propTypes = {
   type: t.string.isRequired,
   image: t.object.isRequired,
+  title: t.string.isRequired,
   questions: t.arrayOf(t.shape({
     id: t.string,
     title: t.string,
