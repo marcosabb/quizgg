@@ -16,6 +16,7 @@ const Result = memo(({
   return (
     <Seo
       title={replace(share, text)}
+      description={replace(share, text)}
       image={image}
       meta={[
         { name: 'robots', content: 'noindex' }
