@@ -1,13 +1,12 @@
 import React, { memo, useState } from 'react'
 import t from 'prop-types'
-import Img from 'gatsby-image'
 import { debounce } from 'lodash'
 
+import Start from '../../components/Start'
 import Question from '../../components/Question'
 import Result from '../../components/Result'
-import Button from '../../components/Button'
 
-import { Container, Wrapper, Start, Image, Title } from './styles'
+import { Container, Wrapper } from './styles'
 
 const Questions = memo(({ type, image, title, questions: q, result, url }) => {
   const [questions, setQuestions] = useState(q)
@@ -16,6 +15,35 @@ const Questions = memo(({ type, image, title, questions: q, result, url }) => {
   const [score, setScore] = useState(0)
   const [start, setStart] = useState(false)
   const [finish, setFinish] = useState(false)
+  // const [responses, setResponses] = useState([])
+
+  // useEffect(() => {
+  //   const fetchResponses = async () => {
+  //     const response = await fetch('http://localhost:3000/responses')
+  //     const data = await response.json()
+
+  //     setResponses(data)
+  //     console.log(responses)
+  //   }
+
+  //   fetchResponses()
+  // }, [])
+
+  // async function handleCreate () {
+  //   const response = await fetch('http://localhost:3000/responses', {
+  //     method: 'post',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify({
+  //       name: 'Joaquim',
+  //       score: Math.floor(Math.random() * 10)
+  //     })
+  //   })
+  //   const data = await response.json()
+  //   setResponses([...responses, data])
+  //   console.log(data)
+  // }
 
   function check (question, option) {
     const correctOption = question.options.find(q => q.correct)
@@ -84,7 +112,7 @@ const Questions = memo(({ type, image, title, questions: q, result, url }) => {
   }
 
   function updateQuestions (question, option) {
-    if (type === 'quiz') {
+    if (type === 'quiz' || type === 'personalidade') {
       check(question, option)
     }
 
@@ -128,6 +156,8 @@ const Questions = memo(({ type, image, title, questions: q, result, url }) => {
       ? result.items[Math.floor(Math.random() * result.items.length)]
       : result.items.find(item => item.title === String(score))
 
+    console.log(item)
+
     const title = type === 'teste'
       ? item.title
       : `${score} pergunta${(score <= 0 || score > 1) ? 's' : ''}!`
@@ -170,16 +200,22 @@ const Questions = memo(({ type, image, title, questions: q, result, url }) => {
     <Container>
       <Wrapper>
         {!start && (
-          <Start>
-            <Title>{title}</Title>
-            <Image>
-              <Img fluid={image.src.childImageSharp.fluid} />
-            </Image>
-            <Button handleClick={handleStart} fluid>Iniciar</Button>
-          </Start>
+          <Start
+            type={type}
+            title={title}
+            image={image}
+            handleStart={handleStart}
+          />
         )}
         {finish && <Result result={generateResult()} url={url} />}
         {!finish && start && renderQuestions()}
+        {/* {responses.map((response) => (
+          <div key={response.id}>
+            <span>{response.name}</span>
+            <span>{response.score}</span>
+          </div>
+        ))}
+        <button onClick={handleCreate}>add</button> */}
       </Wrapper>
     </Container>
   )
@@ -203,7 +239,7 @@ Questions.propTypes = {
     statement: t.shape({
       final: t.string,
       share: t.string,
-      tags: t.shape(t.string)
+      tags: t.arrayOf(t.string)
     }),
     items: t.arrayOf(t.shape({
       id: t.string,

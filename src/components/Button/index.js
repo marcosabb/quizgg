@@ -3,7 +3,14 @@ import t from 'prop-types'
 
 import { Container, Tooltip } from './styles'
 
-const Button = memo(({ handleClick, tooltip, fluid, children, ...props }) => {
+const Button = memo(({
+  handleClick,
+  tooltip,
+  disabled,
+  fluid,
+  children,
+  ...props
+}) => {
   const [showTooltip, setShowTooltip] = useState(false)
 
   function handleShowTooltip () {
@@ -28,6 +35,7 @@ const Button = memo(({ handleClick, tooltip, fluid, children, ...props }) => {
       onClick={onClick}
       onMouseLeave={onMouseLeave}
       tooltip={tooltip}
+      disabled={disabled}
       fluid={fluid}
       {...props}
     >
@@ -40,12 +48,14 @@ const Button = memo(({ handleClick, tooltip, fluid, children, ...props }) => {
 Button.defaultProps = {
   handleClick: () => {},
   tooltip: null,
+  disabled: false,
   fluid: false
 }
 
 Button.propTypes = {
   handleClick: t.func,
   tooltip: t.string,
+  disabled: t.bool,
   fluid: t.bool,
   children: t.node.isRequired
 }

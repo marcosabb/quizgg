@@ -26,6 +26,12 @@ export const Content = styled.div`
   `}
 `
 
+export const Filter = styled.div`
+  display: flex;
+  padding: 40px 10px;
+  margin-bottom: 500px;
+`
+
 export const LoadingWrapper = styled.div`
   display: flex;
   align-items: center;

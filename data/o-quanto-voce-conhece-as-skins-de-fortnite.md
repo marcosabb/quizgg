@@ -205,6 +205,9 @@ result:
     tags: ['fortnite', 'fortnitebrasil']
   items:
     -
+      id: 317594d9-8c87-43af-969d-8ca8f15f3223
+      title: '0'
+    -
       id: ef80302d-c380-416f-99d7-bbef65da477e
       title: '1'
     -

@@ -203,6 +203,9 @@ result:
     tags: ['leagueoflegends', 'leagueoflegendsbrasil']
   items:
     -
+      id: a1cf4d1a-5e49-48b3-838a-6b8cf208ebe0
+      title: '0'
+    -
       id: 64ea9617-51e4-4c57-a65a-f9d6c8d63d82
       title: '1'
     -

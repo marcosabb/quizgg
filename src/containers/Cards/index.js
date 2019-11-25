@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { debounce } from 'lodash'
 
 import Card from '../../components/Card'
+// import Dropdown from '../../components/Dropdown'
 import Loading from '../../components/Loading'
 
 import { Container, Featured, Content, LoadingWrapper } from './styles'
@@ -46,8 +47,15 @@ const Cards = memo(() => {
     `
   )
 
+  // const [filter, setFilter] = useState({
+  //   type: null,
+  //   value: null
+  // })
+
   const featured = documents.filter(document => document.node.frontmatter.featured)
-  const normal = documents.filter(document => !document.node.frontmatter.featured)
+  const normal = documents
+    .filter(document => !document.node.frontmatter.featured)
+    .filter(document => document.node.frontmatter.type !== 'personalidade')
 
   const limit = useRef(6)
   const [items, setItems] = useState(normal.slice(0, limit.current))
@@ -65,6 +73,21 @@ const Cards = memo(() => {
 
     push()
   }
+
+  // useEffect(() => {
+  //   const { type, value } = filter
+  //   if (type && value) {
+  //     setItems(items.filter(item => item.node.frontmatter[type].toLowerCase() === value.toLowerCase()))
+  //   }
+  // }, [filter])
+
+  // function handleFilter (type, value) {
+  //   setFilter({
+  //     ...filter,
+  //     type,
+  //     value
+  //   })
+  // }
 
   function render (items) {
     return items.map((
@@ -101,6 +124,32 @@ const Cards = memo(() => {
 
   return (
     <Container>
+      {/* <Filter>
+        <Dropdown
+          type='type'
+          label='Tipo'
+          value={(filter.type === 'type' && filter.value)}
+          options={[
+            { label: 'Quiz', value: 'quiz' },
+            { label: 'Teste', value: 'teste' },
+            { label: 'Personalidade', value: 'personalidade' }
+          ]}
+          handleSelect={handleFilter}
+        />
+
+        <Dropdown
+          type='game'
+          label='Jogo'
+          value={(filter.type === 'game' && filter.value)}
+          options={[
+            { label: 'Fortnite', value: 'fortnite' },
+            { label: 'Counter Strike', value: 'counter strike' },
+            { label: 'League of Legends', value: 'league of legends' }
+          ]}
+          handleSelect={handleFilter}
+        />
+      </Filter> */}
+
       <Featured>
         {render(featured)}
       </Featured>

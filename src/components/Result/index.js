@@ -141,7 +141,7 @@ Result.propTypes = {
     image: t.object,
     id: t.string,
     quote: t.string,
-    tags: t.shape(t.string)
+    tags: t.arrayOf(t.string)
   }).isRequired,
   url: t.string.isRequired
 }

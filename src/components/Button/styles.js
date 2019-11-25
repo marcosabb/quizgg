@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { ifProp } from 'styled-tools'
 import { rem, darken, rgba } from 'polished'
 
@@ -29,6 +29,12 @@ export const Container = styled.button`
   &:focus {
     outline: none;
   }
+
+  ${ifProp('disabled', css`
+    background-color: ${darken(0.2, color.blue)};
+    border-color: ${darken(0.2, color.blue)};
+    cursor: not-allowed;
+  `, null)}
 `
 
 export const Tooltip = styled.span`

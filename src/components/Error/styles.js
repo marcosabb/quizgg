@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
 
 export const Message = styled.p`
   font-size: ${rem(24)};
+  text-align: center;
 
   a {
     color: ${color.blue};
